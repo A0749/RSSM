@@ -1,15 +1,7 @@
 // Simulated JSON data
 const peopleData = 
   [
-    {
-      "name": "Akbar Khan",
-      "origin": "Mathura, North-Western Province (now Uttar Pradesh)",
-      "description": "Born in 1823; took part in the Uprising of 1857 against the British dominance over the Saugor district of the Central Provinces and Berar (now Sagor, Madhya Pradesh). Joined the anti-British rebel forces of Nawab of Ambapani at Rahatgarh in 1857; fought against the British reinforcement under Hugh Rose from 24 to 28 January 1858 at the Rahatgarh fort. Captured and accused of rebellion against the British, Akbar was executed by hanging at the front gate of the Rahatgarh Fort on 29 January 1858.",
-      "sources": [
-        "Mutiny Papers, Vol. II, NAIB",
-        "Poll Deptt, Vol. No.50 (VII) (1858), MSAB"
-      ]
-    },
+   
     {
       "name": "Anant Singh",
       "origin": "Banpur State, Madhya Pradesh",
@@ -461,7 +453,7 @@ function renderPeople(data) {
       <div class="card-content">
         <div class="name-origin">
           <strong>${person.name}</strong>
-          <span class="origin"><strong>Origin:</strong> ${person.origin}</span>
+          <span class="origin"> ${person.origin}</span>
         </div>
         <div class="description">${person.description}</div>
         <div class="sources">${person.sources.map(source => `<em>${source}</em>`).join(", ")}</div>
