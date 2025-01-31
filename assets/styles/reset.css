@@ -28,7 +28,9 @@ body, html {
   gap: 1rem;
 
 }
-
+.front-page .breadcrumb{
+  visibility: hidden;
+}
 
 img{
     width: 100%;
