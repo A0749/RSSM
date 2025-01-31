@@ -18,6 +18,7 @@
   
   </head>
   <body class="front-page">
+
     <!-- Accessibility Button -->
     <div id="dynamic-gallery-demo" ></div>
 
@@ -36,6 +37,9 @@
               <div id="breadcrumb"></div>
               <div id="lang" class="int-btn"></div>
             </div>
+            <button class="jump-btn int-btn" id="scrollToFooterBtn">Plan your visit</button>
+
+
             <header class="main-header">
               <div class="header-content">
                 <div class="tribal-central-logo">
@@ -306,19 +310,34 @@
           <div class="content footer-content-outer">
             <div class="footer">
               <div class="next">
-                <div class="conservation-slider">
-                  <div class="plan-your-visit-container">
-                    <p>Janpath, New Delhi - 110011</p>
+                <div class="plan-your-visit">
+                  <h3>Plan Your Visit</h3>
 
-                      <p>Tue-Sun (10:00 AM to 6:00 PM)</p>
-                      
-                      <p>(Closed on Mondays and National Holidays)</p>
-                      
-                     <p> Entry Fee: Adults: Rupee Icon 20 </p>
-                      
-                     <p> Foreign Nationals: Rupee Icon 500</p>
-                      
-                     <p> Students up to class 12th: Free entry (with I-cards) click here to pre-book your visit.</p>
+                  <div class="flex-container-footer">
+                    <div class="map-embed">
+                      <a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA"><img src="assets/images/map.png" alt=""></a>
+                    </div>
+                    <div class="how-to-reach">
+                      <h4>How to Reach</h4>
+                      <p>Opposite Rani Durgabati Hospital (elgin), <br>South Civil Lines <br>Jabalpur, Madhya Pradesh - 482007</p>
+                      <div class="int-btn"><a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA">Get Direction</a></div>
+                    </div>
+                    <div class="museum-status">
+                      <div class="timing">
+                        <div class="time-head"><h4>Hours</h4></div>
+                        <p>Tue-Sun (10:00 AM to 6:00 PM) <br>Closed on Mondays and National Holidays</p>
+  
+                      </div>
+                      <div class="entry-fee">
+                        <div class="time-head"><h4>Entry Fee</h4></div>
+                        <ul>
+                          <li><span>Adults:</span><span>20 &#8377;</span></li>
+                          <li><span>Foreign Nationals:</span><span>500 &#8377;</span></li>
+                          <li><span>Students up to class 12th with ID Cards :</span><span>Free</span></li>
+                        </ul>
+  
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -334,13 +353,19 @@
                     RAJA SHANKAR SHAH <br />KUNWAR RAGHUNATH SHAH <br />TRIBAL FREEDOM FIGHTERS MUSEUM <br>JABALPUR, MADHYA PRADESH
                   </a>     
                 </div>
-                <div class="how-to-reach">
-                  <h3>How to Reach</h3>
-                  <p>Lorem ipsum dolor sit,<br>amet consectetur adipisicing elit. <br>Alias, placeat</p>
-                  <div class="btn">Get Directions</div>
+                <div class="menu-footer">
+                  <h4>History</h4>
+                  <ul class="navbar-ul">
+                    <li><a href="history/freedom-movement-of-1857.html">Freedom Movement of 1857</a></li>
+                    <li><a href="history/martyrdom-story-raja-shankar-shah.html">Martyrdom Story of Raja & Kunwar</a></li>
+                    <li><a href="history/the-52nd-regiment.html">The 52nd Regiment</a></li>
+                    <li><a href="history/raja-shankar-shah.html">Raja Shankar Shah</a></li>
+                    <li><a href="history/kunwar-raghunath-shah.html">Kunwar Raghunath Shah</a></li>
+                    
+                  </ul>
                 </div>
                 <div class="menu-footer">
-                  <h3>Menu</h3>
+                  <h4>Menu</h4>
                   <ul class="navbar-ul">
                     <li><a href="tribes-of-mp.html">Tribes of MP</a></li>
                     <li><a href="gond-tribe.html">Gondwana Tribe</a></li>
@@ -350,12 +375,11 @@
                   </ul>
                 </div>
                 <div class="quick-links">
-                  <h3>Quick Links</h3>
+                  <h4>Quick Links</h4>
                   <ul class="quick-links-content">
-                    <li><a href="tribes-of-mp.html">Ministry of Tribal Affairs</a></li>
-                    <li><a href="gond-tribe.html">Tribal Affairs Department, MP</a></li>
-                    <li><a href="history.html">Tribal Research Organisation</a></li>
-                    <li><a href="conservation.html">Intach</a></li>
+                    <li><a href="https://tribal.nic.in/">Ministry of Tribal Affairs</a></li>
+                    <li><a href="https://www.tribal.mp.gov.in/">Tribal Affairs Department, MP</a></li>
+                    <li><a href="https://www.intach.org/">Intach</a></li>
                   </ul>
                 </div>
               </div>
@@ -367,6 +391,7 @@
         
       </div>
     </div>
+    
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.3/lightgallery.umd.min.js"
@@ -406,5 +431,18 @@
     <script src="index.js"></script>
     <script src="assets/scripts/dynamic-gallery.js"></script>
     <script src="assets/scripts/main.js"></script>
+    <script>
+      function smoothScrollToFooter() {
+        let footer = document.getElementById("section-footer"); // Target Footer
+        let footerPosition = footer.offsetTop; // Footer's Position
+        let duration = 1000; // Adjust as needed
+
+        // Use Scrollbar.js's scrollTo method
+        scrollbar.scrollTo(0, footerPosition, duration);
+    }
+
+    // Attach event listener to button
+    document.getElementById("scrollToFooterBtn").addEventListener("click", smoothScrollToFooter);
+  </script>
   </body>
 </html>

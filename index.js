@@ -101,3 +101,5 @@ document.addEventListener('wheel', (event) => {
   // Smoothly scroll to the target section
   scrollbar.scrollTo(0, sections[currentSectionIndex].offsetTop, 600);
 });
+
+

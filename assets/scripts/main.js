@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll('a');
     const currentDomain = window.location.hostname;
