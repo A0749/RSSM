@@ -1,0 +1,111 @@
+.footer-content-outer{
+    width: 100%;
+    height: 100vh;
+    max-width: 100% !important;
+}
+.footer-content-outer .next{
+    height: 60vh;
+}
+.footer-content-outer .footer{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+.footer-content-outer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    width: 96%;
+}
+.footer-content .museum-info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.footer-content-outer .footer-content .text-link{
+    max-width: 100% !important;
+}
+
+.footer-content-outer .footer-content p,
+.footer-content-outer .footer-content  a{
+    font-size: calc(min(100vh / 40)) !important; /* Dynamically scale text */
+    font-family:'Genos' ;
+    letter-spacing: 1px;
+    
+}
+
+#conservation .footer-content-outer .footer-content h3{
+    font-size: calc(min(100vh / 25)) !important;
+    margin-bottom: 3%;
+    font-family: 'Genos';
+    font-weight: 500;
+
+
+}
+.footer-content-outer .footer-content .navbar-ul,
+.footer-content-outer .footer-content .quick-links-content{
+    flex-direction: column;
+    padding: 0;
+}
+.footer{
+    font-family: 'Genos';
+}
+.footer-content-outer .footer-content .navbar-ul li,
+.footer-content-outer .footer-content .quick-links-content li{
+    padding: 0.25rem 0;
+}
+.copyright {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #555;
+    text-align: center;
+    width: 100%;
+    font-size: calc(min(100vh / 50)) !important; /* Dynamically scale text */
+    font-family: 'Hind';
+}
+
+
+
+
+/* Basic anchor styles */
+.footer ul li a[href],
+footer a[href] {
+    position: relative;
+    transition: color 0.3s ease;
+    color: #f1f1f1;
+  }
+  
+  /* On hover, change color */
+  footer a[href]:hover {
+  }
+  
+  /* Arrow container */
+  .footer a[href]::after,
+  footer a[href]::after {
+    content: "→"; /* Unicode arrow */
+    position: absolute;
+    top: 50%;
+    right: 0; /* Adjust space between text and arrow */
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px; /* Rectangle width */
+    height: 20px; /* Rectangle height */
+    background-color: transparent; /* Background color of the rectangle */
+    color: #fff; /* Arrow color */
+    font-size: 1.5rem;
+    border-radius: 3px; /* Optional, for rounded rectangle */
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+  }
+  
+  /* Show arrow on hover */
+  .footer a[href]:hover::after,
+  footer a[href]:hover::after {
+    opacity: 1;
+    right: -24px; /* Adjust distance on hover */
+  }

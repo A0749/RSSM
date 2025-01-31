@@ -1,0 +1,116 @@
+/* Accessibility Container */
+.accessibility-container {
+    position: fixed;
+    bottom: 45vh;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#accessibility-toggle {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color var(--transition-duration);
+}
+
+#accessibility-toggle:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Accessibility Options */
+.accessibility-options {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #fff;
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+}
+
+.accessibility-options button {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+.accessibility-options button:hover {
+    background-color: var(--color-secondary);
+}
+
+
+
+
+/* Toggle Button */
+.image-toggle {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  #toggle-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  /* Image Options Panel */
+  .image-options-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden off-screen initially */
+    width: 300px;
+    height: 100%;
+    background-color: #1a1a1a;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 9;
+  }
+  
+  .image-options-panel h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+  }
+  
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Show Panel */
+  .image-options-panel.open {
+    right: 0; /* Slide in */
+  }
+  
+  

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlideWave Gallery</title>
+  <style>
+    /* SlideWave Styles */
+    .slidewave-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  z-index: 9999;
+}
+
+.slidewave-slider {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slidewave-slide {
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.slidewave-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+/* Custom Cursor Styles */
+.slidewave-cursor {
+  position: fixed;
+  width: 3rem;
+  height: 2rem;
+  pointer-events: none;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  transition: transform 0.2s ease;
+
+}
+
+.slidewave-cursor.left::before {
+  content: "\2190"; /* Unicode left arrow */
+  font-size: 3rem;
+}
+
+.slidewave-cursor.right::before {
+  content: "\2192"; /* Unicode right arrow */
+  font-size: 3rem;
+
+}
+
+/* Hide native cursor in the slider */
+.slidewave-container {
+  cursor: none;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<!-- Button to Launch the Slider -->
+<button class="slidewave-launch" data-slidewave="slider1">Open Slider 1</button>
+<button class="slidewave-launch" data-slidewave="slider2">Open Slider 2</button>
+
+<!-- Slider 1 -->
+<div id="slider1" class="slidewave-container">
+  <div class="slidewave-menu">
+    <button class="close">X</button>
+    <button class="zoom-in">+</button>
+    <button class="zoom-out">-</button>
+  </div>
+  <div class="slidewave-slider">
+    <div class="slidewave-slide"><img src="assets/images/Front/gallery1/1.jpeg" alt=""></div>
+    <div class="slidewave-slide"><img src="assets/images/Front/gallery2/1.JPG" alt=""></div>
+    <div class="slidewave-slide"><img src="assets/images/Front/gallery3/Gallery3a.JPG" alt=""></div>
+  </div>
+</div>
+
+<!-- Slider 2 -->
+<div id="slider2" class="slidewave-container">
+  <div class="slidewave-menu">
+    <button class="close">X</button>
+    <button class="zoom-in">+</button>
+    <button class="zoom-out">-</button>
+  </div>
+  <div class="slidewave-slider">
+    <div class="slidewave-slide">Slide A Content</div>
+    <div class="slidewave-slide">Slide B Content</div>
+    <div class="slidewave-slide">Slide C Content</div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const launchButtons = document.querySelectorAll(".slidewave-launch");
+    const cursor = document.createElement("div");
+    cursor.className = "slidewave-cursor";
+    document.body.appendChild(cursor);
+
+    let activeSlider = null;
+    let currentIndex = 0;
+    let isCursorActive = false;
+
+    // Launch Slider
+    launchButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const sliderId = button.getAttribute("data-slidewave");
+        activeSlider = document.getElementById(sliderId);
+
+        if (activeSlider) {
+          activeSlider.style.display = "block";
+          currentIndex = 0;
+          updateSlider();
+          isCursorActive = true; // Enable custom cursor
+        }
+      });
+    });
+
+    // Close Slider
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("close")) {
+        if (activeSlider) {
+          activeSlider.style.display = "none";
+          activeSlider = null;
+          isCursorActive = false; // Disable custom cursor
+          cursor.style.display = "none"; // Hide cursor
+        }
+        e.stopPropagation(); // Prevent navigation event
+      }
+    });
+
+    // Zoom In and Zoom Out
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("zoom-in")) {
+    const images = activeSlider.querySelectorAll(".slidewave-slide img");
+    images.forEach((img) => {
+      const currentScale = parseFloat(img.getAttribute("data-scale")) || 1;
+      const newScale = currentScale + 0.1; // Increment scale
+      img.style.transform = `scale(${newScale})`;
+      img.setAttribute("data-scale", newScale);
+    });
+    e.stopPropagation(); // Prevent navigation event
+  }
+
+  if (e.target.classList.contains("zoom-out")) {
+    const images = activeSlider.querySelectorAll(".slidewave-slide img");
+    images.forEach((img) => {
+      const currentScale = parseFloat(img.getAttribute("data-scale")) || 1;
+      const newScale = Math.max(currentScale - 0.1, 1); // Decrement scale, minimum is 1
+      img.style.transform = `scale(${newScale})`;
+      img.setAttribute("data-scale", newScale);
+    });
+    e.stopPropagation(); // Prevent navigation event
+  }
+});
+
+
+    // Custom Cursor within Modal
+    document.addEventListener("mousemove", (e) => {
+      if (!isCursorActive || !activeSlider) return;
+
+      const x = e.clientX;
+      const y = e.clientY;
+      const modalBounds = activeSlider.getBoundingClientRect();
+
+      // Check if within modal and exclude menu buttons
+      const isInsideModal =
+        x > modalBounds.left &&
+        x < modalBounds.right &&
+        y > modalBounds.top &&
+        y < modalBounds.bottom;
+      const isOnMenu = e.target.closest(".slidewave-menu");
+
+      if (isInsideModal && !isOnMenu) {
+        cursor.style.display = "flex";
+        cursor.style.top = `${y}px`;
+        cursor.style.left = `${x}px`;
+
+        if (x > window.innerWidth / 2) {
+          cursor.classList.remove("left");
+          cursor.classList.add("right");
+        } else {
+          cursor.classList.remove("right");
+          cursor.classList.add("left");
+        }
+      } else {
+        cursor.style.display = "none"; // Hide cursor outside modal or on menu
+      }
+    });
+
+    // Navigate Slides
+    document.addEventListener("click", (e) => {
+      // Ignore clicks on buttons inside the slider menu
+      if (
+        e.target.classList.contains("close") ||
+        e.target.classList.contains("zoom-in") ||
+        e.target.classList.contains("zoom-out") ||
+        !activeSlider
+      ) {
+        return;
+      }
+
+      const isRight = e.clientX > window.innerWidth / 2;
+      const slides = activeSlider.querySelectorAll(".slidewave-slide");
+
+      if (isRight) {
+        currentIndex = (currentIndex + 1) % slides.length;
+      } else {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      }
+
+      updateSlider();
+    });
+
+    function updateSlider() {
+      if (!activeSlider) return;
+
+      const slider = activeSlider.querySelector(".slidewave-slider");
+      const transform = `translateX(-${currentIndex * 100}vw)`;
+
+      slider.style.transform = transform;
+    }
+  });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Global Styles */
+body, html {
+    font-size: var(--font-size-base);
+    font-family: 'Inter', sans-serif;
+    background-color: #000 !important;
+    color: var(--color-text);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+    overflow-x: hidden;
+    
+}
+.int-container{
+  width: 96% !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center ;
+  gap: 1rem;
+
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  li{
+    list-style-type: none;
+    
+  }
+  a{
+    text-decoration: none !important;
+    color: #fff !important;
+    
+
+  }
+
+.flex{
+    display: flex;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: yellow !important;
+}
+
+/* 
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 14px;
+        --spacing-unit: 0.875rem;
+    }
+    .show-lg{
+      display: none !important;
+    }
+   
+}
+@media (min-width: 768px) {
+    
+  .show-mb{
+    display: none !important;
+  }
+  
+}
+
+  #s-main-container .history-content-outer{
+    background: none;
+  }
+
+  #s-main-container .history-content-inner h2{
+    font-size: calc(min(100vh / 5)); 
+    line-height: 70%;
+
+  }
+
+  .single-page #scroll-container #section-front .content{
+    background:none;
+  }
+  .building-restoration{
+    font-size: calc(min(100vh / 15)) !important; 
+    padding-bottom: 2rem;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+
+  }
+  #conservation #scroll-container .content p{
+    font-size: calc(min(100vh / 35)); 
+    font-weight: 200;
+    font-family: 'Inter';
+  }
+.single-page #scroll-container .content p{
+  font-size: calc(min(100vh / 28)); 
+}
+.buttons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+

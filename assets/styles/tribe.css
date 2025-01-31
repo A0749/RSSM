@@ -1,0 +1,213 @@
+.tribe {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tribe .section {
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Sansita';
+  }
+
+  .tribe .section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+
+
+  .tribe .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  .tribe .text h2 {
+    font-size: calc(min(100vh / 18)); /* Restrict the logo size */
+    margin-bottom: 1rem;
+  }
+
+  .tribe .text p {
+    font-size: calc(min(100vh / 32)); /* Restrict the logo size */
+  }
+
+  /* Tribes of MP */
+
+  .section-tribe{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #tribes-of-mp{
+    color: #e3e3e3;
+  }
+  .footer,
+  .tribe-content,
+  .tribe-content-hero{
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.6362920168067228) 0%,
+      rgba(0, 0, 0, 0.9528186274509804) 97%
+    ) !important;
+  }
+
+  .tribes-navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tribe-content-head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    color: #e3e3e3;
+    font-family: 'Genos';
+  }
+  .tribe-content-head h2 {
+    font-size: calc(min(100vh / 5));
+    line-height: 70%;
+    font-weight: 700;
+}
+  .tribe-content{
+    display: flex;
+    gap: 2rem;
+    color: #e3e3e3;
+  }
+  .tab-pane{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  
+
+  .left-side-tribe{
+    position: sticky;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+    padding: 2rem 0;
+  }
+  .left-side-tribe h1{
+    font-size: calc(min(100vh / 32)); /* Restrict the logo size */
+  }
+  .right-side-tribe{
+    width: 85%;
+    padding: 2rem 0;
+  }
+  .right-side-tribe p{
+    font-size: 1rem;
+  }
+  .right-side-tribe h2 {
+    font-family: 'Inter';
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: 1px dotted;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    line-height: 80%;
+}
+  .left-side-tribe .nav-tabs{
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+.tribes-section{
+  z-index: 100;
+}
+.nav-tabs .nav-link{
+  color: #fff;
+  padding: 0.5 0.8rem;
+  border: none !important;
+  width: 100%;
+  text-align: left;
+
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  background-color: #eebf02 !important;
+  color: #000000 !important;
+  border: none !important;
+}
+.nav-tabs .nav-item .nav-link:hover{
+  color: #1e1e1e !important;
+  border: none !important;
+}
+.nav-tabs .nav-item:hover{
+  border: none !important;
+}
+.nav-tabs .nav-link {
+  margin-bottom: 0 !important;
+  border: 0 m !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.form-control{
+  border-radius: 0 !important;
+}
+
+
+
+/* Constrain navigation buttons inside their respective container */
+#tribes-of-mp .swiper-container {
+  position: relative; /* Ensure child elements like arrows are positioned relative to the container */
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+#tribes-of-mp .swiper-wrapper {
+  display: flex;
+}
+
+#tribes-of-mp .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#tribes-of-mp .swiper-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Position navigation buttons inside the container */
+#tribes-of-mp .swiper-button-next,
+#tribes-of-mp .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #000; /* Customize arrow color */
+  width: 40px;
+  height: 40px;
+  opacity: 0.75;
+}
+
+#tribes-of-mp .swiper-button-next {
+  right: 10px;
+}
+
+#tribes-of-mp .swiper-button-prev {
+  left: 10px;
+}
+
+#tribes-of-mp .swiper-button-next:hover,
+#tribes-of-mp .swiper-button-prev:hover {
+  opacity: 1;
+}
+
+/* Pagination styling */
+#tribes-of-mp .swiper-pagination {
+  bottom: 10px;
+}

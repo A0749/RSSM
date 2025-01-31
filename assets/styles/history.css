@@ -1,0 +1,197 @@
+/* Scroll Container */
+
+/* Section Navigation Container */
+.section-nav {
+  position: fixed;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Section Navigation Items (1 & 2) */
+.section-nav-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Active Section Styling */
+.section-nav-item.active {
+  color: #fff;
+  border: 1px solid #f0a500; /* Circle border */
+}
+
+/* Line between Sections */
+.section-nav-line {
+  width: 1px;
+  height: 20vh; /* Adjust based on your design */
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+/* Styling the section numbers on hover */
+.section-nav-item:hover {
+  color: #fff;
+}
+
+/* Connect the line to both sections */
+.section-nav-item:last-child {
+  margin-bottom: 0;
+}
+
+
+
+#history-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Section */
+.history-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.history-content-inner h1{
+  font-size: calc(min(100vh / 6.5)); 
+  line-height: 100%;
+  font-family: 'Genos';
+  
+}
+.history-content-inner h3{
+  font-size: calc(min(100vh / 16)); 
+  font-weight: 300;
+  padding: 3vh 0;
+}
+
+.history-section.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.history-content-outer {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  font-family: 'Genos';
+    align-items: center;
+    justify-content: center;
+  z-index: 3;
+  height: 100%;
+  height: 100vh;
+
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.6362920168067228) 0%,
+    rgba(0, 0, 0, 0.9528186274509804) 97%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.6362920168067228) 0%,
+    rgba(0, 0, 0, 0.9528186274509804) 97%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.6362920168067228) 0%,
+    rgba(0, 0, 0, 0.9528186274509804) 97%
+  ) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.history-content-inner{
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#history-scroll-container .swiper-pagination {
+  display: none !important;
+}
+#history-scroll-container .swiper {
+  width: 80%;
+  max-width: 1200px;
+  height: 60%;
+}
+#history-scroll-container .swiper-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+#history-scroll-container .swiper-slide {
+  width: calc(min(100vh / 3.5)) !important; /* Fixed slide width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#history-scroll-container .swiper-slide img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out;
+}
+
+#history-scroll-container .slide-text {
+  text-align: center;
+  color: #fff;
+}
+#history-scroll-container .slide-text h3{
+  font-size: calc(min(100vh / 40)); 
+  font-family: 'Inter';
+  transition: transform 0.3s ease;
+
+}
+
+/* Animation */
+
+#history-scroll-container .slide-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#history-scroll-container .slide-image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#history-scroll-container .swiper-slide:hover img, 
+#history-scroll-container .swiper-slide:hover h3 {
+  transform: scale(0.9); /* Slight zoom on hover */
+  filter: grayscale(0%);
+}
+
+

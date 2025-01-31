@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .header .search-container {
+      flex-grow: 1;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header input[type="text"] {
+      flex-grow: 1;
+      padding: 5px 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .categories {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .categories .category {
+      cursor: pointer;
+      background: #e9ecef;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .categories .category.active {
+      background: #0d6efd;
+      color: white;
+    }
+
+    .grid {
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .grid-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Museum Collection</h1>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search artifacts or categories...">
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="categories">
+      <div class="category active" data-category="all">All</div>
+      <div class="category" data-category="pottery">Pottery</div>
+      <div class="category" data-category="weapons">Weapons</div>
+      <div class="category" data-category="sculpture">Sculpture</div>
+      <div class="category" data-category="currency">Currency</div>
+    </div>
+
+    <div class="grid">
+      <div class="grid-item" data-category="pottery">
+        <img src="assets/images/artefects/Bajubandh.png" alt="Ancient Vase">
+        <h5>Ancient Vase</h5>
+        <p>Category: Pottery</p>
+      </div>
+      <div class="grid-item" data-category="weapons">
+        <img src="assets/images/artefects/Bana.bmp" alt="Bronze Sword">
+        <h5>Bronze Sword</h5>
+        <p>Category: Weapons</p>
+      </div>
+      <div class="grid-item" data-category="sculpture">
+        <img src="assets/images/artefects/Bana.bmp" alt="Egyptian Sculpture">
+        <h5>Egyptian Sculpture</h5>
+        <p>Category: Sculpture</p>
+      </div>
+      <div class="grid-item" data-category="sculpture">
+        <img src="https://via.placeholder.com/380x500" alt="Egyptian Sculpture">
+        <h5>Egyptian Sculpture</h5>
+        <p>Category: Sculpture</p>
+      </div>
+      <div class="grid-item" data-category="currency">
+        <img src="https://via.placeholder.com/250x300" alt="Roman Coin">
+        <h5>Roman Coin</h5>
+        <p>Category: Currency</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="artifactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Artifact Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="" id="modalImage">
+          <h5 id="modalTitle"></h5>
+          <p id="modalCategory"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/resources/masonry.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      // Initialize Masonry
+  const grid = document.querySelector(".grid");
+  const msnry = new Masonry(grid, {
+    itemSelector: ".grid-item",
+    columnWidth: ".grid-item",
+    percentPosition: true,
+  });
+
+  // Helper function to refresh Masonry layout
+  function refreshMasonry() {
+    msnry.layout();
+  }
+
+  // Search Functionality
+  const searchInput = document.getElementById("search");
+  const gridItems = document.querySelectorAll(".grid-item");
+
+  searchInput.addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase();
+    gridItems.forEach(item => {
+      const text = item.innerText.toLowerCase();
+      item.style.display = text.includes(query) ? "block" : "none";
+    });
+    // Wait for styles to update before refreshing Masonry
+    setTimeout(refreshMasonry, 100);
+  });
+
+  // Filter by Category
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach(category => {
+    category.addEventListener("click", () => {
+      categories.forEach(cat => cat.classList.remove("active"));
+      category.classList.add("active");
+
+      const selectedCategory = category.dataset.category;
+      gridItems.forEach(item => {
+        const itemCategory = item.dataset.category;
+        item.style.display = selectedCategory === "all" || itemCategory === selectedCategory ? "block" : "none";
+      });
+      // Wait for styles to update before refreshing Masonry
+      setTimeout(refreshMasonry, 100);
+    });
+  });
+
+  // Modal Functionality
+  const modal = new bootstrap.Modal(document.getElementById("artifactModal"));
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalCategory = document.getElementById("modalCategory");
+
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      modalImage.src = item.querySelector("img").src;
+      modalTitle.innerText = item.querySelector("h5").innerText;
+      modalCategory.innerText = item.querySelector("p").innerText;
+      modal.show();
+    });
+  });
+  </script>
+</body>
+</html>

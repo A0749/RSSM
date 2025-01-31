@@ -1,0 +1,135 @@
+
+/* history Navbar */
+.history-navbar, .bottom-navbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .tribes-navbar, .history-navbar, .bottom-navbar{
+    padding: 0.5rem 0;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    color: #fff;
+
+
+  }
+  
+  .history-navbar,
+  .top-nav {
+    top: 0;
+    border-bottom: 1px solid #555;
+  }
+  .tribes-navbar a,
+  .history-navbar a{
+    font-size: calc(min(12vh / 4)); /* Dynamically scale text */
+  }
+  .navbar-content{
+    width: 60%;
+  }
+  .navbar-ul{
+    display: flex;
+    margin-bottom: 0;
+   
+  }
+  .header-content a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .bottom-navbar{
+    transform: translateY(-150px);
+  transition: transform 0.5s ease; /* Fallback for browsers without GSAP */
+
+
+  }
+  
+  .bottom-content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    max-width: 100%; /* Optional: to center and limit width */
+    margin: 0 auto;
+  }
+  .bottom-content div{
+    flex: 1;
+  }
+.navigator{
+  display: flex;
+  justify-content: center;
+}
+.logo-main{
+  display: flex;
+  justify-content: end;
+}
+  .text-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: calc(min(12vh / 3.8)); /* Dynamically scale text */
+    line-height: 1.1; /* Adjust spacing between lines */
+    max-width: 70%; /* Prevent text from taking up too much space */
+    transition: all 0.3s ease-in;
+  }
+
+
+
+  .logo-link img {
+    max-width: calc(min(100vh / 6)); /* Restrict the logo size */
+    height: auto;
+    display: flex;
+  }
+  .bread-lang{
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-family: 'Hind';
+    align-items: center;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 11vh;
+    left: 2%;
+    right: 2%;
+    z-index: 100;
+    color: #e3e3e3;
+  }
+  .bread-lang span{
+    font-family: 'Hind';
+    font-size: 0.8rem;
+    color: #e3e3e3;
+
+
+  }
+  #lang{
+    cursor: pointer;
+    font-family: 'Hind';
+    font-size: 0.8rem;
+
+
+
+  }
+
+  @media (max-width: 768px) {
+    .bottom-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .text-link {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .logo-link img {
+      max-width: 80px;
+    }
+  }
+
+
+  
+  
