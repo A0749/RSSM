@@ -137,48 +137,7 @@ const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
             subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
           },
         ],
-        "tribe-intro-main": [
-          {
-            src: "assets/images/tribe/gond/1.jpg",
-            thumb: "assets/images/tribe/gond/1.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/2.jpg",
-            thumb: "assets/images/tribe/gond/2.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/3.jpg",
-            thumb: "assets/images/tribe/gond/3.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/4.jpg",
-            thumb: "assets/images/tribe/gond/4.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/5.jpg",
-            thumb: "assets/images/tribe/gond/5.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/6.jpg",
-            thumb: "assets/images/tribe/gond/6.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/8.jpg",
-            thumb: "assets/images/tribe/gond/8.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-          {
-            src: "assets/images/tribe/gond/7.jpg",
-            thumb: "assets/images/tribe/gond/7.jpg",
-            subHtml: "<h4>Gallery 6</h4><p>Description for image X</p>",
-          },
-        ],
+        
       };
     
       // Function to initialize the gallery dynamically
@@ -215,7 +174,4 @@ const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
       });
       document.getElementById("gallery-button-6").addEventListener("click", () => {
         initializeGallery("gallery-button-6");
-      });
-      document.getElementById("tribe-intro-main").addEventListener("click", () => {
-        initializeGallery("tribe-intro-main");
       });
