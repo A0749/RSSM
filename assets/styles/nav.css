@@ -102,7 +102,7 @@
     font-size: 0.8rem;
     color: #e3e3e3;
   }
-.front-page .breadcrumb{
+.front-page #breadcrumb{
   opacity: 0;
 }
 .front-page .bread-lang{
