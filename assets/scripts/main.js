@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let path = window.location.pathname;
 
     // GitHub Pages repository name
-    const repoName = '/UpdatedRSSM';
+    const repoName = '/RSSM';
 
     // Check if running inside GitHub Pages
     const isGitHubPages = path.startsWith(repoName);
