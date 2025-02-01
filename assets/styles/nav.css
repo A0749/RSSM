@@ -103,7 +103,7 @@
     color: #e3e3e3;
   }
 .front-page #breadcrumb{
-  opacity: 0;
+  opacity: 0 !important;
 }
 .front-page .bread-lang{
   top: 40% !important;
