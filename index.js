@@ -7,6 +7,9 @@ const sections = document.querySelectorAll('.section');
 const container = document.getElementById('scroll-container');
 const gradientOverlay = document.getElementById('gradient-overlay');
 
+// Check if the current page is the homepage
+const isHomepage = document.body.classList.contains('homepage');
+
 let currentSectionIndex = 0;
 let isScrolling = false; // Prevent multiple scroll events
 
@@ -22,17 +25,26 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const bgImage = entry.target.getAttribute('data-bg');
-      const isOddSection = entry.target.classList.contains('odd');
+      const isFirstSection = entry.target === sections[0];
+      const isLastSection = entry.target === sections[sections.length - 1];
 
       // Set the background image of the scroll container dynamically
       container.style.backgroundImage = `url(${bgImage})`;
 
-      // Adjust the gradient direction based on whether the section is odd or even
-      const gradientDirection = isOddSection ? 'to right' : 'to left';
-      gradientOverlay.style.setProperty(
-        'background',
-        `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0))`
-      );
+      // Apply gradient logic
+      if (isHomepage || (!isFirstSection && !isLastSection)) {
+        const isOddSection = entry.target.classList.contains('odd');
+        const gradientDirection = isOddSection ? 'to right' : 'to left';
+        gradientOverlay.style.setProperty(
+          'background',
+          `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0))`
+        );
+      } 
+      
+      // Remove gradient only on non-homepage pages for first and last sections
+      if (!isHomepage && (isFirstSection || isLastSection)) {
+        gradientOverlay.style.setProperty('background', 'none');
+      }
 
       // Reveal the section with animation
       entry.target.classList.add('visible');
@@ -46,6 +58,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
 
 // Helper to check if an element can scroll
 function canScroll(element) {
