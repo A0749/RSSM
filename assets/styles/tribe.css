@@ -166,6 +166,7 @@
 
 #tribes-of-mp .swiper-wrapper {
   display: flex;
+  height: 50vh;
 }
 
 #tribes-of-mp .swiper-slide {

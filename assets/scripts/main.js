@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ======= ✅ Correct Homepage Logic for GitHub Pages ======= //
     const isHomepage = 
-        path === '/' || path === '/index.html' ||         // Standard root homepage
-        path === repoName + '/' || path === repoName + '/index.html' ||  // GitHub Pages root homepage
-        path === repoName + '/hi/' || path === repoName + '/hi/index.html'; // GitHub Pages Hindi homepage
+        path === '/' || path === '/index.html' ||         
+        path === repoName + '/' || path === repoName + '/index.html' ||  
+        path === repoName + '/hi/' || path === repoName + '/hi/index.html';
 
     if (isHomepage) {
         breadcrumbContainer.style.opacity = '0';
@@ -64,6 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         breadcrumbContainer.innerHTML = breadcrumbHtml;
+
+        // ✅ Attach event listener to breadcrumb links to add `.html` on click
+        breadcrumbContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default navigation
+
+                let newHref = link.getAttribute('href');
+                if (!newHref.endsWith('.html')) {
+                    newHref += '.html'; // Add .html extension
+                }
+
+                window.location.href = newHref; // Navigate to modified URL
+            });
+        });
     }
 
     // Set language toggle text
@@ -78,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Remove "/hi/" from the path
             newPath = url.pathname.replace('/hi/', '/');
         } else {
-            // ✅ Correctly insert "/hi/" inside "/UpdatedRSSM/"
+            // ✅ Correctly insert "/hi/" inside "/RSSM/"
             if (isGitHubPages) {
                 newPath = repoName + '/hi' + url.pathname.replace(repoName, '');
             } else {
@@ -100,16 +114,3 @@ document.addEventListener('DOMContentLoaded', () => {
             : `&copy; 2025 - Raja Shankar Shah Kunwar Raghunath Shah Tribal Freedom Fighters Museum, Jabalpur. All Rights Reserved.`;
     }
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('a');
-    const currentDomain = window.location.hostname;
-
-    links.forEach(link => {
-      const linkDomain = new URL(link.href).hostname;
-      // Check if the link is not pointing to the same domain
-      if (linkDomain !== currentDomain) {
-        link.setAttribute('target', '_blank');
-      }
-    });
-  });
