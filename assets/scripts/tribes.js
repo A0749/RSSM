@@ -13,7 +13,11 @@ const subjects = [
         "After death, the deceased is buried, and on the third day of Teej, family and relatives cut the hair of men. A funeral feast is held on the 10th day. The tribe has a traditional caste panchayat, with the head called Gautiya, settling disputes related to marriage, divorce, bride price, and immoral relations.",
         "Diversity is observed in the culture of tribes in different areas of the state, encompassing family structure, marriage customs, kinship, food, clothing, and traditions. The Agariya tribe engages in Karma dance, Padki dance, and marriage dance on various occasions, celebrating festivals like Navakhani, Dussehra, Deepawali, Holi, and Karmapuja. They believe in gods like Budhadev, Lohasur, Thakurdev, Dulhadev, Shitalamata, Baghdev, Jogni, Ghurlapat, as well as Hindu deities, and also acknowledge ghosts and witchcraft. Traditional songs like Karmageet, Dadriya, Suageet, Vivahgeet, Phaggeet, and Bhajan are integral to their cultural expressions.",
       ],
-      sliderImages: ["assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg"],
+      sliderImages: [
+        "assets/images/Front/gallery4/1.jpeg", 
+        "assets/images/Front/gallery4/1.jpeg", 
+        "assets/images/Front/gallery4/1.jpeg", 
+        "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg"],
     },
     {
       id: "Andh",

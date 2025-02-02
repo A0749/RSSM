@@ -37,6 +37,8 @@
               <div id="breadcrumb"></div>
               <div id="lang" class="int-btn"></div>
             </div>
+            <button class="jump-btn int-btn" id="scrollToFooterBtn">संग्रहालय देखने का प्लान करें</button>
+
             <header class="main-header">
               <div class="header-content">
                 <div class="tribal-central-logo">
@@ -100,7 +102,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="museum"
+              data-gallery="museum"
             >
             फोटो गैलरी
 
@@ -122,7 +124,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-1"
+              data-gallery="gallery-1"
             >
             फोटो गैलरी
 
@@ -148,7 +150,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-2"
+              data-gallery="gallery-2"
             >
             फोटो गैलरी
 
@@ -169,7 +171,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-3"
+              data-gallery="gallery-3"
             >
             फोटो गैलरी
 
@@ -195,7 +197,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-4"
+              data-gallery="gallery-4"
             >
             फोटो गैलरी
 
@@ -219,7 +221,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-5"
+              data-gallery="gallery-5"
             >
             फोटो गैलरी
 
@@ -243,7 +245,7 @@
             <button
               type="button"
               class="int-btn btn-success"
-              id="gallery-button-6"
+              data-gallery="gallery-6"
             >
             फोटो गैलरी
             </button>
@@ -257,8 +259,38 @@
           <div class="content footer-content-outer">
             <div class="footer">
               <div class="next">
-                <div class="conservation-slider"></div>
-              </div>
+                <div class="plan-your-visit">
+                    <h3>अपनी यात्रा की योजना बनाएं</h3>
+            
+                    <div class="flex-container-footer">
+                        <div class="map-embed">
+                            <a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA"><img src="../assets/images/map.png" alt=""></a>
+                        </div>
+                        <div class="how-to-reach">
+                            <h4>कैसे पहुंचे</h4>
+                            <p>रानी दुर्गाबाती अस्पताल (एल्गिन) के सामने, <br> साउथ सिविल लाइन्स <br> जबलपुर, मध्य प्रदेश - 482007</p>
+                            <div class="int-btn"><a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA">दिशा प्राप्त करें</a></div>
+                        </div>
+                        <div class="museum-status">
+                            <div class="timing">
+                                <div class="time-head"><h4>समय</h4></div>
+                                <p>मंगलवार से रविवार (सुबह 10:00 बजे से शाम 6:00 बजे तक) <br> सोमवार और राष्ट्रीय छुट्टियों पर बंद</p>
+            
+                            </div>
+                            <div class="entry-fee">
+                                <div class="time-head"><h4>प्रवेश शुल्क</h4></div>
+                                <ul>
+                                    <li><span>वयस्क:</span><span>20 &#8377;</span></li>
+                                    <li><span>विदेशी नागरिक:</span><span>500 &#8377;</span></li>
+                                    <li><span>12वीं कक्षा तक के छात्र, जो आईडी कार्ड के साथ :</span><span>मुफ्त</span></li>
+                                </ul>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
               <div class="footer-content">
                 <div class="museum-info">
                   <a href="index.html" class="logo-link">
@@ -338,7 +370,20 @@
   ></script>
   <script src="../assets/resources/smooth-scrollbar.js"></script>
     <script src="../index.js"></script>
-    <script src="scripts/dynamic-gallery-hindi.js"></script>
+    <script src="../assets/scripts/dynamic-gallery.js"></script>
     <script src="../assets/scripts/main.js"></script>
+    <script>
+      function smoothScrollToFooter() {
+        let footer = document.getElementById("section-footer"); // Target Footer
+        let footerPosition = footer.offsetTop; // Footer's Position
+        let duration = 1000; // Adjust as needed
+
+        // Use Scrollbar.js's scrollTo method
+        scrollbar.scrollTo(0, footerPosition, duration);
+    }
+
+    // Attach event listener to button
+    document.getElementById("scrollToFooterBtn").addEventListener("click", smoothScrollToFooter);
+  </script>
   </body>
 </html>
