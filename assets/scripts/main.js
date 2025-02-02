@@ -117,17 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Detect if the site is hosted on GitHub Pages
     const isGitHubPages = window.location.hostname.includes("github.io");
     
-    // Extract the repository name from the URL (if hosted on GitHub Pages)
-    const repoName = isGitHubPages ? window.location.pathname.split("/")[1] : "";
-    
-    // Select all dynamically loaded images
+    // Set your GitHub repository name
+    const repoName = "RSSM";
+
     document.querySelectorAll("img").forEach((img) => {
         let currentSrc = img.getAttribute("src");
 
-        // Check if the src starts with "/assets/images" and modify it accordingly
+        // Check if the src starts with "/assets/images" and modify it
         if (currentSrc && currentSrc.startsWith("/assets/images")) {
             img.src = isGitHubPages ? `/${repoName}${currentSrc}` : currentSrc;
         }
