@@ -114,3 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
             : `&copy; 2025 - Raja Shankar Shah Kunwar Raghunath Shah Tribal Freedom Fighters Museum, Jabalpur. All Rights Reserved.`;
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Detect if the site is hosted on GitHub Pages
+    const isGitHubPages = window.location.hostname.includes("github.io");
+    
+    // Extract the repository name from the URL (if hosted on GitHub Pages)
+    const repoName = isGitHubPages ? window.location.pathname.split("/")[1] : "";
+    
+    // Select all dynamically loaded images
+    document.querySelectorAll("img").forEach((img) => {
+        let currentSrc = img.getAttribute("src");
+
+        // Check if the src starts with "/assets/images" and modify it accordingly
+        if (currentSrc && currentSrc.startsWith("/assets/images")) {
+            img.src = isGitHubPages ? `/${repoName}${currentSrc}` : currentSrc;
+        }
+    });
+});
