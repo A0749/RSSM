@@ -21,11 +21,11 @@ const subjects = [
         "अगारिया जनजाति की संस्कृति में कर्मा नृत्य, पडकी नृत्य और विवाह नृत्य शामिल हैं। ये लोग नवाखानी, दशहरा, दीपावली, होली और कर्मा पूजा जैसे त्योहार मनाते हैं। वे बुधदेव, लोहासुर, ठाकुरदेव, दुल्हादेव, शीतलामाता, बाघदेव, जोगनी, घुरलापाट जैसे देवताओं और हिंदू देवी-देवताओं में विश्वास करते हैं। भूत-प्रेत और जादू-टोने को भी मान्यता देते हैं। इनके पारंपरिक गीतों में कर्मगीत, ददरिया, सुवा गीत, विवाह गीत, फाग गीत और भजन शामिल हैं। ",
       ],
       sliderImages: [
-        "../../assets/images/Tribes/Agaria/image-000.jpg", 
-        "../../assets/images/Tribes/Agaria/image-001.jpg", 
-        "../../assets/images/Tribes/Agaria/image-002.jpg", 
-        "../../assets/images/Tribes/Agaria/image-003.jpg", 
-        "../../assets/images/Tribes/Agaria/image-004.jpg"
+        "../assets/images/Tribes/Agaria/image-000.jpg", 
+        "../assets/images/Tribes/Agaria/image-001.jpg", 
+        "../assets/images/Tribes/Agaria/image-002.jpg", 
+        "../assets/images/Tribes/Agaria/image-003.jpg", 
+        "../assets/images/Tribes/Agaria/image-004.jpg"
       ],
     },
     {
@@ -64,11 +64,11 @@ const subjects = [
         "बैगा जनजाति की समृद्ध सांस्कृतिक पृष्ठभूमि उनके पहनावे, नृत्यों और अनुष्ठानों में झलकती है, जो मध्य प्रदेश के जनजातीय जीवन के अनूठे और विविध पहलुओं को प्रदर्शित करती है। यह समुदाय अपनी मेहनतकश प्रकृति के लिए जाना जाता है। उनके मनोरंजन में नृत्य और गायन शामिल हैं, और पारंपरिक नृत्यों जैसे कर्मा, लहकी, रीना और सैला का आयोजन होता है। बैगा लोग भूत-प्रेत और जादू-टोने में विश्वास रखते हैं, और उनके देवताओं के पुजारी और भूत भगाने वाले के रूप में भुमका की महत्वपूर्ण भूमिका होती है। ",
       ],
       sliderImages: [
-        "../../assets/images/Tribes/baiga/image-006.jpg", 
-        "../../assets/images/Tribes/baiga/image-007.jpg", 
-        "../../assets/images/Tribes/baiga/image-008.jpg", 
-        "../../assets/images/Tribes/baiga/image-009.jpg", 
-        "../../assets/images/Tribes/baiga/image-0010.jpg"
+        "../assets/images/Tribes/baiga/image-006.jpg", 
+        "../assets/images/Tribes/baiga/image-007.jpg", 
+        "../assets/images/Tribes/baiga/image-008.jpg", 
+        "../assets/images/Tribes/baiga/image-009.jpg", 
+        "../assets/images/Tribes/baiga/image-0010.jpg"
       ],
     },
     {
@@ -95,12 +95,12 @@ const subjects = [
 
       ],
       sliderImages: [
-        "../../assets/images/Tribes/Bhaina/image-011.jpg", 
-        "../../assets/images/Tribes/Bhaina/image-012.jpg", 
-        "../../assets/images/Tribes/Bhaina/image-013.jpg", 
-        "../../assets/images/Tribes/Bhaina/image-014.jpg", 
-        "../../assets/images/Tribes/Bhaina/image-016.jpg", 
-        "../../assets/images/Tribes/Bhaina/image-016.jpg", 
+        "../assets/images/Tribes/Bhaina/image-011.jpg", 
+        "../assets/images/Tribes/Bhaina/image-012.jpg", 
+        "../assets/images/Tribes/Bhaina/image-013.jpg", 
+        "../assets/images/Tribes/Bhaina/image-014.jpg", 
+        "../assets/images/Tribes/Bhaina/image-016.jpg", 
+        "../assets/images/Tribes/Bhaina/image-016.jpg", 
       ],
     },
     {
@@ -162,10 +162,10 @@ const subjects = [
         "त्योहारों में हरियाली, नवा खाई, नागपंचमी, दशहरा, होली और दिवाली मनाई जाती हैं। पारंपरिक नृत्य और लोकगीत भतरा जनजाति की सांस्कृतिक पहचान का हिस्सा हैं। ",
       ],
       sliderImages: [
-        "../../assets/images/Tribes/Bhatra/image-023.jpg", 
-        "../../assets/images/Tribes/Bhatra/image-024.jpg", 
-        "../../assets/images/Tribes/Bhatra/image-025.jpg", 
-        "../../assets/images/Tribes/Bhatra/image-026.jpg"
+        "../assets/images/Tribes/Bhatra/image-023.jpg", 
+        "../assets/images/Tribes/Bhatra/image-024.jpg", 
+        "../assets/images/Tribes/Bhatra/image-025.jpg", 
+        "../assets/images/Tribes/Bhatra/image-026.jpg"
       ],
     },
     {
@@ -236,12 +236,12 @@ const subjects = [
 
       ],
       sliderImages: [
-        "../../assets/images/Tribes/BhilMeena/image-035.jpg", 
-        "../../assets/images/Tribes/BhilMeena/image-036.jpg", 
-        "../../assets/images/Tribes/BhilMeena/image-037.jpg", 
-        "../../assets/images/Tribes/BhilMeena/image-038.jpg", 
-        "../../assets/images/Tribes/BhilMeena/image-039.jpg", 
-        "../../assets/images/Tribes/BhilMeena/image-040.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-035.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-036.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-037.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-038.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-039.jpg", 
+        "../assets/images/Tribes/BhilMeena/image-040.jpg", 
       ],
     },
     {

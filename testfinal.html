@@ -1,120 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LightGallery Slider with Two Images Per Slide</title>
-
-  <!-- LightGallery CSS (CDN.jsDelivr) -->
-  <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.1/css/lightgallery-bundle.min.css" rel="stylesheet">
-
-  <!-- Swiper CSS (CDN.jsDelivr) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css">
-
-  <style>
-    /* Styling for the slider */
-    .swiper-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 50px auto;
-    }
-
-    .swiper-slide {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .swiper-slide a {
-      display: block;
-      width: 48%; /* Adjust the size of each image */
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      border: 2px solid #ddd;
-      transition: transform 0.3s ease;
-    }
-
-    .swiper-slide img:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightGallery - Two Images Side by Side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #lightgallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        #lightgallery a {
+            display: inline-block;
+            width: 120px;
+            height: 80px;
+            overflow: hidden;
+        }
+        #lightgallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .lg-item {
+            display: flex !important;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+        .lg-item img {
+            max-width: 45%;
+            max-height: 80vh;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Swiper Slider -->
-  <div class="swiper-container" id="lightgallery">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <a href="assets/images/conservation/1a.jpg">
-          <img src="assets/images/conservation/1a.jpg" alt="Image 1">
-        </a>
-        <a href="assets/images/conservation/1b.jpg">
-          <img src="assets/images/conservation/1b.jpg" alt="Image 2">
-        </a>
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <a href="assets/images/conservation/1c.jpg">
-          <img src="assets/images/conservation/1c.jpg" alt="Image 3">
-        </a>
-        <a href="assets/images/conservation/1d.jpg">
-          <img src="assets/images/conservation/1d.jpg" alt="Image 4">
-        </a>
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <a href="assets/images/conservation/1e.jpg">
-          <img src="assets/images/conservation/1e.jpg" alt="Image 5">
-        </a>
-        <a href="assets/images/conservation/1f.jpg">
-          <img src="assets/images/conservation/1f.jpg" alt="Image 6">
-        </a>
-      </div>
+    <h2>Click any image to open LightGallery</h2>
+
+    <!-- Image Gallery -->
+    <div id="lightgallery">
+        <a href="assets/images/conservation/10a.jpg"><img src="assets/images/conservation/10a.jpg" /></a>
+        <a href="assets/images/conservation/10b.JPG"><img src="assets/images/conservation/10b.JPG" /></a>
+        <a href="assets/images/conservation/11a.JPG"><img src="assets/images/conservation/11b.JPG" /></a>
+        <a href="assets/images/conservation/12a.JPG"><img src="assets/images/conservation/12b.jpg" /></a>
+        <a href="https://via.placeholder.com/600x400?text=Image+5"><img src="https://via.placeholder.com/150x100?text=Image+5" /></a>
+        <a href="https://via.placeholder.com/600x400?text=Image+6"><img src="https://via.placeholder.com/150x100?text=Image+6" /></a>
     </div>
 
-    <!-- Swiper Pagination (Optional) -->
-    <div class="swiper-pagination"></div>
+    <!-- LightGallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
-    <!-- Swiper Navigation (Optional) -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = document.getElementById("lightgallery");
+            const images = Array.from(gallery.querySelectorAll("a"));
+            const dynamicEl = [];
 
-  <!-- jQuery (CDN.jsDelivr) -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+            // Group images in pairs
+            for (let i = 0; i < images.length; i += 2) {
+                const img1 = images[i]?.getAttribute("href");
+                const img2 = images[i + 1]?.getAttribute("href");
 
-  <!-- Swiper JS (CDN.jsDelivr) -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.js"></script>
+                if (img1 && img2) {
+                    dynamicEl.push({
+                        src: img1, 
+                        thumb: img1 
+                    });
+                    dynamicEl.push({
+                        src: img2, 
+                        thumb: img2 
+                    });
+                }
+            }
 
-  <!-- LightGallery JS (CDN.jsDelivr) -->
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.1/js/lightgallery.min.js"></script>
+            // Initialize LightGallery
+            lightGallery(gallery, {
+                dynamic: true,
+                dynamicEl: dynamicEl,
+                mode: 'lg-fade',
+                addClass: 'lg-custom',
+                download: false,
+                thumbnail: false
+            });
 
-  <script>
-    // Initialize Swiper
-    const swiper = new Swiper('.swiper-container', {
-      loop: true, // Enable looping of slides
-      slidesPerView: 1, // Show one slide at a time
-      spaceBetween: 10, // Space between slides
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true, // Enable clickable pagination
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-    // Initialize LightGallery for the images
-    $(document).ready(function() {
-      $('#lightgallery').lightGallery({
-        selector: 'a', // LightGallery will be triggered for each <a> tag
-      });
-    });
-  </script>
+            // Open LightGallery on image click
+            gallery.addEventListener("click", function (event) {
+                event.preventDefault();
+                lightGallery(gallery, {
+                    dynamic: true,
+                    dynamicEl: dynamicEl,
+                    index: 0 // Start from first image pair
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
