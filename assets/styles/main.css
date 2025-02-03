@@ -230,6 +230,9 @@ p, span{
   max-width: 45%;
   text-align: left;
 }
+#scroll-container .full-width-content{
+  max-width: 100% !important;
+}
 
 #scroll-container .content h1 {
   font-size: calc(min(10vh / 1.4)) ; /* Dynamically scale text */

@@ -115,19 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const isGitHubPages = window.location.hostname.includes("github.io");
-    
-    // Set your GitHub repository name
-    const repoName = "RSSM";
-
-    document.querySelectorAll("img").forEach((img) => {
-        let currentSrc = img.getAttribute("src");
-
-        // Check if the src starts with "/assets/images" and modify it
-        if (currentSrc && currentSrc.startsWith("/assets/images")) {
-            img.src = isGitHubPages ? `/${repoName}${currentSrc}` : currentSrc;
-        }
-    });
-});

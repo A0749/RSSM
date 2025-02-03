@@ -119,3 +119,16 @@ ul{
   gap: 1rem;
 }
 
+
+.before-after {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+.before-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

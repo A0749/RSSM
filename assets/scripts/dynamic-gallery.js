@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
 
+  // Detect if running on GitHub Pages (adjust for repo)
+  const repoName = "/RSSM"; // Change this if your repo name is different
+  const isGitHubPages = window.location.hostname === "a0749.github.io";
+
+  // Function to update image paths dynamically
+  function updateImagePaths(galleries) {
+      Object.keys(galleries).forEach(key => {
+          galleries[key] = galleries[key].map(item => ({
+              ...item,
+              src: isGitHubPages ? repoName + item.src : item.src,
+              thumb: isGitHubPages ? repoName + item.thumb : item.thumb
+          }));
+      });
+  }
+
+  // Update all image paths
+  updateImagePaths(galleries);
+
   // Function to detect language
   function detectLanguage() {
       return window.location.pathname.includes("/hi/") ? "hi" : "en";
@@ -30,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           initializeGallery(button.dataset.gallery);
       });
   });
+
 
   //  Galleries object
   const galleries = {
@@ -263,7 +282,28 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: "/assets/images/tribe/architectural/architectural26.webp", thumb: "/assets/images/tribe/architectural/architectural26.webp", en: "<p>Architectural Legacy - The Gondwana Tribe</p>", hi: "<p>वाास्तुशिल्पीय धरोहर - गोंडवाना जनजाति</p>" },
         { src: "/assets/images/tribe/architectural/architectural27.webp", thumb: "/assets/images/tribe/architectural/architectural27.webp", en: "<p>Architectural Legacy - The Gondwana Tribe</p>", hi: "<p>वाास्तुशिल्पीय धरोहर - गोंडवाना जनजाति</p>" },
         { src: "/assets/images/tribe/architectural/architectural28.webp", thumb: "/assets/images/tribe/architectural/architectural28.webp", en: "<p>Architectural Legacy - The Gondwana Tribe</p>", hi: "<p>वाास्तुशिल्पीय धरोहर - गोंडवाना जनजाति</p>" }
-      ]
+      ],
+      
+      "conservation-compare": [
+        { src: "/assets/images/conservation/slider/slider1.png", thumb: "/assets/images/conservation/slider/slider1.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider2.png", thumb: "/assets/images/conservation/slider/slider2.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider3.png", thumb: "/assets/images/conservation/slider/slider3.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider4.png", thumb: "/assets/images/conservation/slider/slider4.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider5.png", thumb: "/assets/images/conservation/slider/slider5.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider6.png", thumb: "/assets/images/conservation/slider/slider6.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider7.png", thumb: "/assets/images/conservation/slider/slider7.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider8.png", thumb: "/assets/images/conservation/slider/slider8.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider9.png", thumb: "/assets/images/conservation/slider/slider9.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider10.png", thumb: "/assets/images/conservation/slider/slider10.png", en: "<p>Before & After</p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider11.png", thumb: "/assets/images/conservation/slider/slider11.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider12.png", thumb: "/assets/images/conservation/slider/slider12.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+        { src: "/assets/images/conservation/slider/slider13.png", thumb: "/assets/images/conservation/slider/slider13.png", en: "<p>Before & After </p>", hi: "<p>पहले & बाद में </p>" },
+      ],
+
+      // Conservation Compare 
+
+
+
       
 
 

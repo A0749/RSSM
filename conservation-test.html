@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before-After Slider</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 90vw; /* Full width */
+            max-width: 1200px;
+            height: 80vh; /* Full height */
+            overflow: hidden;
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider .before {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slider .before img {
+            width: 200%; /* Double width to allow cropping */
+            height: 100%;
+            object-fit: cover;
+            transform: translateX(-50%);
+        }
+
+        .slider .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="/assets/images/conservation/10b.JPG" alt="After">
+            <div class="before">
+                <img src="/assets/images/conservation/10a.jpg" alt="Before">
+            </div>
+            <div class="slider-handle"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const before = document.querySelector(".before");
+            const handle = document.querySelector(".slider-handle");
+
+            let isDragging = false;
+
+            function moveSlider(x) {
+                let offset = x - slider.getBoundingClientRect().left;
+                let percentage = (offset / slider.offsetWidth) * 100;
+
+                if (percentage < 0) percentage = 0;
+                if (percentage > 100) percentage = 100;
+
+                before.style.width = percentage + "%";
+                handle.style.left = percentage + "%";
+            }
+
+            handle.addEventListener("mousedown", () => (isDragging = true));
+            document.addEventListener("mousemove", (e) => isDragging && moveSlider(e.clientX));
+            document.addEventListener("mouseup", () => (isDragging = false));
+        });
+    </script>
+
+</body>
+</html>
