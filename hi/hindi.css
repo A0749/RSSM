@@ -42,3 +42,9 @@ body a{
 
 }
 
+.footer-content .museum-info .text-link {
+    font-size: calc(min(100vh / 25)) !important;
+    letter-spacing: normal;
+    line-height: 110%;
+    font-family: 'Hind';
+}

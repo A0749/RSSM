@@ -63,7 +63,13 @@ const subjects = [
 
         "बैगा जनजाति की समृद्ध सांस्कृतिक पृष्ठभूमि उनके पहनावे, नृत्यों और अनुष्ठानों में झलकती है, जो मध्य प्रदेश के जनजातीय जीवन के अनूठे और विविध पहलुओं को प्रदर्शित करती है। यह समुदाय अपनी मेहनतकश प्रकृति के लिए जाना जाता है। उनके मनोरंजन में नृत्य और गायन शामिल हैं, और पारंपरिक नृत्यों जैसे कर्मा, लहकी, रीना और सैला का आयोजन होता है। बैगा लोग भूत-प्रेत और जादू-टोने में विश्वास रखते हैं, और उनके देवताओं के पुजारी और भूत भगाने वाले के रूप में भुमका की महत्वपूर्ण भूमिका होती है। ",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "../../assets/images/Tribes/baiga/image-006.jpg", 
+        "../../assets/images/Tribes/baiga/image-007.jpg", 
+        "../../assets/images/Tribes/baiga/image-008.jpg", 
+        "../../assets/images/Tribes/baiga/image-009.jpg", 
+        "../../assets/images/Tribes/baiga/image-0010.jpg"
+      ],
     },
     {
       id: "Bhaina",
@@ -88,7 +94,14 @@ const subjects = [
         "पारंपरिक समारोहों और प्रथाओं के अलावा, भैना जनजाति अपने सांस्कृतिक अभिव्यक्तियों के लिए प्रसिद्ध है। इनके नृत्यों में कर्मा, रहस, रामधुनी और बिहाव तथा गीतों में कर्मागीत, ददरियागीत, रहसगीत, भजन, सुआगीत और बिहाव गीत शामिल हैं। ",
 
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "../../assets/images/Tribes/Bhaina/image-011.jpg", 
+        "../../assets/images/Tribes/Bhaina/image-012.jpg", 
+        "../../assets/images/Tribes/Bhaina/image-013.jpg", 
+        "../../assets/images/Tribes/Bhaina/image-014.jpg", 
+        "../../assets/images/Tribes/Bhaina/image-016.jpg", 
+        "../../assets/images/Tribes/Bhaina/image-016.jpg", 
+      ],
     },
     {
       id: "Bhariya",
@@ -148,7 +161,12 @@ const subjects = [
 
         "त्योहारों में हरियाली, नवा खाई, नागपंचमी, दशहरा, होली और दिवाली मनाई जाती हैं। पारंपरिक नृत्य और लोकगीत भतरा जनजाति की सांस्कृतिक पहचान का हिस्सा हैं। ",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "../../assets/images/Tribes/Bhatra/image-023.jpg", 
+        "../../assets/images/Tribes/Bhatra/image-024.jpg", 
+        "../../assets/images/Tribes/Bhatra/image-025.jpg", 
+        "../../assets/images/Tribes/Bhatra/image-026.jpg"
+      ],
     },
     {
       id: "Bhil",
@@ -217,7 +235,14 @@ const subjects = [
         
 
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "../../assets/images/Tribes/BhilMeena/image-035.jpg", 
+        "../../assets/images/Tribes/BhilMeena/image-036.jpg", 
+        "../../assets/images/Tribes/BhilMeena/image-037.jpg", 
+        "../../assets/images/Tribes/BhilMeena/image-038.jpg", 
+        "../../assets/images/Tribes/BhilMeena/image-039.jpg", 
+        "../../assets/images/Tribes/BhilMeena/image-040.jpg", 
+      ],
     },
     {
       id: "Bhunjiya",

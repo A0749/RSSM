@@ -14,10 +14,13 @@ const subjects = [
         "Diversity is observed in the culture of tribes in different areas of the state, encompassing family structure, marriage customs, kinship, food, clothing, and traditions. The Agariya tribe engages in Karma dance, Padki dance, and marriage dance on various occasions, celebrating festivals like Navakhani, Dussehra, Deepawali, Holi, and Karmapuja. They believe in gods like Budhadev, Lohasur, Thakurdev, Dulhadev, Shitalamata, Baghdev, Jogni, Ghurlapat, as well as Hindu deities, and also acknowledge ghosts and witchcraft. Traditional songs like Karmageet, Dadriya, Suageet, Vivahgeet, Phaggeet, and Bhajan are integral to their cultural expressions.",
       ],
       sliderImages: [
-        "assets/images/Front/gallery4/1.jpeg", 
-        "assets/images/Front/gallery4/1.jpeg", 
-        "assets/images/Front/gallery4/1.jpeg", 
-        "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg", "assets/images/Front/gallery4/1.jpeg"],
+        "assets/images/Tribes/Agaria/image-001.jpg", 
+        "assets/images/Tribes/Agaria/image-002.jpg", 
+        "assets/images/Tribes/Agaria/image-003.jpg", 
+        "assets/images/Tribes/Agaria/image-004.jpg", 
+        "assets/images/Tribes/Agaria/image-005.jpg"
+        
+      ],
     },
     {
       id: "Andh",
@@ -36,7 +39,9 @@ const subjects = [
         "In Maharashtra, the Andh tribe follows different rituals related to birth, naming ceremonies, marriage, and festivals. They worship deities like Maruti, Mahadev, Mari Aai, Mata, Bhimsen, Waghmai, Khandoba, Kanhoba, Masai, Munja, Krishna, with sacrifices of cock and goat. Their main festivals include Akhadi, Gudi Padwa, Nagpanchami, Pola, Dussehra, Diwali, Holi, Mahashivratri, and they hold beliefs in ghosts, witchcraft, and mantra-tantra.",
       
         ],
-      sliderImages: ["Slide A", "Slide B", "Slide C"],
+      sliderImages: [
+        
+      ],
     },
     {
       id: "Baiga",
@@ -49,7 +54,14 @@ const subjects = [
         "Traditional practices during childbirth, marriage, and death are observed within the Baiga tribe. Marriages typically occur between the ages of 14-18 for boys and 12-16 for girls. The tribe celebrates various festivals such as Chhathi, Holi, Pola, Navakhai, Bidri Puja, Dussehra, and Karma Puja. They follow a polytheistic belief system, and their main deities include Thakur Dev, Narayan Dev, Khairmai, and Manpati Mai.",
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "assets/images/Tribes/baiga/image-006.jpg", 
+        "assets/images/Tribes/baiga/image-007.jpg", 
+        "assets/images/Tribes/baiga/image-008.jpg", 
+        "assets/images/Tribes/baiga/image-009.jpg", 
+        "assets/images/Tribes/baiga/image-0010.jpg"
+
+      ],
     },
     {
       id: "Bhaina",
@@ -62,7 +74,15 @@ const subjects = [
         "Traditional practices during childbirth, marriage, and death are observed within the Baiga tribe. Marriages typically occur between the ages of 14-18 for boys and 12-16 for girls. The tribe celebrates various festivals such as Chhathi, Holi, Pola, Navakhai, Bidri Puja, Dussehra, and Karma Puja. They follow a polytheistic belief system, and their main deities include Thakur Dev, Narayan Dev, Khairmai, and Manpati Mai.",
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "assets/images/Tribes/Bhaina/image-011.jpg", 
+        "assets/images/Tribes/Bhaina/image-012.jpg", 
+        "assets/images/Tribes/Bhaina/image-013.jpg", 
+        "assets/images/Tribes/Bhaina/image-014.jpg", 
+        "assets/images/Tribes/Bhaina/image-016.jpg", 
+        "assets/images/Tribes/Bhaina/image-016.jpg", 
+
+      ],
     },
     {
       id: "Bhariya",
@@ -70,7 +90,10 @@ const subjects = [
       paragraphs: [
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        
+
+      ],
     },
     {
       id: "Bhatra",
@@ -78,7 +101,13 @@ const subjects = [
       paragraphs: [
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "assets/images/Tribes/Bhatra/image-023.jpg", 
+        "assets/images/Tribes/Bhatra/image-024.jpg", 
+        "assets/images/Tribes/Bhatra/image-025.jpg", 
+        "assets/images/Tribes/Bhatra/image-026.jpg"
+
+      ],
     },
     {
       id: "Bhil",
@@ -86,7 +115,9 @@ const subjects = [
       paragraphs: [
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        
+      ],
     },
     {
       id: "Bhil-meena",
@@ -94,7 +125,14 @@ const subjects = [
       paragraphs: [
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        "assets/images/Tribes/BhilMeena/image-035.jpg", 
+        "assets/images/Tribes/BhilMeena/image-036.jpg", 
+        "assets/images/Tribes/BhilMeena/image-037.jpg", 
+        "assets/images/Tribes/BhilMeena/image-038.jpg", 
+        "assets/images/Tribes/BhilMeena/image-039.jpg", 
+        "assets/images/Tribes/BhilMeena/image-040.jpg", 
+      ],
     },
     {
       id: "Bhunjiya",
@@ -102,7 +140,9 @@ const subjects = [
       paragraphs: [
         "The Baiga tribe's vibrant cultural environment is reflected in their clothing, dances, and rituals, showcasing a unique and diverse aspect of Madhya Pradesh's tribal world. The community is known for its hardworking nature, and their entertainment includes dancing and singing, with traditional dances like Karma, Lahki, Reena, and Saila. The Baiga people also believe in witchcraft and ghosts, with Bhumka serving as the priest for their deities and exorcist for ghosts.",
       ],
-      sliderImages: ["Content X", "Content Y", "Content Z"],
+      sliderImages: [
+        
+      ],
     },
 
   ];
