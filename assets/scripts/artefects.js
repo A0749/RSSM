@@ -13,12 +13,12 @@ const artifacts = [
     {
       image: "assets/images/artefects/Tora.png",
       category: "Jewellery",
-      description: "An ancient coin from the Roman Empire.",
+      description: "Tora is a piece of jewellery made of Aluminium. It is made by intertwining aluminium wires. It is worn by women of the Gond tribe in regions of Chhindwara and Mandla in their daily lives.",
     },
     {
       image: "assets/images/artefects/RignaOrRing.png",
       category: "Jewellery",
-      description: "An ancient coin from the Roman Empire.",
+      description: "Ring/Rigna is a piece of jewellery made of iron. On the outer surface, the prominent design is mostly circular, like a rope. It is worn by the men of the Gond tribe in regions of Mandla in their daily lives.",
     },
     {
       image: "assets/images/artefects/Kangan.png",

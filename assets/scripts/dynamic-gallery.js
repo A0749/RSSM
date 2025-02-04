@@ -52,16 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gondwana Tribe Galleries
 
       "gond-tribe": [
-          { src: "/assets/images/tribe/gond/gond1.webp", thumb: "/assets/images/tribe/gond/gond1.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond2.webp", thumb: "/assets/images/tribe/gond/gond2.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond3.webp", thumb: "/assets/images/tribe/gond/gond3.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond4.webp", thumb: "/assets/images/tribe/gond/gond4.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond5.webp", thumb: "/assets/images/tribe/gond/gond5.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond6.webp", thumb: "/assets/images/tribe/gond/gond6.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond7.webp", thumb: "/assets/images/tribe/gond/gond7.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond8.webp", thumb: "/assets/images/tribe/gond/gond8.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond9.webp", thumb: "/assets/images/tribe/gond/gond9.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
-          { src: "/assets/images/tribe/gond/gond10.webp", thumb: "/assets/images/tribe/gond/gond10.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/the-GOND-intro.webp", thumb: "/assets/images/tribe/the-GOND-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/social-intro.webp", thumb: "/assets/images/tribe/social-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/religious-intro.webp", thumb: "/assets/images/tribe/religious-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/cultural-intro.webp", thumb: "/assets/images/tribe/cultural-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/cuisine-intro.webp", thumb: "/assets/images/tribe/cuisine-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/paintings-intro.webp", thumb: "/assets/images/tribe/paintings-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/painting-artist-intro.webp", thumb: "/assets/images/tribe/painting-artist-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/ayurveda-intro.webp", thumb: "/assets/images/tribe/ayurveda-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/economic-life-intro.webp", thumb: "/assets/images/tribe/economic-life-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
+          { src: "/assets/images/tribe/architectural-intro.webp", thumb: "/assets/images/tribe/architectural-intro.webp", en: "<p>The Gondwana Tribe</p>", hi: "<p>गोंडवाना जनजाति</p>" },
 
       ],
       "social-life": [
