@@ -118,6 +118,13 @@
     .swipe-portrait{
         padding-bottom: 3rem;
     }
+    .no-show {
+        display: none !important;
+      }
+     .no-show-lg{
+        display: block;
+      }
+     
     
 
 }

@@ -17,6 +17,16 @@ const observerOptions = {
   threshold: 0.5,
 };
 
+// Get current pathname
+const path = window.location.pathname;
+
+// Determine if the current page is the index page
+const isIndexPage = path === '/' || path.endsWith('/index') || path.endsWith('/index.html');
+
+// Identify the first and last sections
+const firstSection = sections[0];
+const lastSection = sections[sections.length - 1];
+
 // Background Transition and Section Reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -27,12 +37,17 @@ const observer = new IntersectionObserver((entries) => {
       // Set the background image of the scroll container dynamically
       container.style.backgroundImage = `url(${bgImage})`;
 
-      // Adjust the gradient direction based on whether the section is odd or even
-      const gradientDirection = isOddSection ? 'to right' : 'to left';
-      gradientOverlay.style.setProperty(
-        'background',
-        `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0))`
-      );
+      // Disable gradient for first and last sections on non-index pages
+      if (!isIndexPage && (entry.target === firstSection || entry.target === lastSection)) {
+        gradientOverlay.style.background = 'none';
+      } else {
+        // Adjust the gradient direction based on whether the section is odd or even
+        const gradientDirection = isOddSection ? 'to right' : 'to left';
+        gradientOverlay.style.setProperty(
+          'background',
+          `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0))`
+        );
+      }
 
       // Reveal the section with animation
       entry.target.classList.add('visible');
@@ -46,6 +61,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
 
 // Helper to check if an element can scroll
 function canScroll(element) {

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Museum Collection - Raja Shankar Shah Kunwar Raghunath Shah Tribal
+      Freedom Fighters Museum, Jabalpur
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/resources/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/resources/swiper-bundle.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.3/css/lightgallery-bundle.min.css"
+      integrity="sha512-uQ9QwIpsBg69ivqexGlFIj47EzEM+ySCTV6oot09ZI7bvsb+RahrkEXSBOTvUXioup7sEFa24h8haLcph+1oDg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body id="tribes-of-mp" class="">
+    <!-- Accessibility Button -->
+    <div id="dynamic-gallery-demo"></div>
+    <div class="tribes-main" id="scroll-container">
+      <div
+        class="section-tribe"
+        style="
+          background-image: url('assets/images/Front/transition/Gallery1.jpg');
+        "
+      >
+        <div class="tribe-content-hero">
+          <!-- Navbar -->
+          <div class="top-nav">
+            <nav class="tribes-navbar">
+              <div class="int-container">
+                <div>
+                  <a class="tribal-central-logo" href="https://tribal.nic.in/">
+                    <img src="./assets/images/logos/tribal-light.png" alt="" />
+                  </a>
+                </div>
+                <div class="navbar-content">
+                  <ul class="navbar-ul">
+                    <li><a href="tribes-of-mp.html">Tribes of MP</a></li>
+                    <li><a href="gond-tribe.html">Gondwana Tribe</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="conservation.html">Conservation</a></li>
+                    <li>
+                      <a href="museum-collection.html">Museum Collection</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <a class="tribal-state-logo" href="https://www.tribal.mp.gov.in/CMS"
+                    ><img src="./assets/images/logos/tribalmp-light.png" alt=""
+                  /></a>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="bread-lang">
+            <div id="breadcrumb"></div>
+            <div id="lang" class="int-btn"></div>
+          </div>
+          <!-- Hero Head -->
+          <div class="tribe-content-head">
+            <div class="tribe-head-inner">
+              <h2>Museum Collection</h2>
+              <h3>Explore the Collection</h3>
+            </div>
+          </div>
+          <!-- Bottom Navbar -->
+          <div class="bottom-navbar">
+            <div class="bottom-content int-container">
+              <div class="museum-text">
+                <a href="index.html" class="text-link">
+                  RAJA SHANKAR SHAH <br />
+                  KUNWAR RAGHUNATH SHAH <br />
+                  TRIBAL FREEDOM FIGHTERS MUSEUM
+                </a>
+              </div>
+              <div class="navigator">
+                <a href="#" class="btn">
+                  <span id="section-info"></span>
+                  <span id="arrow">&#8595;</span>
+                </a>
+              </div>
+              <div class="logo-main">
+                <a href="index.html" class="logo-link">
+                  <img
+                    src="assets/images/logos/main-logo.png"
+                    alt="Museum Logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="section-tribe"
+        style="
+          background-image: url('assets/images/Front/transition/Gallery3.jpg');
+        "
+      >
+        <div class="tribe-content">
+          <div class="collection-section">
+            <!-- Search Bar -->
+            <div class="search-container">
+              <div class="search-text">Search Collection</div>
+              <input type="text" id="search" placeholder="painting..." />
+            </div>
+          
+            <!-- Categories -->
+            <div class="categories-container">
+              <button class="category-btn" data-category="all">All</button>
+              <button class="category-btn" data-category="sculptures">Sculptures</button>
+              <button class="category-btn" data-category="Instruments">Instruments</button>
+              <button class="category-btn" data-category="Garments">Garments</button>
+              <button class="category-btn" data-category="Games">Games</button>
+              <button class="category-btn" data-category="Weapons">Weapons</button>
+              <button class="category-btn" data-category="Jewellery">Jewellery</button>
+              <button class="category-btn" data-category="Accessory">Accessory</button>
+            </div>
+          
+            <div class="grid-container"></div>
+            <button class="load-more int-btn">Load More</button>
+
+
+          
+            <!-- Modal -->
+            <div class="modal" id="artifact-modal">
+              <div class="modal-content">
+                <button class="close-btn">&times;</button>
+                <div class="modal-image">
+                  <img src="" alt="Artifact Image" id="modal-img" />
+                </div>
+                <div class="modal-text">
+                  <h2 id="artifact-title"></h2>
+                  <p id="artifact-description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+      class="section-tribe"
+      id="section-footer"
+      data-bg="assets/images/conservation/1b.JPG"
+    >
+      <div class="content footer-content-outer">
+        <div class="footer">
+          <div class="next">
+            <div class="plan-your-visit">
+              <h3>Plan Your Visit</h3>
+
+              <div class="flex-container-footer">
+                <div class="map-embed">
+                  <a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA"><img src="assets/images/map.png" alt=""></a>
+                </div>
+                <div class="how-to-reach">
+                  <h4>How to Reach</h4>
+                  <p>Opposite Rani Durgabati Hospital (elgin), <br>South Civil Lines <br>Jabalpur, Madhya Pradesh - 482007</p>
+                  <div class="int-btn"><a href="https://maps.app.goo.gl/DPxq8S8RToBFFeAAA">Get Direction</a></div>
+                </div>
+                <div class="museum-status">
+                  <div class="timing">
+                    <div class="time-head"><h4>Hours</h4></div>
+                    <p>Tue-Sun (10:00 AM to 6:00 PM) <br>Closed on Mondays and National Holidays</p>
+
+                  </div>
+                  <div class="entry-fee">
+                    <div class="time-head"><h4>Entry Fee</h4></div>
+                    <ul>
+                      <li><span>Adults:</span><span>20 &#8377;</span></li>
+                      <li><span>Foreign Nationals:</span><span>500 &#8377;</span></li>
+                      <li><span>Students up to class 12th <br> (with ID Cards) :</span><span>Free</span></li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-content">
+            <div class="museum-info">
+              <a href="index.html" class="logo-link">
+                <img
+                  src="assets/images/logos/main-logo.png"
+                  alt="Museum Logo"
+                />
+              </a>
+              <a href="index.html" class="text-link">
+                RAJA SHANKAR SHAH <br />KUNWAR RAGHUNATH SHAH <br />TRIBAL FREEDOM FIGHTERS <br> MUSEUM, JABALPUR
+              </a>     
+            </div>
+            <div class="menu-footer">
+              <h4>History</h4>
+              <ul class="navbar-ul">
+                <li><a href="history/freedom-movement-of-1857.html">Freedom Movement of 1857</a></li>
+                <li><a href="history/martyrdom-story-raja-shankar-shah.html">Martyrdom Story of Raja & Kunwar</a></li>
+                <li><a href="history/the-52nd-regiment.html">The 52nd Regiment</a></li>
+                <li><a href="history/raja-shankar-shah.html">Raja Shankar Shah</a></li>
+                <li><a href="history/kunwar-raghunath-shah.html">Kunwar Raghunath Shah</a></li>
+                
+              </ul>
+            </div>
+            <div class="menu-footer">
+              <h4>Menu</h4>
+              <ul class="navbar-ul">
+                <li><a href="tribes-of-mp.html">Tribes of MP</a></li>
+                <li><a href="gond-tribe.html">Gondwana Tribe</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="conservation.html">Conservation</a></li>
+                <li><a href="collection.html">Museum Collection</a></li>
+              </ul>
+            </div>
+            <div class="quick-links">
+              <h4>Quick Links</h4>
+              <ul class="quick-links-content">
+                <li><a href="https://tribal.nic.in/">Ministry of Tribal Affairs</a></li>
+                <li><a href="https://www.tribal.mp.gov.in/">Tribal Affairs Department, MP</a></li>
+                <li><a href="https://www.intach.org/">Intach</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="copyright" class="copyright"></div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="assets/resources/ScrollTrigger.min.js"></script>
+    <script src="assets/resources/gsap.min.js"></script>
+    <script src="assets/resources/bootstrap.min.js"></script>
+
+    <script src="assets/resources/masonry.pkgd.min.js"></script>
+    <script src="assets/scripts/artefects.js" defer></script>
+    <script src="assets/scripts/main.js" defer></script>
+
+  </body>
+</html>
