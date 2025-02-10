@@ -108,9 +108,6 @@ const subjects = [
     "The original mother tongue of the Bhariya tribe is called \"Bharnoti\" or Bhariadhi, but at present, few use it in its original form. The influence of Gondi is evident in their dialect. The Bhariya tribe celebrates festivals like Vidari, Asadi, Jeevati, Panchami, Diwali, Rahas in Holi, Gunnur in Pola, Vihav in marriages, along with various dance forms such as Saila, Rahas, Gunnur, Bihav, and Phadki. Folk songs like Phag in Holi, Ahirai songs in Diwali, Seva songs in Jawara are prevalent in their culture.",
     "The Bhariya tribe follows a religion based on faith in particular deities. Some of their main gods and goddesses include Hardul Dev, Bada Dev, Thakur Dev, Budhibai, Bhaisasur, along with worship of Hindu deities like Sun God, Nagdev, Vriksha Nadi. They celebrate festivals by offering cocks and goats to the gods. Individuals knowledgeable in Tantra Mantra are called Bhumka.",
     "Dance forms like Shaila in Diwali, Rahas in Holi, Gunnur in Pola, Bihav in marriages are performed by the Bhariya tribe. Women participate in Phadki dance, and major folk songs include Phag, Ahirai, Seva.",
-
-  
-    
 ],
 "sliderImages": [
     "assets/images/Tribes/fwdbharia/image-019.jpg", 
