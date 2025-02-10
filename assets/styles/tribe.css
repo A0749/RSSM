@@ -96,6 +96,7 @@
     width: 15%;
     height: 100vh;
     padding: 2rem 0;
+    overflow: auto;
   }
   .left-side-tribe h1{
     font-size: calc(min(100vh / 32)); /* Restrict the logo size */
