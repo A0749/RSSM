@@ -209,3 +209,23 @@ footer a[href] {
     z-index: 999;
     font-size: 0.8rem;
 }
+
+/* Hide desktop footer on small screens */
+.footer-desktop {
+  display: none;
+}
+
+/* Hide mobile footer on large screens */
+.footer-mobile {
+  display: block;
+}
+
+/* When screen width is 768px or larger */
+@media (min-width: 768px) {
+  .footer-desktop {
+    display: block; /* Show desktop footer */
+  }
+  .footer-mobile {
+    display: none; /* Hide mobile footer */
+  }
+}

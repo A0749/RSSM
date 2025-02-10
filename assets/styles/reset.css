@@ -132,3 +132,15 @@ ul{
   object-fit: cover;
 }
 
+
+/* Hide scrollbar but keep scrolling */
+.left-side-tribe {
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  border-right: 1px solid #555;
+}
+
+.left-side-tribe::-webkit-scrollbar {
+  display: none !important; /* For Chrome, Edge, Safari */
+}
+

@@ -115,3 +115,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth >= 769) return; // Exit if screen is larger than 768px
+
+    // Detect language folder (English or Hindi)
+    const isHindi = window.location.pathname.includes("/hi/");
+    let pathPrefix = isHindi ? "/hi/" : "/";
+
+    // Navbar content for English & Hindi
+    const navbarHTML = `
+        <div class="custom-navbar">
+            <!-- Toggle Button -->
+            <button id="customMenuToggle" class="custom-menu-btn">☰</button>
+
+            <!-- Full-Screen Offcanvas Menu -->
+            <div id="customOffcanvasMenu" class="custom-offcanvas">
+                <button id="customCloseMenu" class="custom-close-btn">&times;</button>
+                <ul class="custom-menu">
+                    <li><a href="${pathPrefix}tribes-of-mp.html">${isHindi ? "म.प्र. की जनजातियाँ" : "Tribes of MP"}</a></li>
+                    <li><a href="${pathPrefix}gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
+                    <li><a href="${pathPrefix}history.html">${isHindi ? "इतिहास" : "History"}</a></li>
+                    <li><a href="${pathPrefix}conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
+                    <li><a href="${pathPrefix}museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
+                </ul>
+            </div>
+        </div>
+    `;
+
+    // Insert navbar at the beginning of the body
+    document.body.insertAdjacentHTML("afterbegin", navbarHTML);
+
+    // Select Elements After Injection
+    const menuToggle = document.getElementById("customMenuToggle");
+    const closeMenu = document.getElementById("customCloseMenu");
+    const offcanvasMenu = document.getElementById("customOffcanvasMenu");
+
+    // Open Menu
+    menuToggle.addEventListener("click", function () {
+        offcanvasMenu.classList.add("show");
+    });
+
+    // Close Menu
+    closeMenu.addEventListener("click", function () {
+        offcanvasMenu.classList.remove("show");
+    });
+});

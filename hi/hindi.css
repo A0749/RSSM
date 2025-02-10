@@ -48,3 +48,21 @@ body a{
     line-height: 110%;
     font-family: 'Hind';
 }
+
+
+@media (max-width: 431px) {
+
+    .header-content .tribal-museum-title p{
+        font-size: calc(min(100vh / 60)) !important;
+    }
+    .int-btn{
+        font-size: 12px;
+    }
+    #scroll-container #section-front .content h1{
+        font-size: calc(min(80vh / 2.8, 77vw / 2.8)) !important;
+        padding-top: 2vh !important;
+
+    }
+    
+
+}

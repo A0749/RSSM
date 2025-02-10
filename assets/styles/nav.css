@@ -120,7 +120,6 @@
 
   @media (max-width: 768px) {
     .bottom-content {
-      flex-direction: column;
       align-items: center;
       text-align: center;
     }
@@ -128,13 +127,82 @@
     .text-link {
       max-width: 100%;
       margin-bottom: 10px;
+      font-size: 1rem;
     }
 
     .logo-link img {
-      max-width: 80px;
+      max-width: 120px;
     }
   }
 
 
-  
-  
+#history-page .custom-menu-btn{
+  top: 8vh;
+  left: 45%;
+
+}
+  /* Style for Toggle Button */
+.custom-menu-btn {
+  position: absolute;
+  top: 8vh;
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  color:#fff;
+  margin-top: 0.4rem;
+}
+
+/* Full-Screen Offcanvas */
+.custom-offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-200%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1050;
+}
+
+/* Show Menu */
+.custom-offcanvas.show {
+  transform: translateX(0);
+}
+
+/* Close Button */
+.custom-close-btn {
+  position: absolute;
+  top: 6vh;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu Links */
+.custom-menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-menu li {
+  margin: 20px 0;
+}
+
+.custom-menu a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}

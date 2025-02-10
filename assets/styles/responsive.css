@@ -29,7 +29,7 @@
     }
     .banner-title{
         width: 100%;
-        padding-top: 2rem;
+        padding-top: 6vh;
     }
     #scroll-container #section-front .content h1 {
         font-size: calc(min(80vh / 3, 100vw / 5.8));
@@ -82,19 +82,19 @@
         flex-direction: column;
         gap: 1rem;
     }
-    .history-navbar .main-logo-second-head{
+    #history-page .main-logo-second-head{
         justify-content: space-between;
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        padding-top: 25vh;
     }
-
     .history-content-inner {
-       
         justify-content: end;
         height: 100vh;
     }
+  
     .history-content-inner h1 {
         font-size: calc(min(100vh / 11));
         line-height: 70%;
@@ -103,28 +103,134 @@
     .history-content-inner h3 {
         font-size: calc(min(100vh / 25));
         font-weight: 200;
-        padding-top: 2rem;
+        padding: 0 !important;
     }
     .swiper{
         width: 100%;
         height: 100%;
     }
+    #history-scroll-container .swiper{
+        height: auto;
+    }
     .history-content-inner .slide-text h3{
         font-size: calc(min(100vh / 40));
     }
+ 
     .history-navbar a{
         font-size: calc(min(12vh / 6));
+    }
+    .main-logo-second-head .logo-link img{
+        max-width: 80px;
     }
     .swipe-portrait{
         padding-bottom: 3rem;
     }
-    .no-show {
+    .no-show, .map-embed, .menu-footer, .quick-links {
         display: none !important;
       }
      .no-show-lg{
         display: block;
       }
-     
+      .flex-container-footer{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+      }
+      .section-footer{
+        height: 200vh;
+      }
+      .int-btn{
+        font-size: 16px;
+        padding: 5px 10px;
+        max-width: 180px;
+      }
+      .footer-content-outer .next{
+        height: 70vh;
+      }
+      .plan-your-visit{
+        height: 70vh;
+      }
+      .footer-content-outer .footer-content{
+        height: 20vh;
+        width: 100%;
+        align-items: center;
+      }
+      .flex-container-footer{
+        justify-content:end;
+      }
+      .flex-container-footer div{
+        width: 100%;
+      }
+      .copyright{
+        font-size: 14px !important;
+      }
+      .left-side-tribe{
+        height: auto;
+        width: 100%;
+      }
+      .tribe-content{
+        flex-direction: column;
+      }
+      .left-side-tribe .nav-tabs{
+        border-radius: 0 !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+    }
+    .right-side-tribe {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .right-side-tribe .tab-content{
+        width: 96%;
+    }
+    .front-page .bread-lang{
+        top: 8vh !important;
+    }
+    
+   
+    .bread-lang{
+        top: 12vh !important;
+        
+
+    }
+    .jump-btn{
+        bottom: 15% !important;
+        left: 27%;
+    }
+    .banner{
+        height: 74vh;
+    }
+    .banner-content{
+        height: 74vh;
+    }
+    #scroll-container #section-front .content{
+        height: 100vh;
+    }
+    .main-footer{
+        display: none;
+    }
+    .navbar-content{
+        display: none;
+    }
+    #s-main-container .history-content-inner h2,
+     .tribe-content-head h2 {
+        font-size: calc(min(100vh / 18));
+        line-height: 70%;
+        font-weight: 700;
+    }
+    #history-page .navigator{
+        display: block;
+    }
+    .navigator{
+        display: none;
+    }
+    .museum-text{
+        text-align: left;
+    }
     
 
 }
