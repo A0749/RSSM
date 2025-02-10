@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isHindi = window.location.pathname.includes("/hi/");
     let pathPrefix = isHindi ? "/hi/" : "/";
 
-    // Navbar content for English & Hindi
+    // Navbar content
     const navbarHTML = `
         <div class="custom-navbar">
             <!-- Toggle Button -->
@@ -138,27 +138,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a href="${pathPrefix}gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
                     <li><a href="${pathPrefix}history.html">${isHindi ? "इतिहास" : "History"}</a></li>
                     <li><a href="${pathPrefix}conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
-                    <li><a href="${pathPrefix}museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
+                    <li><a href="/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
                 </ul>
             </div>
         </div>
     `;
 
-    // Insert navbar at the beginning of the body
-    document.body.insertAdjacentHTML("afterbegin", navbarHTML);
+    // Insert navbar inside the placeholder
+    document.getElementById("customNavbar").innerHTML = navbarHTML;
 
-    // Select Elements After Injection
+    // Select elements after insertion
     const menuToggle = document.getElementById("customMenuToggle");
     const closeMenu = document.getElementById("customCloseMenu");
     const offcanvasMenu = document.getElementById("customOffcanvasMenu");
 
-    // Open Menu
+    // Toggle menu
     menuToggle.addEventListener("click", function () {
-        offcanvasMenu.classList.add("show");
+        offcanvasMenu.classList.toggle("show");
     });
 
-    // Close Menu
+    // Close menu
     closeMenu.addEventListener("click", function () {
         offcanvasMenu.classList.remove("show");
+    });
+
+    // Close menu if user clicks outside of it
+    document.addEventListener("click", function (event) {
+        if (!offcanvasMenu.contains(event.target) && event.target !== menuToggle) {
+            offcanvasMenu.classList.remove("show");
+        }
     });
 });

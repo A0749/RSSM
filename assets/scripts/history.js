@@ -75,17 +75,21 @@ switchSection(currentSectionIndex);
 
 const swiper = new Swiper('.swiper', {
   loop: true,
-  spaceBetween: 20,
+  spaceBetween: 0, // No space between slides
+  centeredSlides: true, // Ensure slides are fully aligned
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
+    320: { slidesPerView: 1 }, // Show only 1 slide at a time
+    480: { slidesPerView: 1 }, 
     767: { slidesPerView: 1 },
-    1024: { slidesPerView: 2 },
+    1024: { slidesPerView: 2 }, // Show 2 slides for larger screens
     1025: { slidesPerView: 4 },
   },
 });
+
 
 
 const slides = document.querySelectorAll('.slide-image-container');

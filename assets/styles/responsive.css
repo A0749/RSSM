@@ -88,11 +88,19 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        padding-top: 25vh;
+        padding-top: 27vh;
+        position: absolute;
+        z-index: 5;
+        left: 2%;
     }
-    .history-content-inner {
+    #history-page #lang{
+        z-index: 4;
+        top: 18vh !important;
+    }
+    #history-page .history-content-inner {
+        height: 85vh;
         justify-content: end;
-        height: 100vh;
+        
     }
   
     .history-content-inner h1 {
@@ -101,7 +109,7 @@
     }
     
     .history-content-inner h3 {
-        font-size: calc(min(100vh / 25));
+        font-size: calc(min(100vh / 35));
         font-weight: 200;
         padding: 0 !important;
     }
@@ -193,8 +201,21 @@
     
    
     .bread-lang{
-        top: 12vh !important;
-        
+        position: static;
+    }
+    #breadcrumb{
+        position: absolute;
+        top: 40vh;
+        display: flex
+    ;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    #lang{
+        position: absolute !important;
+        top: 10vh !important;
+        right: 2% !important;
 
     }
     .jump-btn{
@@ -224,6 +245,7 @@
     }
     #history-page .navigator{
         display: block;
+        padding-top: 8vh;
     }
     .navigator{
         display: none;
@@ -231,6 +253,24 @@
     .museum-text{
         text-align: left;
     }
-    
+
+    /* Tribe */
+    .left-side-tribe{
+        padding: 0;
+        background-color: #010101d6;
+        z-index: 2;
+    }
+    .left-side-tribe #search{
+        display: none;
+    }
+    .swiper-slide{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-way .container .g-card{
+        
+    }
 
 }

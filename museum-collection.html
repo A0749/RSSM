@@ -348,6 +348,8 @@
               </div>
             </nav>
           </div>
+          <div id="customNavbar"></div>
+
           <div class="bread-lang">
             <div id="breadcrumb"></div>
             <div id="lang" class="int-btn"></div>
@@ -1957,7 +1959,9 @@
         slidesPerViewMedium,
         slidesPerGroupMedium,
         slidesPerViewLarge,
-        slidesPerGroupLarge
+        slidesPerGroupLarge,
+        slidesPerViewXLarge,
+        slidesPerGroupXLarge
       ) {
         return new Swiper("." + containerClass, {
           slidesPerView: 1,
@@ -1968,6 +1972,10 @@
             enabled: true,
           },
           breakpoints: {
+            1420: {
+              slidesPerView: slidesPerViewXLarge,
+              slidesPerGroup: slidesPerGroupXLarge,
+            },
             1281: {
               slidesPerView: slidesPerViewLarge,
               slidesPerGroup: slidesPerGroupLarge,
@@ -1997,7 +2005,7 @@
 
       // Initialize Swipers with different configurations
       var swiper1 = initializeSwiper("mySwiper", 1, 1, 3, 3, 4, 4);
-      var swiper2 = initializeSwiper("vert-gallery", 1, 1, 3, 3, 4, 4);
+      var swiper2 = initializeSwiper("vert-gallery", 1, 1, 3, 3, 4, 4, 5, 5);
       var swiper3 = initializeSwiper("vert-gallery2", 1, 1, 3, 3, 5, 5);
       var swiper4 = initializeSwiper("vert-gallery3", 1, 1, 3, 3, 4, 4);
       var swiper5 = initializeSwiper("galleryLast", 1, 1, 3, 3, 4, 4);

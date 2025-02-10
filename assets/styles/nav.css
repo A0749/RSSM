@@ -137,15 +137,15 @@
 
 
 #history-page .custom-menu-btn{
-  top: 8vh;
-  left: 45%;
+  top: 18vh;
+  left: 2%;
 
 }
   /* Style for Toggle Button */
 .custom-menu-btn {
   position: absolute;
-  top: 8vh;
-  left: 20px;
+  top: 10vh;
+  left: 2%;
   font-size: 24px;
   background: none;
   border: none;
