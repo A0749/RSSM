@@ -51,7 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Gondwana Tribe Galleries
 
-      "gond-tribe": [
+      "gond-tribe": [ 
+          { src: "/assets/images/Tribes/gond/image-062.jpg", thumb: "/assets/images/Tribes/gond/image-062.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-063.jpg", thumb: "/assets/images/Tribes/gond/image-063.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-064.jpg", thumb: "/assets/images/Tribes/gond/image-064.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-065.jpg", thumb: "/assets/images/Tribes/gond/image-065.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-066.jpg", thumb: "/assets/images/Tribes/gond/image-066.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-067.jpg", thumb: "/assets/images/Tribes/gond/image-067.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-068.jpg", thumb: "/assets/images/Tribes/gond/image-068.jpg", en: "", hi: "" },
+          { src: "/assets/images/Tribes/gond/image-069.jpg", thumb: "/assets/images/Tribes/gond/image-069.jpg", en: "", hi: "" },
           { src: "/assets/images/tribe/the-GOND-intro.webp", thumb: "/assets/images/tribe/the-GOND-intro.webp", en: "", hi: "" },
           { src: "/assets/images/tribe/social-intro.webp", thumb: "/assets/images/tribe/social-intro.webp", en: "", hi: "" },
           { src: "/assets/images/tribe/religious-intro.webp", thumb: "/assets/images/tribe/religious-intro.webp", en: "", hi: "" },
