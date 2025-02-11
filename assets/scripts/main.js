@@ -169,3 +169,179 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// Create SlickMode Modal Dynamically
+const slickMode = document.createElement("div");
+slickMode.id = "slickmode-modal";
+slickMode.innerHTML = `
+  <div class="slickmode-content">
+    <span class="slickmode-close">&times;</span>
+    <img id="slickmode-image" src="" alt="Fullscreen Image">
+  </div>
+  <button id="slickmode-prev">&#10094;</button>
+  <button id="slickmode-next">&#10095;</button>
+  <div class="zoom-controls">
+    <button id="zoom-out">-</button>
+    <button id="zoom-reset">Reset</button>
+    <button id="zoom-in">+</button>
+  </div>
+`;
+document.body.appendChild(slickMode);
+
+// Select Elements
+const slickModeImage = document.getElementById("slickmode-image");
+const slickModePrev = document.getElementById("slickmode-prev");
+const slickModeNext = document.getElementById("slickmode-next");
+const slickModeClose = document.querySelector(".slickmode-close");
+const zoomInBtn = document.getElementById("zoom-in");
+const zoomOutBtn = document.getElementById("zoom-out");
+const zoomResetBtn = document.getElementById("zoom-reset");
+
+let slickModeImages = [];
+let slickModeIndex = 0;
+let zoomLevel = 1;
+let isDragging = false;
+let startX = 0, startY = 0;
+let currentX = 0, currentY = 0;
+let isSwiperMode = false;
+let swiperInstance = null;
+
+// Open SlickMode Function
+function openSlickMode(images, index) {
+    slickModeImages = images;
+    slickModeIndex = index;
+    slickModeImage.src = slickModeImages[slickModeIndex].src;
+    slickMode.style.display = "flex";
+
+    // Detect if Swiper is being used
+    isSwiperMode = images[0].closest(".swiper-container") ? true : false;
+
+    if (isSwiperMode) {
+        // Find the related Swiper instance
+        swiperInstance = document.querySelector(".swiper-container").swiper;
+    }
+
+    // Show/hide prev/next buttons
+    if (slickModeImages.length > 1) {
+        slickModePrev.style.display = "block";
+        slickModeNext.style.display = "block";
+    } else {
+        slickModePrev.style.display = "none";
+        slickModeNext.style.display = "none";
+    }
+
+    updateZoom(); // Keep zoom level stable when switching images
+}
+
+// Close SlickMode Function
+function closeSlickMode() {
+    slickMode.style.display = "none";
+}
+
+// Change Image Function (Handles Swiper & Standalone)
+function slickModeChange(step) {
+    if (slickModeImages.length <= 1) return; // No change if only one image
+
+    if (isSwiperMode && swiperInstance) {
+        // Control Swiper directly
+        if (step === 1) swiperInstance.slideNext();
+        if (step === -1) swiperInstance.slidePrev();
+        slickModeImage.src = slickModeImages[swiperInstance.realIndex].src;
+    } else {
+        // Regular image switching
+        slickModeIndex = (slickModeIndex + step + slickModeImages.length) % slickModeImages.length;
+        slickModeImage.src = slickModeImages[slickModeIndex].src;
+    }
+
+    updateZoom();
+}
+
+// Zoom Functions
+function zoomImage(factor) {
+    zoomLevel = Math.max(1, Math.min(3, zoomLevel * factor));
+    updateZoom();
+}
+
+function updateZoom() {
+    slickModeImage.style.transform = `scale(${zoomLevel}) translate(${currentX / zoomLevel}px, ${currentY / zoomLevel}px)`;
+    slickModeImage.style.cursor = zoomLevel > 1 ? "grab" : "zoom-in";
+}
+
+// Dragging Functionality for Moving Image
+slickModeImage.addEventListener("mousedown", (e) => {
+    if (zoomLevel === 1) return; // Only allow dragging when zoomed in
+    isDragging = true;
+    startX = e.clientX - currentX;
+    startY = e.clientY - currentY;
+    slickModeImage.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    currentX = e.clientX - startX;
+    currentY = e.clientY - startY;
+    updateZoom();
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    slickModeImage.style.cursor = zoomLevel > 1 ? "grab" : "zoom-in";
+});
+
+// Prevent Image Selection While Dragging
+slickModeImage.addEventListener("dragstart", (e) => e.preventDefault());
+
+// Click Zoom Functionality
+slickModeImage.addEventListener("click", () => {
+    if (zoomLevel === 1) {
+        zoomImage(1.5);
+    }
+});
+
+// Zoom Button Click Events
+zoomInBtn.addEventListener("click", () => zoomImage(1.5));
+zoomOutBtn.addEventListener("click", () => zoomImage(0.67));
+zoomResetBtn.addEventListener("click", () => {
+    zoomLevel = 1;
+    currentX = 0;
+    currentY = 0;
+    updateZoom();
+});
+
+// Attach Click Event to All Images (Handles Swiper & Standalone)
+document.querySelectorAll(".swiper-container, .slickmode").forEach((container) => {
+    container.addEventListener("click", (e) => {
+        if (e.target.tagName === "IMG") {
+            const swiperImages = [...document.querySelectorAll(".swiper-container img")];
+            const standaloneImages = [...document.querySelectorAll(".slickmode")];
+
+            let images, index;
+            if (swiperImages.includes(e.target)) {
+                images = swiperImages;
+            } else {
+                images = [e.target];
+            }
+            index = images.indexOf(e.target);
+            openSlickMode(images, index);
+        }
+    });
+});
+
+// Prev/Next Buttons
+slickModePrev.addEventListener("click", () => slickModeChange(-1));
+slickModeNext.addEventListener("click", () => slickModeChange(1));
+
+// Close on Click & Keyboard Navigation
+slickModeClose.addEventListener("click", closeSlickMode);
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSlickMode();
+    if (e.key === "ArrowLeft") slickModeChange(-1);
+    if (e.key === "ArrowRight") slickModeChange(1);
+});
+
+
+
+
+
+

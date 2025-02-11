@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
      //  Galleries object
   const galleries = {
     // Front Page Galleries
+
+
       "museum": [
           { src: "/assets/images/Front/museum/EastFacade.JPG", thumb: "/assets/images/Front/museum/EastFacade.JPG", en: "", hi: "" },
           { src: "/assets/images/Front/museum/NorthFacade.JPG", thumb: "/assets/images/Front/museum/NorthFacade.JPG", en: "", hi: "" },
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           { src: "/assets/images/Front/museum/1.JPG", thumb: "/assets/images/Front/museum/1.JPG", en: "", hi: "" },
           { src: "/assets/images/Front/museum/4b.JPG", thumb: "/assets/images/Front/museum/4b.JPG", en: "", hi: "" },
       ],
+  
       "gallery-1": [
           { src: "/assets/images/Front/gallery1/1.webp", thumb: "/assets/images/Front/gallery1/1.webp", en: "", hi: "" },
           { src: "/assets/images/Front/gallery1/2.webp", thumb: "/assets/images/Front/gallery1/2.webp", en: "", hi: "" },
