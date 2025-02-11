@@ -195,14 +195,19 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .custom-menu li {
   margin: 20px 0;
+  border-bottom: 1px solid #555;
+  width: 100%;
 }
 
 .custom-menu a {
   color: white;
-  font-size: 2rem;
   text-decoration: none;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
 }

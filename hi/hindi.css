@@ -63,6 +63,8 @@ body a{
         padding-top: 2vh !important;
 
     }
-    
+    .footer-content .museum-info .text-link {
+        font-size: calc(min(100vh / 32)) !important;
+    }
 
 }

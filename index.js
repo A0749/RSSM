@@ -45,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
         const gradientDirection = isOddSection ? 'to right' : 'to left';
         gradientOverlay.style.setProperty(
           'background',
-          `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0))`
+          `linear-gradient(${gradientDirection}, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.2))`
         );
       }
 
