@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayPath = displayPath.replace(/\.[^/.]+$/, '');
 
     // Split path into segments and filter out empty ones
-    const segments = displayPath.split('/').filter(segment => segment !== '' && segment !== 'file:');
+    const segments = displayPath.split('/').filter(segment => segment !== '' && segment !== 'file:' && segment !== 'RSSM');
 
     // ======= ✅ Correct Homepage Logic for GitHub Pages ======= //
     const isHomepage = 
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         langContainer.style.top = 'unset';
         langContainer.style.right = 'unset';
 
-        // Generate breadcrumb
-        let breadcrumbHtml = `<a href="${isGitHubPages ? repoName : ''}/">Home</a>`;
+        // ✅ Fixed Breadcrumb Links
+        let breadcrumbHtml = `<a href="${isGitHubPages ? repoName + (isHindi ? '/hi' : '') : ''}/">Home</a>`;
         let currentPath = '';
 
         segments.forEach((segment, index) => {
@@ -59,31 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index === segments.length - 1) {
                 breadcrumbHtml += ` > <span>${formattedSegment}</span>`;
             } else {
-                breadcrumbHtml += ` > <a href="${fullPath}">${formattedSegment}</a>`;
+                breadcrumbHtml += ` > <a href="${fullPath}.html">${formattedSegment}</a>`;
             }
         });
 
         breadcrumbContainer.innerHTML = breadcrumbHtml;
-
-        // ✅ Attach event listener to breadcrumb links to add `.html` on click
-        breadcrumbContainer.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent default navigation
-
-                let newHref = link.getAttribute('href');
-                if (!newHref.endsWith('.html')) {
-                    newHref += '.html'; // Add .html extension
-                }
-
-                window.location.href = newHref; // Navigate to modified URL
-            });
-        });
     }
 
-    // Set language toggle text
+    // ✅ Fix Language Toggle for GitHub Pages
     langContainer.textContent = isHindi ? 'Switch to English' : 'Switch to हिंदी';
 
-    // ✅ Fix Language Toggle for GitHub Pages
     langContainer.addEventListener('click', () => {
         const url = new URL(window.location.href);
         let newPath;
@@ -114,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : `&copy; 2025 - Raja Shankar Shah Kunwar Raghunath Shah Tribal Freedom Fighters Museum, Jabalpur. All Rights Reserved.`;
     }
 });
+
 
 
 
