@@ -143,6 +143,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     currentSectionIndex = 0; // 🚀 Reset section index
 }
+function smoothScrollToFooter() {
+    let footer = document.getElementById("section-footer"); // Target Footer
+    let footerPosition = footer.offsetTop; // Footer's Position
+    let duration = 0; // Adjust as needed
+
+    // Use Scrollbar.js's scrollTo method
+    scrollbar.scrollTo(0, footerPosition, duration);
+}
+
+// Attach event listener to button
+document.getElementById("scrollToFooterBtn").addEventListener("click", smoothScrollToFooter);
 
 
 
