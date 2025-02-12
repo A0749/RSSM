@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
 
@@ -12,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       "museum": [
-          { src: "/assets/images/Front/museum/EastFacade.JPG", thumb: "/assets/images/Front/museum/EastFacade.JPG", en: "", hi: "" },
+          { src: "/assets/images/Front/museum/EastFacade.JPG", thumb: "/assets/images/Front/museum/EastFacade.JPG", en: "The Museum", hi: "" },
           { src: "/assets/images/Front/museum/NorthFacade.JPG", thumb: "/assets/images/Front/museum/NorthFacade.JPG", en: "", hi: "" },
           { src: "/assets/images/Front/museum/SouthFacade.jpg", thumb: "/assets/images/Front/museum/SouthFacade.jpg", en: "", hi: "" },
           { src: "/assets/images/Front/museum/museum1.jpeg", thumb: "/assets/images/Front/museum/museum1.jpeg", en: "", hi: "" },
@@ -270,6 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Conservation Compare
 
   };
+
+
+  
 
     // Function to fix image paths for GitHub Pages
     function fixImagePaths() {
