@@ -7,8 +7,10 @@
       संरक्षण की कहानी - राजा शंकर शाह - कुँवर रघुनाथ शाह आदिवासी स्वतंत्रता
       सेनानी संग्रहालय, जबलपुर
     </title>
+    <link rel="stylesheet" href="../assets/resources/swiper-bundle.min.css">
     <link rel="stylesheet" href="hindi.css">
     <link rel="stylesheet" href="../style.css" />
+    
 
     <link
       rel="stylesheet"
@@ -18,7 +20,11 @@
       referrerpolicy="no-referrer"
     />
 
+
     <style>
+      .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 5vh;
+      }
       .section-front {
         background: radial-gradient(
           circle,
@@ -208,6 +214,35 @@
           </div>
         </div>
         <div
+          class="section even"
+          id="section3"
+          data-bg="../assets/images/conservation//re3.jpg"
+        >
+        <div class="content content-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider2.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider3.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider4.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider5.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider6.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider7.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider8.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider9.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider10.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider11.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider12.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/conservation/slider/slider13.png" alt=""></div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        </div>
+        </div>
+        <div
           class="section odd"
           id="section-footer"
           data-bg="../assets/images/conservation/1b.JPG"
@@ -328,5 +363,52 @@
     <script src="../index.js"></script>
     <script src="../assets/scripts/dynamic-gallery.js"></script>
     <script src="../assets/scripts/main.js"></script>
+    <script src="../assets/resources/swiper-bundle.min.js"></script>
+
+    <script>
+      // JavaScript (swiper.js)
+document.addEventListener("DOMContentLoaded", function () {
+    const swipers = document.querySelectorAll(".content .swiper-container");
+    swipers.forEach((container) => {
+        new Swiper(container, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: container.querySelector(".swiper-pagination"),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: container.querySelector(".swiper-button-next"),
+                prevEl: container.querySelector(".swiper-button-prev"),
+            },
+        });
+    });
+
+    const sections = document.querySelectorAll(".scroll-container .section");
+    const options = {
+        root: null,
+        threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const content = entry.target.querySelector(".content");
+            if (entry.isIntersecting) {
+                content.style.visibility = "visible";
+                content.style.opacity = "1";
+            } else {
+                content.style.visibility = "hidden";
+                content.style.opacity = "0";
+            }
+        });
+    }, options);
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+});
+
+    </script>
   </body>
 </html>
