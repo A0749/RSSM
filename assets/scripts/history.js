@@ -6,6 +6,12 @@ const sectionInfo = document.getElementById("section-info");
 const arrow = document.getElementById("arrow");
 
 let currentSectionIndex = 0;
+let lastScrollTime = 0; // Prevent multiple scrolls in one rotation
+
+// Function to get the current language
+function getLanguage() {
+  return document.body.getAttribute("data-lang") || "en"; // Default to English
+}
 
 // Function to switch sections
 function switchSection(index) {
@@ -22,13 +28,22 @@ function switchSection(index) {
   // Update the current section index
   currentSectionIndex = index;
 
-  // Update the button content based on the current section
+  // Get current language
+  const lang = getLanguage();
+
+  // Update section info text and arrow based on the section
   if (currentSectionIndex === 0) {
-    sectionInfo.textContent = "The 52nd Regiment";
-    arrow.innerHTML = "&#8595;"; // Down arrow for section 1
+    sectionInfo.textContent =
+      lang === "hi" ? "बावनवीं पलटन" : "The 52nd Regiment";
+    arrow.innerHTML = "&#8595;"; // Down arrow
+  } else if (currentSectionIndex === 1) {
+    sectionInfo.textContent =
+      lang === "hi" ? "गोंड राजवंश" : "The Gond Dynasty";
+    arrow.innerHTML = "&#8595;"; // Down arrow for middle section
   } else {
-    sectionInfo.textContent = "The Gond Dynasty";
-    arrow.innerHTML = "&#8593;"; // Up arrow for section 2
+    sectionInfo.textContent =
+      lang === "hi" ? "शहीदों की सूची" : "List of Martyrs";
+    arrow.innerHTML = "&#8593;"; // Up arrow for last section
   }
 }
 
@@ -41,8 +56,12 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Handle mouse scroll navigation
+// Handle mouse scroll navigation (one section per wheel rotation)
 document.addEventListener("wheel", (e) => {
+  const now = new Date().getTime();
+  if (now - lastScrollTime < 400) return; // Prevent multiple triggers in one rotation
+  lastScrollTime = now; // Update last scroll time
+
   if (e.deltaY > 0) {
     switchSection(currentSectionIndex + 1);
   } else {
@@ -50,29 +69,29 @@ document.addEventListener("wheel", (e) => {
   }
 });
 
-// Add click event listeners to navigation items
+// Add click event listeners to navigation items (Instant)
 navItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     switchSection(index);
   });
 });
 
-// Add click event listener for the button
+// Add click event listener for the button (Instant)
 informerBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default action (page reload)
-  
-  // Switch to the next section when the button is clicked
-  if (currentSectionIndex === 0) {
-    switchSection(1); // Move to section 2
+  e.preventDefault(); // Prevent default action
+
+  // Move to the next section instantly when button is clicked
+  if (currentSectionIndex < historySections.length - 1) {
+    switchSection(currentSectionIndex + 1);
   } else {
-    switchSection(0); // Move back to section 1
+    switchSection(0); // Loop back to the first section
   }
 });
 
 // Initialize the first section
 switchSection(currentSectionIndex);
 
-
+// Swiper Initialization
 const swiper = new Swiper('.swiper', {
   loop: true,
   spaceBetween: 20,
@@ -85,17 +104,4 @@ const swiper = new Swiper('.swiper', {
     1024: { slidesPerView: 2 },
     1025: { slidesPerView: 4 },
   },
-});
-
-
-const slides = document.querySelectorAll('.slide-image-container');
-
-slides.forEach(slide => {
-  slide.addEventListener('mouseenter', () => {
-    slide.querySelector('.moon').style.opacity = '1';
-  });
-
-  slide.addEventListener('mouseleave', () => {
-    slide.querySelector('.moon').style.opacity = '0';
-  });
 });

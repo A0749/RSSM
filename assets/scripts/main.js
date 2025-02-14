@@ -5,28 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyrightContainer = document.getElementById('copyright');
     let path = window.location.pathname;
 
-    // GitHub Pages repository name
     const repoName = '/RSSM';
-
-    // Check if running inside GitHub Pages
     const isGitHubPages = path.startsWith(repoName);
-
-    // Check if the current path is in Hindi
     const isHindi = path.includes('/hi/');
     let displayPath = path;
 
-    // Remove `/hi/` prefix if it exists
     if (isHindi) {
         displayPath = path.replace('/hi/', '/');
     }
 
-    // Remove file extensions like `.html`
     displayPath = displayPath.replace(/\.[^/.]+$/, '');
-
-    // Split path into segments and filter out empty ones
     const segments = displayPath.split('/').filter(segment => segment !== '' && segment !== 'file:' && segment !== 'RSSM');
 
-    // ======= ✅ Correct Homepage Logic for GitHub Pages ======= //
     const isHomepage = 
         path === '/' || path === '/index.html' ||         
         path === repoName + '/' || path === repoName + '/index.html' ||  
@@ -43,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         langContainer.style.top = 'unset';
         langContainer.style.right = 'unset';
 
-        // ✅ Fixed Breadcrumb Links
         let breadcrumbHtml = `<a href="${isGitHubPages ? repoName + (isHindi ? '/hi' : '') : ''}/">Home</a>`;
         let currentPath = '';
 
@@ -51,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const formattedSegment = segment.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
             currentPath += `/${segment}`;
 
-            // ✅ Ensure correct breadcrumb links for GitHub Pages
             const fullPath = isHindi 
                 ? `${isGitHubPages ? repoName : ''}/hi${currentPath}` 
                 : `${isGitHubPages ? repoName : ''}${currentPath}`;
@@ -66,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         breadcrumbContainer.innerHTML = breadcrumbHtml;
     }
 
-    // ✅ Fix Language Toggle for GitHub Pages
     langContainer.textContent = isHindi ? 'Switch to English' : 'Switch to हिंदी';
 
     langContainer.addEventListener('click', () => {
@@ -74,25 +61,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let newPath;
 
         if (isHindi) {
-            // Remove "/hi/" from the path
             newPath = url.pathname.replace('/hi/', '/');
         } else {
-            // ✅ Correctly insert "/hi/" inside "/RSSM/"
-            if (isGitHubPages) {
-                newPath = repoName + '/hi' + url.pathname.replace(repoName, '');
-            } else {
-                newPath = '/hi' + url.pathname;
-            }
+            newPath = isGitHubPages 
+                ? repoName + '/hi' + url.pathname.replace(repoName, '') 
+                : '/hi' + url.pathname;
         }
 
-        // ✅ Normalize the path (remove duplicate slashes)
         newPath = newPath.replace(/\/+/g, '/');
 
-        // Redirect to the new path
-        window.location.href = url.origin + newPath;
+        // Check if the Hindi version exists before redirecting
+        fetch(newPath, { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = url.origin + newPath;
+                } else {
+                    alert("This page is not available in Hindi.");
+                }
+            })
+            .catch(() => {
+                alert("This page is not available in Hindi.");
+            });
     });
 
-    // Update copyright based on language
     if (copyrightContainer) {
         copyrightContainer.innerHTML = isHindi
             ? `&copy; 2025 - राजा शंकर शाह कुंवर रघुनाथ शाह आदिवासी स्वतंत्रता सेनानी संग्रहालय, जबलपुर। सभी अधिकार सुरक्षित।`
@@ -103,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Mobile Custom Nav
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth >= 769) return; // Exit if screen is larger than 768px
 
@@ -157,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Create SlickMode Modal Dynamically
+//  SlickMode Modal Dynamically
 const slickMode = document.createElement("div");
 slickMode.id = "slickmode-modal";
 slickMode.innerHTML = `
@@ -325,9 +317,6 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") slickModeChange(-1);
     if (e.key === "ArrowRight") slickModeChange(1);
 });
-
-
-
 
 
 

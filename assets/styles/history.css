@@ -35,7 +35,7 @@
 /* Line between Sections */
 .section-nav-line {
   width: 1px;
-  height: 20vh; /* Adjust based on your design */
+  height: 12vh; /* Adjust based on your design */
   background-color: #fff;
   transition: all 0.3s;
 }
@@ -199,6 +199,9 @@
 #scroll-container .content-img{
   flex-direction: column;
 
+}
+#scroll-container .content-slider{
+  background: #000000;
 }
 #scroll-container .content-slider,
 #scroll-container .content-img{

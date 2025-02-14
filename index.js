@@ -1,7 +1,6 @@
-let scrollbar; // Declare globally
+let scrollbar; 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize Smooth Scrollbar (Only Once)
     let scrollContainer = document.getElementById("scroll-container");
     scrollbar = Scrollbar.get(scrollContainer);
 
@@ -19,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSectionIndex = 0;
     let isScrolling = false;
 
-    // Get current pathname
-    const path = window.location.pathname.replace(/\/$/, ''); // Remove trailing slash
+    const path = window.location.pathname.replace(/\/$/, ''); 
     const isIndexPage =
       path === '' ||  
       path === '/' ||  
@@ -30,11 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       path === '/RSSM/index' ||  
       path === '/RSSM/index.html';
     
-    // Identify first and last sections
     const firstSection = sections[0];
     const lastSection = sections[sections.length - 1];
 
-    // Intersection Observer for Background Transition & Section Reveal
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -63,15 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { root: null, rootMargin: '0px', threshold: 0.5 });
 
-    // Observe sections
     sections.forEach(section => observer.observe(section));
 
-    // Mousewheel event listener for section scrolling
     document.addEventListener('wheel', (event) => {
         if (isScrolling) return;
         isScrolling = true;
 
-        setTimeout(() => { isScrolling = false; }, 600); // Prevent multiple triggers
+        setTimeout(() => { isScrolling = false; }, 600); 
 
         const currentSection = sections[currentSectionIndex];
         const content = currentSection.querySelector('.right-side-tribe');
@@ -81,23 +75,20 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Scroll between sections
         if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
             currentSectionIndex++;
         } else if (event.deltaY < 0 && currentSectionIndex > 0) {
             currentSectionIndex--;
         }
 
-        scrollbar.scrollTo(0, sections[currentSectionIndex].offsetTop, 600);
+        scrollbar.scrollTo(0, sections[currentSectionIndex].offsetTop, 600); 
     });
 
-    // Create "Go to Top" button dynamically
     let goTopBtn = document.createElement("button");
     goTopBtn.id = "goTopBtn";
     goTopBtn.innerText = "↑ Top";
     document.body.appendChild(goTopBtn);
 
-    // Style the "Go to Top" button
     Object.assign(goTopBtn.style, {
         position: "fixed",
         bottom: "5vh",
@@ -115,51 +106,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Get the height of the first two sections for Go to Top visibility
-    let scrollThreshold = 0;
-    if (sections.length >= 2) {
-        scrollThreshold = sections[0].offsetHeight + sections[1].offsetHeight;
-    }
+   
+    let scrollThreshold = sections.length > 0 ? sections[0].offsetHeight : 0;
 
-    function smoothScrollToTop() {
-        if (scrollbar) {
-            scrollbar.setPosition(0, 0); // 🚀 Instantly jump to top (no animation)
-        } else {
-            window.scrollTo(0, 0); // 🚀 Native fallback for instant jump
+
+    function smoothScrollToSection(sectionId) {
+        let targetSection = document.getElementById(sectionId);
+        if (!targetSection) {
+            console.warn(`Section with ID '${sectionId}' not found.`);
+            return;
         }
-
-        currentSectionIndex = 0; // 🚀 Reset section index
+    
+        // Instantly update the section index
+        currentSectionIndex = Array.from(sections).indexOf(targetSection);
+    
+        // Instantly scroll to the section just like goTopBtn
+        scrollbar.setPosition(0, targetSection.offsetTop);
+    
+        // Reset any scrolling state to avoid issues
+        isScrolling = false;
     }
-
-    // Attach event listener to Go to Top button
-    goTopBtn.addEventListener("click", smoothScrollToTop);
+    
+    const sectionMap = {
+        scrollToFooterBtn: "section-footer",
+        scrollToGeneologyBtn: "section-geneology",
+        scrollToServicesBtn: "services-section",
+        scrollToContactBtn: "contact-section"
+    };
+    
+    Object.entries(sectionMap).forEach(([btnId, sectionId]) => {
+        document.getElementById(btnId)?.addEventListener("click", () => smoothScrollToSection(sectionId));
+    });
+    
 
     // Show/hide Go to Top button after scrolling past two sections
     scrollbar.addListener(({ offset }) => {
-        if (offset.y > scrollThreshold) {
-            goTopBtn.style.opacity = "1";
-            goTopBtn.style.visibility = "visible";
-        } else {
-            goTopBtn.style.opacity = "0";
-            goTopBtn.style.visibility = "hidden";
-        }
+        goTopBtn.style.opacity = offset.y > scrollThreshold ? "1" : "0";
+        goTopBtn.style.visibility = offset.y > scrollThreshold ? "visible" : "hidden";
     });
+
+    goTopBtn.addEventListener("click", () => smoothScrollToSection(sections[0].id));
 });
-
-// **✅ FIXED smoothScrollToFooter**
-function smoothScrollToFooter() {
-    let footer = document.getElementById("section-footer"); // Target Footer
-
-    if (!scrollbar) {
-        console.warn("Scrollbar is not initialized.");
-        return;
-    }
-
-    let footerPosition = footer.offsetTop; // Footer's Position
-    let duration = 600; // Adjust as needed
-
-    // Use Scrollbar.js's scrollTo method
-    scrollbar.scrollTo(0, footerPosition, duration);
-}
-
-// Attach event listener to button
-document.getElementById("scrollToFooterBtn").addEventListener("click", smoothScrollToFooter);
