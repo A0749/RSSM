@@ -1102,10 +1102,9 @@ const subjects = [
     `;
   });
   
-  // Initialize Swiper for each dynamically added slider within #tribes-of-mp
   subjects.forEach(subject => {    new Swiper(`#tribes-of-mp .swiper-${subject.id}`, {      loop: true,
-      slidesPerView: 1, // Number of slides visible per screen
-      spaceBetween: 10, // Space between slides in pixels
+      slidesPerView: 1, 
+      spaceBetween: 10, 
       breakpoints: {        640: { slidesPerView: 1, spaceBetween: 20 },
         768: { slidesPerView: 2, spaceBetween: 30 },
       },
@@ -1119,7 +1118,6 @@ const subjects = [
   });
   
   
-  // Optional: Add search functionality
   const searchInput = document.getElementById("search");
   if (searchInput) {    searchInput.addEventListener("input", (e) => {      const searchTerm = e.target.value.toLowerCase();
       document.querySelectorAll(".nav-item").forEach((item) => {        const subjectTitle = item.textContent.toLowerCase();

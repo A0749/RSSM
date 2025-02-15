@@ -6,44 +6,37 @@ const sectionInfo = document.getElementById("section-info");
 const arrow = document.getElementById("arrow");
 
 let currentSectionIndex = 0;
-let lastScrollTime = 0; // Prevent multiple scrolls in one rotation
+let lastScrollTime = 0; 
 
-// Function to get the current language
 function getLanguage() {
-  return document.body.getAttribute("data-lang") || "en"; // Default to English
+  return document.body.getAttribute("data-lang") || "en"; 
 }
 
-// Function to switch sections
 function switchSection(index) {
   if (index < 0 || index >= historySections.length) return;
 
-  // Remove active class from all sections and nav items
   historySections.forEach((section) => section.classList.remove("active"));
   navItems.forEach((item) => item.classList.remove("active"));
 
-  // Add active class to the current section and nav item
   historySections[index].classList.add("active");
   navItems[index].classList.add("active");
 
-  // Update the current section index
   currentSectionIndex = index;
 
-  // Get current language
   const lang = getLanguage();
 
-  // Update section info text and arrow based on the section
   if (currentSectionIndex === 0) {
     sectionInfo.textContent =
       lang === "hi" ? "बावनवीं पलटन" : "The 52nd Regiment";
-    arrow.innerHTML = "&#8595;"; // Down arrow
+    arrow.innerHTML = "&#8595;"; 
   } else if (currentSectionIndex === 1) {
     sectionInfo.textContent =
       lang === "hi" ? "गोंड राजवंश" : "The Gond Dynasty";
-    arrow.innerHTML = "&#8595;"; // Down arrow for middle section
+    arrow.innerHTML = "&#8595;"; 
   } else {
     sectionInfo.textContent =
       lang === "hi" ? "शहीदों की सूची" : "List of Martyrs";
-    arrow.innerHTML = "&#8593;"; // Up arrow for last section
+    arrow.innerHTML = "&#8593;"; 
   }
 }
 
@@ -56,11 +49,11 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Handle mouse scroll navigation (one section per wheel rotation)
+
 document.addEventListener("wheel", (e) => {
   const now = new Date().getTime();
-  if (now - lastScrollTime < 400) return; // Prevent multiple triggers in one rotation
-  lastScrollTime = now; // Update last scroll time
+  if (now - lastScrollTime < 400) return; 
+  lastScrollTime = now; 
 
   if (e.deltaY > 0) {
     switchSection(currentSectionIndex + 1);
@@ -69,22 +62,19 @@ document.addEventListener("wheel", (e) => {
   }
 });
 
-// Add click event listeners to navigation items (Instant)
 navItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     switchSection(index);
   });
 });
 
-// Add click event listener for the button (Instant)
 informerBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default action
+  e.preventDefault(); 
 
-  // Move to the next section instantly when button is clicked
   if (currentSectionIndex < historySections.length - 1) {
     switchSection(currentSectionIndex + 1);
   } else {
-    switchSection(0); // Loop back to the first section
+    switchSection(0);
   }
 });
 

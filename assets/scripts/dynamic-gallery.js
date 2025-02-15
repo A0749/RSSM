@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
 
-  // Detect if running on GitHub Pages
-  const repoName = "/RSSM"; // Change this if your repo name is different
+  const repoName = "/RSSM"; 
   const isGitHubPages = window.location.hostname === "a0749.github.io";
 
-  //  Galleries object (with dynamic path correction)
-   //  Galleries object
+  
+  
 const galleries = {
   // Front Page Galleries
 
@@ -274,7 +273,6 @@ const galleries = {
 
 
 
-  // Function to fix image paths for GitHub Pages
   function fixImagePaths() {
       if (isGitHubPages) {
           Object.keys(galleries).forEach(key => {
@@ -287,15 +285,12 @@ const galleries = {
       }
   }
 
-  // Apply fix before initializing the gallery
   fixImagePaths();
 
-  // Function to detect language
   function detectLanguage() {
       return window.location.pathname.includes("/hi/") ? "hi" : "en";
   }
 
-  // Function to initialize the gallery dynamically
   function initializeGallery(buttonId) {
       const lang = detectLanguage();
       const galleryData = galleries[buttonId].map(item => ({
@@ -313,7 +308,6 @@ const galleries = {
       dynamicGallery.openGallery(0);
   }
 
-  // Attach event listeners to all gallery buttons
   document.querySelectorAll("[data-gallery]").forEach(button => {
       button.addEventListener("click", () => {
           initializeGallery(button.dataset.gallery);

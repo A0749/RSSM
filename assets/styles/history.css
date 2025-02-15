@@ -29,23 +29,21 @@
 /* Active Section Styling */
 .section-nav-item.active {
   color: #fff;
-  border: 1px solid #f0a500; /* Circle border */
+  border: 1px solid #f0a500; 
 }
 
 /* Line between Sections */
 .section-nav-line {
   width: 1px;
-  height: 12vh; /* Adjust based on your design */
+  height: 12vh; 
   background-color: #fff;
   transition: all 0.3s;
 }
 
-/* Styling the section numbers on hover */
 .section-nav-item:hover {
   color: #fff;
 }
 
-/* Connect the line to both sections */
 .section-nav-item:last-child {
   margin-bottom: 0;
 }

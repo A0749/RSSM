@@ -190,41 +190,41 @@ const artifacts = [
  
   ];
 
-// Utility function to generate ID from image name
+//  Generate ID from image name
 function generateIdFromName(name) {
   return name
     .toLowerCase()
     .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9\-]/g, ""); // Convert to lowercase, replace spaces with '-', and remove invalid characters
+    .replace(/[^a-z0-9\-]/g, ""); 
 }
 
 // Utility function to extract and format artifact name from the image name
 function getArtifactNameFromImage(imagePath) {
-  const fileName = imagePath.split("/").pop().split(".")[0]; // Extract the file name without extension
+  const fileName = imagePath.split("/").pop().split(".")[0]; 
   return fileName
-    .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space between camel case
-    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
+    .replace(/([a-z])([A-Z])/g, "$1 $2") 
+    .replace(/\b\w/g, (char) => char.toUpperCase()); 
 }
 
 // Enhance artifact data by dynamically adding IDs and names
 artifacts.forEach((artifact) => {
   const name = getArtifactNameFromImage(artifact.image);
-  artifact.name = name; // Set the formatted name
-  artifact.id = generateIdFromName(name); // Generate the ID based on the name
+  artifact.name = name; 
+  artifact.id = generateIdFromName(name); 
 });
 
-const ROW_LIMIT = 4; // Limit on the number of rows displayed
+const ROW_LIMIT = 4; 
 let currentCategory = "all";
 let currentSearchQuery = "";
-let currentArtifacts = []; // Filtered artifacts array
-let visibleRows = 0; // Track visible rows
+let currentArtifacts = []; 
+let visibleRows = 0; 
 
 function loadArtifacts(category = "all", searchQuery = "", reset = true) {
   const container = document.querySelector(".grid-container");
 
   if (reset) {
-    container.innerHTML = ""; // Clear previous items
-    visibleRows = 0; // Reset visible rows
+    container.innerHTML = ""; 
+    visibleRows = 0; 
     currentArtifacts = artifacts.filter(
       (artifact) =>
         (category === "all" || artifact.category === category) &&
@@ -232,7 +232,7 @@ function loadArtifacts(category = "all", searchQuery = "", reset = true) {
     );
   }
 
-  const itemsPerRow = Math.floor(container.offsetWidth / 200); // Approximate items per row based on width
+  const itemsPerRow = Math.floor(container.offsetWidth / 200); 
   const totalItemsToShow = (visibleRows + ROW_LIMIT) * itemsPerRow;
   const artifactsToShow = currentArtifacts.slice(0, totalItemsToShow);
 
@@ -240,7 +240,7 @@ function loadArtifacts(category = "all", searchQuery = "", reset = true) {
     const rowClass = index % 2 === 0 ? "row-horizontal" : "row-vertical";
     let row = container.querySelector(`.${rowClass}`);
 
-    // Create a new container for the row if not already present
+    
     if (!row) {
       row = document.createElement("div");
       row.classList.add(rowClass);
@@ -262,9 +262,9 @@ function loadArtifacts(category = "all", searchQuery = "", reset = true) {
     row.appendChild(artifactEl);
   });
 
-  visibleRows += ROW_LIMIT; // Update visible rows count
+  visibleRows += ROW_LIMIT; 
 
-  // Show or hide Load More button
+  
   const loadMoreBtn = document.querySelector(".load-more");
   if (currentArtifacts.length > artifactsToShow.length) {
     loadMoreBtn.style.display = "block";
@@ -273,30 +273,30 @@ function loadArtifacts(category = "all", searchQuery = "", reset = true) {
   }
 }
 
-// Initial load
+
 loadArtifacts();
 
-// Event listeners for filtering and search
+
 document.querySelectorAll(".category-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     currentCategory = btn.dataset.category;
-    currentSearchQuery = ""; // Clear search query
-    document.getElementById("search").value = ""; // Reset search input
+    currentSearchQuery = ""; 
+    document.getElementById("search").value = ""; 
     loadArtifacts(currentCategory);
   });
 });
 
 document.getElementById("search").addEventListener("input", (e) => {
-  currentSearchQuery = e.target.value; // Update search query
+  currentSearchQuery = e.target.value; 
   loadArtifacts(currentCategory, currentSearchQuery);
 });
 
-// Event listener for Load More button
+
 document.querySelector(".load-more").addEventListener("click", () => {
   loadArtifacts(currentCategory, currentSearchQuery, false);
 });
 
-// Modal functionality
+// Modal 
 document.addEventListener("click", (e) => {
   if (e.target.closest(".artifact")) {
     const artifactId = e.target.closest(".artifact").dataset.id;

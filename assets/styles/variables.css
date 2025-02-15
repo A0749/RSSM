@@ -1,6 +1,6 @@
 /* Root Variables */
 :root {
-    --font-size-base: 1rem; /* Default 16px */
+    --font-size-base: 1rem; 
     --font-size-small: calc(var(--font-size-base) * 0.875);
     --font-size-normal: calc(var(--font-size-base) * 1);
     --font-size-medium: calc(var(--font-size-base) * 1.15);

@@ -217,17 +217,16 @@ function closeSlickMode() {
     slickMode.style.display = "none";
 }
 
-// Change Image Function (Handles Swiper & Standalone)
+
 function slickModeChange(step) {
-    if (slickModeImages.length <= 1) return; // No change if only one image
+    if (slickModeImages.length <= 1) return; 
 
     if (isSwiperMode && swiperInstance) {
-        // Control Swiper directly
+       
         if (step === 1) swiperInstance.slideNext();
         if (step === -1) swiperInstance.slidePrev();
         slickModeImage.src = slickModeImages[swiperInstance.realIndex].src;
     } else {
-        // Regular image switching
         slickModeIndex = (slickModeIndex + step + slickModeImages.length) % slickModeImages.length;
         slickModeImage.src = slickModeImages[slickModeIndex].src;
     }

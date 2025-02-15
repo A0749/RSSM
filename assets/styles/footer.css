@@ -17,7 +17,7 @@
   border-bottom: 1px dotted #555;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  font-size: calc(min(100vh / 35)) !important; /* Dynamically scale text */
+  font-size: calc(min(100vh / 35)) !important; 
   color: #fff;
 
 }
@@ -53,7 +53,7 @@
     align-items: center;
 }
 .footer-content .museum-info .text-link{
-  font-size: calc(min(100vh / 35)) !important; /* Dynamically scale text */
+  font-size: calc(min(100vh / 35)) !important; 
   letter-spacing: normal;
   font-family: 'Jockey';
   font-weight: 100;
@@ -66,7 +66,7 @@
 
 .footer-content-outer .footer-content p,
 .footer-content-outer .footer-content  a{
-    font-size: calc(min(100vh / 50)) !important; /* Dynamically scale text */
+    font-size: calc(min(100vh / 50)) !important; 
     font-family:'Hind' ;
     letter-spacing: 1px;
     
@@ -96,7 +96,7 @@
     border-top: 1px solid #555;
     text-align: center;
     width: 100%;
-    font-size: calc(min(100vh / 50)) !important; /* Dynamically scale text */
+    font-size: calc(min(100vh / 50)) !important; 
     font-family: 'Hind';
     height: 10vh;
     display: flex;
@@ -131,12 +131,12 @@ footer a[href] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px; /* Rectangle width */
-    height: 20px; /* Rectangle height */
-    background-color: transparent; /* Background color of the rectangle */
-    color: #fff; /* Arrow color */
+    width: 20px; 
+    height: 20px; 
+    background-color: transparent; 
+    color: #fff; 
     font-size: 1.5rem;
-    border-radius: 3px; /* Optional, for rounded rectangle */
+    border-radius: 3px; 
     opacity: 0;
     transition: opacity 0.3s ease, right 0.3s ease;
   }
@@ -145,7 +145,7 @@ footer a[href] {
   .footer a[href]:hover::after,
   footer a[href]:hover::after {
     opacity: 1;
-    right: -24px; /* Adjust distance on hover */
+    right: -24px; 
   }
 
   .plan-your-visit{
@@ -172,7 +172,7 @@ footer a[href] {
   }
   .flex-container-footer .how-to-reach p{
     font-family: 'Hind';
-    font-size: calc(min(100vh / 50)) !important; /* Dynamically scale text */
+    font-size: calc(min(100vh / 50)) !important; 
 
   }
   .entry-fee .time-head,
@@ -193,7 +193,7 @@ footer a[href] {
   .timing p,
   .entry-fee ul li span{
     font-family: 'Hind' !important;
-    font-size: calc(min(100vh / 50)) !important; /* Dynamically scale text */
+    font-size: calc(min(100vh / 50)) !important; 
 
   }
   .entry-fee ul li {
@@ -210,23 +210,20 @@ footer a[href] {
     font-size: 0.8rem;
 }
 
-/* Hide desktop footer on small screens */
 .footer-desktop {
   display: none;
 }
 
-/* Hide mobile footer on large screens */
 .footer-mobile {
   display: block;
 }
 
-/* When screen width is 768px or larger */
 @media (min-width: 768px) {
   .footer-desktop {
-    display: block; /* Show desktop footer */
+    display: block;
   }
   .footer-mobile {
-    display: none; /* Hide mobile footer */
+    display: none; 
   }
 }
 
@@ -258,7 +255,6 @@ footer a[href] {
   width: 100%;
 }
 
-/* Image Zoom Effect */
 #slickmode-image {
   max-width: 100%;
   max-height: 100%;
@@ -269,7 +265,6 @@ footer a[href] {
   width: auto;
 }
 
-/* Close Button */
 .slickmode-close {
   position: absolute;
   top: 15px;
@@ -280,7 +275,6 @@ footer a[href] {
   z-index: 10;
 }
 
-/* Navigation Buttons */
 #slickmode-prev, #slickmode-next {
   position: absolute;
   top: 50%;
@@ -296,7 +290,6 @@ footer a[href] {
 #slickmode-prev { left: 20px; }
 #slickmode-next { right: 20px; }
 
-/* Zoom Controls */
 .zoom-controls {
   position: absolute;
   bottom: 20px;

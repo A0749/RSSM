@@ -41,7 +41,7 @@
   font-weight: 300;
   margin-top: 10px;
   color: #e3e3e3;
-  display: none; /* Initially hidden */
+  display: none; 
 }
 
 .description {
@@ -55,15 +55,14 @@
 }
 
 .person-card.active .description {
-  max-height: 100px; /* Adjust based on expected content size */
+  max-height: 100px; 
   opacity: 1;
   padding: 10px 0;
 }
 
 .person-card.active .sources {
-  display: block; /* Show sources when the description is active */
+  display: block; 
 }
-
 #load-more {
   display: block;
   margin: 20px auto;

@@ -1,5 +1,4 @@
 
-/* history Navbar */
 .history-navbar, .bottom-navbar {
     position: absolute;
     width: 100%;
@@ -26,7 +25,7 @@
   }
   .tribes-navbar a,
   .history-navbar a{
-    font-size: calc(min(12vh / 4)); /* Dynamically scale text */
+    font-size: calc(min(12vh / 4)); 
   }
   .navbar-content{
     width: 60%;
@@ -43,7 +42,7 @@
   }
   .bottom-navbar{
     transform: translateY(-150px);
-  transition: transform 0.5s ease; /* Fallback for browsers without GSAP */
+  transition: transform 0.5s ease; 
 
 
   }
@@ -52,7 +51,7 @@
     display: flex;
     align-items: end;
     justify-content: space-between;
-    max-width: 100%; /* Optional: to center and limit width */
+    max-width: 100%; 
     margin: 0 auto;
   }
   .bottom-content div{
@@ -69,16 +68,16 @@
   .text-link {
     text-decoration: none;
     color: #fff;
-    font-size: calc(min(12vh / 3.8)); /* Dynamically scale text */
-    line-height: 1.1; /* Adjust spacing between lines */
-    max-width: 70%; /* Prevent text from taking up too much space */
+    font-size: calc(min(12vh / 3.8)); 
+    line-height: 1.1;
+    max-width: 70%; 
     transition: all 0.3s ease-in;
   }
 
 
 
   .logo-link img {
-    max-width: calc(min(100vh / 6)); /* Restrict the logo size */
+    max-width: calc(min(100vh / 6)); 
     height: auto;
     display: flex;
   }
