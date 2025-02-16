@@ -270,9 +270,6 @@ const galleries = {
 
 };
 
-
-
-
   function fixImagePaths() {
       if (isGitHubPages) {
           Object.keys(galleries).forEach(key => {
