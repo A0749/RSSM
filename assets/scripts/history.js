@@ -31,11 +31,11 @@ function switchSection(index) {
     arrow.innerHTML = "&#8595;"; 
   } else if (currentSectionIndex === 1) {
     sectionInfo.textContent =
-      lang === "hi" ? "गोंड राजवंश" : "The Gond Dynasty";
+    lang === "hi" ? "शहीदों की सूची" : "List of Martyrs";
     arrow.innerHTML = "&#8595;"; 
   } else {
     sectionInfo.textContent =
-      lang === "hi" ? "शहीदों की सूची" : "List of Martyrs";
+    lang === "hi" ? "गोंड राजवंश" : "The Gond Dynasty";
     arrow.innerHTML = "&#8593;"; 
   }
 }

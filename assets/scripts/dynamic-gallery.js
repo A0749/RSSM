@@ -27,7 +27,7 @@ const galleries = {
     "gallery-2": [
         { src: "/assets/images/Front/gallery2/1.webp", thumb: "/assets/images/Front/gallery2/1.webp", en: "", hi: "" },
         { src: "/assets/images/Front/gallery2/2.webp", thumb: "/assets/images/Front/gallery2/2.webp", en: "", hi: "" },
-        { src: "/assets/images/Front/gallery2/3.webp", thumb: "/assets/images/Front/gallery2/3.webp", en: "", hi: "" },
+        { src: "/assets/images/Front/gallery2/3.jpg", thumb: "/assets/images/Front/gallery2/3.jpg", en: "", hi: "" },
     ],
     "gallery-3": [
         { src: "/assets/images/Front/gallery3/Gallery3a.webp", thumb: "/assets/images/Front/gallery3/Gallery3a.webp", en: "", hi: "" },
@@ -41,14 +41,14 @@ const galleries = {
     ],
     "gallery-5": [
         { src: "/assets/images/Front/gallery5/1.webp", thumb: "/assets/images/Front/gallery5/1.webp", en: "", hi: "" },
-        { src: "/assets/images/Front/gallery5/2.webp", thumb: "/assets/images/Front/gallery5/2.webp", en: "", hi: "" },
+        { src: "/assets/images/Front/gallery5/2.jpg", thumb: "/assets/images/Front/gallery5/2.jpg", en: "", hi: "" },
         { src: "/assets/images/Front/gallery5/3.webp", thumb: "/assets/images/Front/gallery5/3.webp", en: "", hi: "" },
         { src: "/assets/images/Front/gallery5/4.webp", thumb: "/assets/images/Front/gallery5/4.webp", en: "", hi: "" },
     ],
     "gallery-6": [
         { src: "/assets/images/Front/gallery6/Gallery6a.webp", thumb: "/assets/images/Front/gallery6/Gallery6a.webp", en: "", hi: "" },
         { src: "/assets/images/Front/gallery6/Gallery6b.webp", thumb: "/assets/images/Front/gallery6/Gallery6b.webp", en: "", hi: "" },
-        { src: "/assets/images/Front/gallery6/Gallery6c.webp", thumb: "/assets/images/Front/gallery6/Gallery6c.webp", en: "", hi: "" },
+        { src: "/assets/images/Front/gallery6/Gallery6c.jpg", thumb: "/assets/images/Front/gallery6/Gallery6c.jpg", en: "", hi: "" },
     ],
 
   // Gondwana Tribe Galleries
@@ -62,7 +62,6 @@ const galleries = {
         { src: "/assets/images/Tribes/gond/image-067.jpg", thumb: "/assets/images/Tribes/gond/image-067.jpg", en: "", hi: "" },
         { src: "/assets/images/Tribes/gond/image-068.jpg", thumb: "/assets/images/Tribes/gond/image-068.jpg", en: "", hi: "" },
         { src: "/assets/images/Tribes/gond/image-069.jpg", thumb: "/assets/images/Tribes/gond/image-069.jpg", en: "", hi: "" },
-        { src: "/assets/images/tribe/the-GOND-intro.webp", thumb: "/assets/images/tribe/the-GOND-intro.webp", en: "", hi: "" },
         { src: "/assets/images/tribe/social-intro.webp", thumb: "/assets/images/tribe/social-intro.webp", en: "", hi: "" },
         { src: "/assets/images/tribe/religious-intro.webp", thumb: "/assets/images/tribe/religious-intro.webp", en: "", hi: "" },
         { src: "/assets/images/tribe/cultural-intro.webp", thumb: "/assets/images/tribe/cultural-intro.webp", en: "", hi: "" },
@@ -153,7 +152,6 @@ const galleries = {
       { src: "/assets/images/tribe/painting/painting7.webp", thumb: "/assets/images/tribe/painting/painting7.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/painting8.webp", thumb: "/assets/images/tribe/painting/painting8.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/painting9.webp", thumb: "/assets/images/tribe/painting/painting9.webp", en: "", hi: "" },
-      { src: "/assets/images/tribe/painting/painting10.webp", thumb: "/assets/images/tribe/painting/painting10.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/painting11.webp", thumb: "/assets/images/tribe/painting/painting11.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/painting12.webp", thumb: "/assets/images/tribe/painting/painting12.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/painting13.webp", thumb: "/assets/images/tribe/painting/painting13.webp", en: "", hi: "" },
@@ -185,6 +183,7 @@ const galleries = {
     
     ],
     "jangarh": [
+      { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam10.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam10.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam9.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam9.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam1.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam1.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam2.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam2.webp", en: "", hi: "" },
@@ -194,7 +193,6 @@ const galleries = {
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam6.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam6.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam7.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam7.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam8.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam8.webp", en: "", hi: "" },
-      { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam10.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam10.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam11.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam11.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam12.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam12.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/painting/jangadKalam/jangadKalam13.webp", thumb: "/assets/images/tribe/painting/jangadKalam/jangadKalam13.webp", en: "", hi: "" }
@@ -205,7 +203,6 @@ const galleries = {
       { src: "/assets/images/tribe/aayurveda/aayurveda2.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda2.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/aayurveda/aayurveda3.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda3.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/aayurveda/aayurveda4.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda4.webp", en: "", hi: "" },
-      { src: "/assets/images/tribe/aayurveda/aayurveda5.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda5.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/aayurveda/aayurveda6.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda6.webp", en: "", hi: "" },
       { src: "/assets/images/tribe/aayurveda/aayurveda7.webp", thumb: "/assets/images/tribe/aayurveda/aayurveda7.webp", en: "", hi: "" }
     ],
