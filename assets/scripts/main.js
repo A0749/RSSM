@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a href="${pathPrefix}/gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
                     <li><a href="${pathPrefix}/history.html">${isHindi ? "इतिहास" : "History"}</a></li>
                     <li><a href="${pathPrefix}/conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
-                    <li><a href="${basePath}/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
+                    <li><a href="/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
                 </ul>
             </div>
         </div>
@@ -152,13 +152,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 class SlickMode {
     constructor() {
         this.createModal();
         this.slickModeImages = [];
         this.slickModeIndex = 0;
         this.captions = {};
+        this.zoomScale = 1;
+        this.isDragging = false;
+        this.startX = 0;
+        this.startY = 0;
+        this.offsetX = 0;
+        this.offsetY = 0;
         this.initEventListeners();
     }
 
@@ -181,23 +186,26 @@ class SlickMode {
         this.slickModePrev = document.getElementById("slickmode-prev");
         this.slickModeNext = document.getElementById("slickmode-next");
         this.slickModeClose = document.querySelector(".slickmode-close");
+
+        this.slickModeImage.style.transformOrigin = "center";
+        this.slickModeImage.style.cursor = "grab";
     }
 
     open(images, selectedImageSrc, captions) {
-        // Only get images from the same Swiper container as the clicked image
-        const clickedSwiperContainer = images.find(img => img.dataset.src === selectedImageSrc).closest(".swiper-container");
-        
+        const clickedSwiperContainer = images.find(img => img.dataset.src === selectedImageSrc)?.closest(".swiper-container");
+
         if (!clickedSwiperContainer) return;
-    
-        // Get only images inside the clicked Swiper
+
         this.slickModeImages = [...clickedSwiperContainer.querySelectorAll(".swiper-image")];
         this.captions = captions;
-    
+
         this.slickModeIndex = this.slickModeImages.findIndex(img => img.dataset.src === selectedImageSrc);
         this.updateImage();
         this.slickMode.style.display = "flex";
+
+        // Reset zoom & position
+        this.resetZoomAndPosition();
     }
-    
 
     close() {
         this.slickMode.style.display = "none";
@@ -212,9 +220,65 @@ class SlickMode {
         const imgElement = this.slickModeImages[this.slickModeIndex];
         const imgSrc = imgElement.dataset.src;
         this.slickModeImage.src = imgSrc;
-
-        // Set caption from captions.json
         this.slickModeCaption.textContent = this.captions[imgSrc] || "No caption available";
+
+        // Reset zoom & position when switching images
+        this.resetZoomAndPosition();
+    }
+
+    zoomImage(event) {
+        event.preventDefault();
+        const zoomFactor = 0.1;
+        if (event.deltaY < 0) {
+            this.zoomScale += zoomFactor; // Zoom in
+        } else if (event.deltaY > 0) {
+            this.zoomScale = Math.max(1, this.zoomScale - zoomFactor); // Zoom out (min scale 1)
+        }
+        this.slickModeImage.style.transform = `scale(${this.zoomScale}) translate(${this.offsetX}px, ${this.offsetY}px)`;
+    }
+
+    toggleZoom(event) {
+        event.preventDefault();
+        if (this.zoomScale === 1) {
+            this.zoomScale = 2; // Zoom in
+        } else {
+            this.resetZoomAndPosition(); // Reset zoom and position
+        }
+        this.slickModeImage.style.transform = `scale(${this.zoomScale}) translate(${this.offsetX}px, ${this.offsetY}px)`;
+    }
+
+    resetZoomAndPosition() {
+        this.zoomScale = 1;
+        this.offsetX = 0;
+        this.offsetY = 0;
+        this.slickModeImage.style.transform = `scale(1) translate(0px, 0px)`;
+        this.slickModeImage.style.cursor = "grab";
+    }
+
+    startDragging(event) {
+        if (this.zoomScale === 1) return;
+        this.isDragging = true;
+        this.slickModeImage.style.cursor = "grabbing";
+
+        // Store initial positions
+        this.startX = event.clientX - this.offsetX;
+        this.startY = event.clientY - this.offsetY;
+    }
+
+    dragging(event) {
+        if (!this.isDragging || this.zoomScale === 1) return;
+
+        // Calculate new position
+        this.offsetX = event.clientX - this.startX;
+        this.offsetY = event.clientY - this.startY;
+
+        // Apply transform
+        this.slickModeImage.style.transform = `scale(${this.zoomScale}) translate(${this.offsetX}px, ${this.offsetY}px)`;
+    }
+
+    stopDragging() {
+        this.isDragging = false;
+        this.slickModeImage.style.cursor = "grab";
     }
 
     initEventListeners() {
@@ -227,7 +291,45 @@ class SlickMode {
             if (e.key === "ArrowLeft") this.changeImage(-1);
             if (e.key === "ArrowRight") this.changeImage(1);
         });
+
+        // Zoom in/out with mouse wheel
+        this.slickModeImage.addEventListener("wheel", (e) => this.zoomImage(e));
+
+        // Double-click to toggle zoom
+        this.slickModeImage.addEventListener("dblclick", (e) => this.toggleZoom(e));
+
+        // Dragging to move image when zoomed in
+        this.slickModeImage.addEventListener("mousedown", (e) => this.startDragging(e));
+        document.addEventListener("mousemove", (e) => this.dragging(e));
+        document.addEventListener("mouseup", () => this.stopDragging());
+
+        // Touchscreen dragging support
+        this.slickModeImage.addEventListener("touchstart", (e) => this.startDragging(e.touches[0]));
+        document.addEventListener("touchmove", (e) => this.dragging(e.touches[0]));
+        document.addEventListener("touchend", () => this.stopDragging());
     }
 }
 
 const slickModeInstance = new SlickMode();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".slickmode").forEach(image => {
+        image.addEventListener("click", function () {
+            let selectedImageSrc = this.getAttribute("data-src") || this.getAttribute("src");
+
+            if (!selectedImageSrc) return; // Exit if no valid image source
+
+            // Open the modal with the clicked image as the only item
+            slickModeInstance.slickModeImages = [this]; // Set the clicked image as the only image
+            slickModeInstance.slickModeIndex = 0; // Since it's a single image
+            slickModeInstance.slickModeImage.src = selectedImageSrc; // Set image source
+            slickModeInstance.slickModeCaption.textContent = "No caption available"; // Default caption
+            slickModeInstance.slickMode.style.display = "flex"; // Show the modal
+            
+            // Hide navigation buttons for independent images
+            slickModeInstance.slickModePrev.style.display = "none";
+            slickModeInstance.slickModeNext.style.display = "none";
+        });
+    });
+});

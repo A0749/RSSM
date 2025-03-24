@@ -9,8 +9,8 @@
         font-size: 24px;
     }
     .vert-gallery2 .v-card {
-        max-width: 340px;
-        min-height: 450px;
+        max-width: 340px !important;
+        min-height: 450px !important;
     }
     .gallery-way{
         min-height: auto;
