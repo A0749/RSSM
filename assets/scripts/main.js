@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a href="${pathPrefix}/gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
                     <li><a href="${pathPrefix}/history.html">${isHindi ? "इतिहास" : "History"}</a></li>
                     <li><a href="${pathPrefix}/conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
-                    <li><a href="/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
+                    <li><a href="${basePath}/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
                 </ul>
             </div>
         </div>
