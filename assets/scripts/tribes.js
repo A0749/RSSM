@@ -15,12 +15,12 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Agaria/image-000.jpg", 
-    "/assets/images/Tribes/Agaria/image-001.jpg", 
-    "/assets/images/Tribes/Agaria/image-002.jpg", 
-    "/assets/images/Tribes/Agaria/image-003.jpg", 
-    "/assets/images/Tribes/Agaria/image-004.jpg", 
-    "/assets/images/Tribes/Agaria/image-005.jpg"
+    "./assets/images/Tribes/Agaria/image-000.jpg", 
+    "./assets/images/Tribes/Agaria/image-001.jpg", 
+    "./assets/images/Tribes/Agaria/image-002.jpg", 
+    "./assets/images/Tribes/Agaria/image-003.jpg", 
+    "./assets/images/Tribes/Agaria/image-004.jpg", 
+    "./assets/images/Tribes/Agaria/image-005.jpg"
     ]
 },
 {"id": "ANDH",
@@ -63,11 +63,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/baiga/image-006.jpg", 
-    "/assets/images/Tribes/baiga/image-007.jpg", 
-    "/assets/images/Tribes/baiga/image-008.jpg", 
-    "/assets/images/Tribes/baiga/image-009.jpg", 
-    "/assets/images/Tribes/baiga/image-010.jpg", 
+    "./assets/images/Tribes/baiga/image-006.jpg", 
+    "./assets/images/Tribes/baiga/image-007.jpg", 
+    "./assets/images/Tribes/baiga/image-008.jpg", 
+    "./assets/images/Tribes/baiga/image-009.jpg", 
+    "./assets/images/Tribes/baiga/image-010.jpg", 
     ]
 },
 {"id": "BHAINA",
@@ -85,12 +85,12 @@ const subjects = [
     
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Bhaina/image-011.jpg", 
-        "/assets/images/Tribes/Bhaina/image-012.jpg", 
-        "/assets/images/Tribes/Bhaina/image-013.jpg", 
-        "/assets/images/Tribes/Bhaina/image-014.jpg", 
-        "/assets/images/Tribes/Bhaina/image-015.jpg", 
-        "/assets/images/Tribes/Bhaina/image-016.jpg"
+    "./assets/images/Tribes/Bhaina/image-011.jpg", 
+        "./assets/images/Tribes/Bhaina/image-012.jpg", 
+        "./assets/images/Tribes/Bhaina/image-013.jpg", 
+        "./assets/images/Tribes/Bhaina/image-014.jpg", 
+        "./assets/images/Tribes/Bhaina/image-015.jpg", 
+        "./assets/images/Tribes/Bhaina/image-016.jpg"
 ]
 },
 {"id": "BHARIYA",
@@ -110,10 +110,10 @@ const subjects = [
     "Dance forms like Shaila in Diwali, Rahas in Holi, Gunnur in Pola, Bihav in marriages are performed by the Bhariya tribe. Women participate in Phadki dance, and major folk songs include Phag, Ahirai, Seva.",
 ],
 "sliderImages": [
-    "/assets/images/Tribes/fwdbharia/image-019.jpg", 
-    "/assets/images/Tribes/fwdbharia/image-020.jpg", 
-    "/assets/images/Tribes/fwdbharia/image-021.jpg", 
-    "/assets/images/Tribes/fwdbharia/image-022.jpg", 
+    "./assets/images/Tribes/fwdbharia/image-019.jpg", 
+    "./assets/images/Tribes/fwdbharia/image-020.jpg", 
+    "./assets/images/Tribes/fwdbharia/image-021.jpg", 
+    "./assets/images/Tribes/fwdbharia/image-022.jpg", 
 ]
 },
 {"id": "BHATRA",
@@ -133,10 +133,10 @@ const subjects = [
     
     ],
     "sliderImages": [
-    "/assets/images/Tribes/Bhatra/image-023.jpg", 
-    "/assets/images/Tribes/Bhatra/image-024.jpg", 
-    "/assets/images/Tribes/Bhatra/image-025.jpg", 
-    "/assets/images/Tribes/Bhatra/image-026.jpg", 
+    "./assets/images/Tribes/Bhatra/image-023.jpg", 
+    "./assets/images/Tribes/Bhatra/image-024.jpg", 
+    "./assets/images/Tribes/Bhatra/image-025.jpg", 
+    "./assets/images/Tribes/Bhatra/image-026.jpg", 
 
 ]
 },
@@ -163,14 +163,14 @@ const subjects = [
     
 ],
 "sliderImages": [
-    "/assets/images/Tribes/fwdbhil/image-027.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-028.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-029.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-030.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-031.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-032.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-033.jpg", 
-    "/assets/images/Tribes/fwdbhil/image-034.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-027.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-028.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-029.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-030.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-031.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-032.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-033.jpg", 
+    "./assets/images/Tribes/fwdbhil/image-034.jpg", 
 ]
 },
 {"id": "BHILMEENA",
@@ -191,10 +191,10 @@ const subjects = [
     "People of the Bhil Meena tribe express their faith through dance during occasions like marriage and Holi. Bhajans are sung during pujas, wedding songs at marriages, and phagas during Holi, contributing to the cultural richness of the tribe.",
 ],
     "sliderImages": [
-        "/assets/images/Tribes/Bhatra/image-023.jpg", 
-        "/assets/images/Tribes/Bhatra/image-024.jpg", 
-        "/assets/images/Tribes/Bhatra/image-025.jpg", 
-        "/assets/images/Tribes/Bhatra/image-026.jpg", 
+        "./assets/images/Tribes/Bhatra/image-023.jpg", 
+        "./assets/images/Tribes/Bhatra/image-024.jpg", 
+        "./assets/images/Tribes/Bhatra/image-025.jpg", 
+        "./assets/images/Tribes/Bhatra/image-026.jpg", 
     
     ],
 
@@ -270,13 +270,13 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Birhor/image-041.jpg", 
-    "/assets/images/Tribes/Birhor/image-042.jpg", 
-    "/assets/images/Tribes/Birhor/image-043.jpg", 
-    "/assets/images/Tribes/Birhor/image-044.jpg", 
-    "/assets/images/Tribes/Birhor/image-044.jpg", 
-    "/assets/images/Tribes/Birhor/image-045.jpg", 
-    "/assets/images/Tribes/Birhor/image-046.jpg", 
+    "./assets/images/Tribes/Birhor/image-041.jpg", 
+    "./assets/images/Tribes/Birhor/image-042.jpg", 
+    "./assets/images/Tribes/Birhor/image-043.jpg", 
+    "./assets/images/Tribes/Birhor/image-044.jpg", 
+    "./assets/images/Tribes/Birhor/image-044.jpg", 
+    "./assets/images/Tribes/Birhor/image-045.jpg", 
+    "./assets/images/Tribes/Birhor/image-046.jpg", 
 ]
 },
 {"id": "DAMOR",
@@ -304,12 +304,12 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Danor/image-047.jpg", 
-    "/assets/images/Tribes/Danor/image-048.jpg", 
-    "/assets/images/Tribes/Danor/image-049.jpg", 
-    "/assets/images/Tribes/Danor/image-050.jpg", 
-    "/assets/images/Tribes/Danor/image-051.jpg", 
-    "/assets/images/Tribes/Danor/image-052.jpg", 
+    "./assets/images/Tribes/Danor/image-047.jpg", 
+    "./assets/images/Tribes/Danor/image-048.jpg", 
+    "./assets/images/Tribes/Danor/image-049.jpg", 
+    "./assets/images/Tribes/Danor/image-050.jpg", 
+    "./assets/images/Tribes/Danor/image-051.jpg", 
+    "./assets/images/Tribes/Danor/image-052.jpg", 
 ]
 },
 {"id": "DHANWAR",
@@ -336,10 +336,10 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Dhanwar/image-053.jpg", 
-    "/assets/images/Tribes/Dhanwar/image-054.jpg", 
-    "/assets/images/Tribes/Dhanwar/image-055.jpg", 
-    "/assets/images/Tribes/Dhanwar/image-056.jpg", 
+    "./assets/images/Tribes/Dhanwar/image-053.jpg", 
+    "./assets/images/Tribes/Dhanwar/image-054.jpg", 
+    "./assets/images/Tribes/Dhanwar/image-055.jpg", 
+    "./assets/images/Tribes/Dhanwar/image-056.jpg", 
 ]
 },
 {"id": "GADABA",
@@ -368,11 +368,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/Gadaba/image-057.jpg", 
-    "/assets/images/Tribes/Gadaba/image-058.jpg", 
-    "/assets/images/Tribes/Gadaba/image-059.jpg", 
-    "/assets/images/Tribes/Gadaba/image-060.jpg", 
-    "/assets/images/Tribes/Gadaba/image-061.jpg", 
+    "./assets/images/Tribes/Gadaba/image-057.jpg", 
+    "./assets/images/Tribes/Gadaba/image-058.jpg", 
+    "./assets/images/Tribes/Gadaba/image-059.jpg", 
+    "./assets/images/Tribes/Gadaba/image-060.jpg", 
+    "./assets/images/Tribes/Gadaba/image-061.jpg", 
 
 ]
 },
@@ -396,14 +396,14 @@ const subjects = [
  
 ],
 "sliderImages": [
-    "/assets/images/Tribes/gond/image-062.jpg", 
-    "/assets/images/Tribes/gond/image-063.jpg", 
-    "/assets/images/Tribes/gond/image-064.jpg", 
-    "/assets/images/Tribes/gond/image-065.jpg", 
-    "/assets/images/Tribes/gond/image-066.jpg", 
-    "/assets/images/Tribes/gond/image-067.jpg", 
-    "/assets/images/Tribes/gond/image-068.jpg", 
-    "/assets/images/Tribes/gond/image-069.jpg", 
+    "./assets/images/Tribes/gond/image-062.jpg", 
+    "./assets/images/Tribes/gond/image-063.jpg", 
+    "./assets/images/Tribes/gond/image-064.jpg", 
+    "./assets/images/Tribes/gond/image-065.jpg", 
+    "./assets/images/Tribes/gond/image-066.jpg", 
+    "./assets/images/Tribes/gond/image-067.jpg", 
+    "./assets/images/Tribes/gond/image-068.jpg", 
+    "./assets/images/Tribes/gond/image-069.jpg", 
 
 ]
 },
@@ -427,11 +427,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/halba/image-070.jpg", 
-    "/assets/images/Tribes/halba/image-071.jpg", 
-    "/assets/images/Tribes/halba/image-072.jpg", 
-    "/assets/images/Tribes/halba/image-073.jpg", 
-    "/assets/images/Tribes/halba/image-074.jpg", 
+    "./assets/images/Tribes/halba/image-070.jpg", 
+    "./assets/images/Tribes/halba/image-071.jpg", 
+    "./assets/images/Tribes/halba/image-072.jpg", 
+    "./assets/images/Tribes/halba/image-073.jpg", 
+    "./assets/images/Tribes/halba/image-074.jpg", 
 
 ]
 },
@@ -453,11 +453,11 @@ const subjects = [
     "",
 ],
 "sliderImages": [
-    "/assets/images/Tribes/kamar/image-075.jpg", 
-    "/assets/images/Tribes/kamar/image-076.jpg", 
-    "/assets/images/Tribes/kamar/image-077.jpg", 
-    "/assets/images/Tribes/kamar/image-078.jpg", 
-    "/assets/images/Tribes/kamar/image-079.jpg", 
+    "./assets/images/Tribes/kamar/image-075.jpg", 
+    "./assets/images/Tribes/kamar/image-076.jpg", 
+    "./assets/images/Tribes/kamar/image-077.jpg", 
+    "./assets/images/Tribes/kamar/image-078.jpg", 
+    "./assets/images/Tribes/kamar/image-079.jpg", 
 
 ]
 },
@@ -479,11 +479,11 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/kanwar/image-080.jpg", 
-    "/assets/images/Tribes/kanwar/image-081.jpg", 
-    "/assets/images/Tribes/kanwar/image-082.jpg", 
-    "/assets/images/Tribes/kanwar/image-083.jpg", 
-    "/assets/images/Tribes/kanwar/image-084.jpg", 
+    "./assets/images/Tribes/kanwar/image-080.jpg", 
+    "./assets/images/Tribes/kanwar/image-081.jpg", 
+    "./assets/images/Tribes/kanwar/image-082.jpg", 
+    "./assets/images/Tribes/kanwar/image-083.jpg", 
+    "./assets/images/Tribes/kanwar/image-084.jpg", 
  
 ]
 },
@@ -509,8 +509,8 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/khairwar/image-085.jpg", 
-    "/assets/images/Tribes/khairwar/image-086.jpg", 
+    "./assets/images/Tribes/khairwar/image-085.jpg", 
+    "./assets/images/Tribes/khairwar/image-086.jpg", 
 ]
 },
 {"id": "KHARIA",
@@ -536,11 +536,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/kharia/image-087.jpg", 
-    "/assets/images/Tribes/kharia/image-088.jpg", 
-    "/assets/images/Tribes/kharia/image-089.jpg", 
-    "/assets/images/Tribes/kharia/image-090.jpg", 
-    "/assets/images/Tribes/kharia/image-091.jpg", 
+    "./assets/images/Tribes/kharia/image-087.jpg", 
+    "./assets/images/Tribes/kharia/image-088.jpg", 
+    "./assets/images/Tribes/kharia/image-089.jpg", 
+    "./assets/images/Tribes/kharia/image-090.jpg", 
+    "./assets/images/Tribes/kharia/image-091.jpg", 
  
 ]
 },
@@ -566,10 +566,10 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/kond/image-092.jpg", 
-    "/assets/images/Tribes/kond/image-093.jpg", 
-    "/assets/images/Tribes/kond/image-094.jpg", 
-    "/assets/images/Tribes/kond/image-095.jpg", 
+    "./assets/images/Tribes/kond/image-092.jpg", 
+    "./assets/images/Tribes/kond/image-093.jpg", 
+    "./assets/images/Tribes/kond/image-094.jpg", 
+    "./assets/images/Tribes/kond/image-095.jpg", 
 
 ]
 },
@@ -590,10 +590,10 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/kol/image-096.jpg", 
-    "/assets/images/Tribes/kol/image-097.jpg", 
-    "/assets/images/Tribes/kol/image-098.jpg", 
-    "/assets/images/Tribes/kol/image-099.jpg", 
+    "./assets/images/Tribes/kol/image-096.jpg", 
+    "./assets/images/Tribes/kol/image-097.jpg", 
+    "./assets/images/Tribes/kol/image-098.jpg", 
+    "./assets/images/Tribes/kol/image-099.jpg", 
 
 ]
 },
@@ -644,15 +644,15 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/korku/image-100.jpg", 
-    "/assets/images/Tribes/korku/image-101.jpg", 
-    "/assets/images/Tribes/korku/image-102.jpg", 
-    "/assets/images/Tribes/korku/image-103.jpg", 
-    "/assets/images/Tribes/korku/image-104.jpg", 
-    "/assets/images/Tribes/korku/image-105.jpg", 
-    "/assets/images/Tribes/korku/image-106.jpg", 
-    "/assets/images/Tribes/korku/image-107.jpg", 
-    "/assets/images/Tribes/korku/image-108.jpg", 
+    "./assets/images/Tribes/korku/image-100.jpg", 
+    "./assets/images/Tribes/korku/image-101.jpg", 
+    "./assets/images/Tribes/korku/image-102.jpg", 
+    "./assets/images/Tribes/korku/image-103.jpg", 
+    "./assets/images/Tribes/korku/image-104.jpg", 
+    "./assets/images/Tribes/korku/image-105.jpg", 
+    "./assets/images/Tribes/korku/image-106.jpg", 
+    "./assets/images/Tribes/korku/image-107.jpg", 
+    "./assets/images/Tribes/korku/image-108.jpg", 
 
 ]
 },
@@ -677,11 +677,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/korwa/image-109.jpg", 
-    "/assets/images/Tribes/korwa/image-110.jpg", 
-    "/assets/images/Tribes/korwa/image-111.jpg", 
-    "/assets/images/Tribes/korwa/image-112.jpg", 
-    "/assets/images/Tribes/korwa/image-113.jpg", 
+    "./assets/images/Tribes/korwa/image-109.jpg", 
+    "./assets/images/Tribes/korwa/image-110.jpg", 
+    "./assets/images/Tribes/korwa/image-111.jpg", 
+    "./assets/images/Tribes/korwa/image-112.jpg", 
+    "./assets/images/Tribes/korwa/image-113.jpg", 
 
 ]
 },
@@ -706,12 +706,12 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/majhi/image-114.jpg", 
-    "/assets/images/Tribes/majhi/image-115.jpg", 
-    "/assets/images/Tribes/majhi/image-116.jpg", 
-    "/assets/images/Tribes/majhi/image-117.jpg", 
-    "/assets/images/Tribes/majhi/image-118.jpg", 
-    "/assets/images/Tribes/majhi/image-119.jpg", 
+    "./assets/images/Tribes/majhi/image-114.jpg", 
+    "./assets/images/Tribes/majhi/image-115.jpg", 
+    "./assets/images/Tribes/majhi/image-116.jpg", 
+    "./assets/images/Tribes/majhi/image-117.jpg", 
+    "./assets/images/Tribes/majhi/image-118.jpg", 
+    "./assets/images/Tribes/majhi/image-119.jpg", 
 
 ]
 },
@@ -733,10 +733,10 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/majhwar/image-120.jpg", 
-    "/assets/images/Tribes/majhwar/image-121.jpg", 
-    "/assets/images/Tribes/majhwar/image-122.jpg", 
-    "/assets/images/Tribes/majhwar/image-123.jpg", 
+    "./assets/images/Tribes/majhwar/image-120.jpg", 
+    "./assets/images/Tribes/majhwar/image-121.jpg", 
+    "./assets/images/Tribes/majhwar/image-122.jpg", 
+    "./assets/images/Tribes/majhwar/image-123.jpg", 
 
 ]
 },
@@ -763,11 +763,11 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/mawasi/image-124.jpg", 
-    "/assets/images/Tribes/mawasi/image-125.jpg", 
-    "/assets/images/Tribes/mawasi/image-126.jpg", 
-    "/assets/images/Tribes/mawasi/image-127.jpg", 
-    "/assets/images/Tribes/mawasi/image-128.jpg", 
+    "./assets/images/Tribes/mawasi/image-124.jpg", 
+    "./assets/images/Tribes/mawasi/image-125.jpg", 
+    "./assets/images/Tribes/mawasi/image-126.jpg", 
+    "./assets/images/Tribes/mawasi/image-127.jpg", 
+    "./assets/images/Tribes/mawasi/image-128.jpg", 
 
 ]
 },
@@ -837,12 +837,12 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/oraon/image-129.jpg", 
-    "/assets/images/Tribes/oraon/image-130.jpg", 
-    "/assets/images/Tribes/oraon/image-131.jpg", 
-    "/assets/images/Tribes/oraon/image-132.jpg", 
-    "/assets/images/Tribes/oraon/image-133.jpg", 
-    "/assets/images/Tribes/oraon/image-134.jpg", 
+    "./assets/images/Tribes/oraon/image-129.jpg", 
+    "./assets/images/Tribes/oraon/image-130.jpg", 
+    "./assets/images/Tribes/oraon/image-131.jpg", 
+    "./assets/images/Tribes/oraon/image-132.jpg", 
+    "./assets/images/Tribes/oraon/image-133.jpg", 
+    "./assets/images/Tribes/oraon/image-134.jpg", 
 
 ]
 },
@@ -870,12 +870,12 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/panika/image-135.jpg", 
-    "/assets/images/Tribes/panika/image-136.jpg", 
-    "/assets/images/Tribes/panika/image-137.jpg", 
-    "/assets/images/Tribes/panika/image-138.jpg", 
-    "/assets/images/Tribes/panika/image-139.jpg", 
-    "/assets/images/Tribes/panika/image-140.jpg", 
+    "./assets/images/Tribes/panika/image-135.jpg", 
+    "./assets/images/Tribes/panika/image-136.jpg", 
+    "./assets/images/Tribes/panika/image-137.jpg", 
+    "./assets/images/Tribes/panika/image-138.jpg", 
+    "./assets/images/Tribes/panika/image-139.jpg", 
+    "./assets/images/Tribes/panika/image-140.jpg", 
 
 ]
 },
@@ -896,11 +896,11 @@ const subjects = [
         "",
     ],
     "sliderImages": [
-        "/assets/images/Tribes/pardhan/image-146.jpg", 
-        "/assets/images/Tribes/pardhan/image-147.jpg", 
-        "/assets/images/Tribes/pardhan/image-148.jpg", 
-        "/assets/images/Tribes/pardhan/image-149.jpg", 
-        "/assets/images/Tribes/pardhan/image-150.jpg", 
+        "./assets/images/Tribes/pardhan/image-146.jpg", 
+        "./assets/images/Tribes/pardhan/image-147.jpg", 
+        "./assets/images/Tribes/pardhan/image-148.jpg", 
+        "./assets/images/Tribes/pardhan/image-149.jpg", 
+        "./assets/images/Tribes/pardhan/image-150.jpg", 
 
     ]
     },
@@ -922,11 +922,11 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/pav/image-141.jpg", 
-    "/assets/images/Tribes/pav/image-142.jpg", 
-    "/assets/images/Tribes/pav/image-143.jpg", 
-    "/assets/images/Tribes/pav/image-144.jpg", 
-    "/assets/images/Tribes/pav/image-145.jpg", 
+    "./assets/images/Tribes/pav/image-141.jpg", 
+    "./assets/images/Tribes/pav/image-142.jpg", 
+    "./assets/images/Tribes/pav/image-143.jpg", 
+    "./assets/images/Tribes/pav/image-144.jpg", 
+    "./assets/images/Tribes/pav/image-145.jpg", 
 
 ]
 },
@@ -983,15 +983,15 @@ const subjects = [
 
 ],
 "sliderImages": [
-    "/assets/images/Tribes/sahariya/image-151.jpg", 
-    "/assets/images/Tribes/sahariya/image-152.jpg", 
-    "/assets/images/Tribes/sahariya/image-153.jpg", 
-    "/assets/images/Tribes/sahariya/image-154.jpg", 
-    "/assets/images/Tribes/sahariya/image-155.jpg", 
-    "/assets/images/Tribes/sahariya/image-156.jpg", 
-    "/assets/images/Tribes/sahariya/image-157.jpg", 
-    "/assets/images/Tribes/sahariya/image-158.jpg", 
-    "/assets/images/Tribes/sahariya/image-159.jpg", 
+    "./assets/images/Tribes/sahariya/image-151.jpg", 
+    "./assets/images/Tribes/sahariya/image-152.jpg", 
+    "./assets/images/Tribes/sahariya/image-153.jpg", 
+    "./assets/images/Tribes/sahariya/image-154.jpg", 
+    "./assets/images/Tribes/sahariya/image-155.jpg", 
+    "./assets/images/Tribes/sahariya/image-156.jpg", 
+    "./assets/images/Tribes/sahariya/image-157.jpg", 
+    "./assets/images/Tribes/sahariya/image-158.jpg", 
+    "./assets/images/Tribes/sahariya/image-159.jpg", 
 
 ]
 },
@@ -1014,10 +1014,10 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/saunta/image-160.jpg", 
-    "/assets/images/Tribes/saunta/image-161.jpg", 
-    "/assets/images/Tribes/saunta/image-162.jpg", 
-    "/assets/images/Tribes/saunta/image-163.jpg", 
+    "./assets/images/Tribes/saunta/image-160.jpg", 
+    "./assets/images/Tribes/saunta/image-161.jpg", 
+    "./assets/images/Tribes/saunta/image-162.jpg", 
+    "./assets/images/Tribes/saunta/image-163.jpg", 
 
 ]
 },
@@ -1044,9 +1044,9 @@ const subjects = [
     ""
 ],
 "sliderImages": [
-    "/assets/images/Tribes/saur/image-164.jpg", 
-    "/assets/images/Tribes/saur/image-165.jpg", 
-    "/assets/images/Tribes/saur/image-166.jpg", 
+    "./assets/images/Tribes/saur/image-164.jpg", 
+    "./assets/images/Tribes/saur/image-165.jpg", 
+    "./assets/images/Tribes/saur/image-166.jpg", 
 
 ]
 },
