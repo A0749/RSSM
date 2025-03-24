@@ -94,13 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Mobile Custom Nav
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth >= 769) return; // Exit if screen is larger than 768px
 
+    // Detect GitHub Pages repository name dynamically
+    const repoName = window.location.pathname.split('/')[1]; // Extract repo name
+    const basePath = repoName ? `/${repoName}` : ""; // Add repo prefix if exists
+
     // Detect language folder (English or Hindi)
     const isHindi = window.location.pathname.includes("/hi/");
-    let pathPrefix = isHindi ? "/hi/" : "/";
+    let pathPrefix = `${basePath}${isHindi ? "/hi" : ""}/`;
 
     // Navbar content
     const navbarHTML = `
@@ -112,11 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <div id="customOffcanvasMenu" class="custom-offcanvas">
                 <button id="customCloseMenu" class="custom-close-btn">&times;</button>
                 <ul class="custom-menu">
-                    <li><a href="${pathPrefix}tribes-of-mp.html">${isHindi ? "म.प्र. की जनजातियाँ" : "Tribes of MP"}</a></li>
-                    <li><a href="${pathPrefix}gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
-                    <li><a href="${pathPrefix}history.html">${isHindi ? "इतिहास" : "History"}</a></li>
-                    <li><a href="${pathPrefix}conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
-                    <li><a href="/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
+                    <li><a href="${pathPrefix}/tribes-of-mp.html">${isHindi ? "म.प्र. की जनजातियाँ" : "Tribes of MP"}</a></li>
+                    <li><a href="${pathPrefix}/gond-tribe.html">${isHindi ? "गोंडवाना जनजाति" : "Gondwana Tribe"}</a></li>
+                    <li><a href="${pathPrefix}/history.html">${isHindi ? "इतिहास" : "History"}</a></li>
+                    <li><a href="${pathPrefix}/conservation.html">${isHindi ? "संरक्षण" : "Conservation"}</a></li>
+                    <li><a href="${basePath}/museum-collection.html">${isHindi ? "संग्रहालय संग्रह" : "Museum Collection"}</a></li>
                 </ul>
             </div>
         </div>
