@@ -317,6 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".slickmode").forEach(image => {
         image.addEventListener("click", function () {
             let selectedImageSrc = this.getAttribute("data-src") || this.getAttribute("src");
+            let selectedImageAlt = this.getAttribute("alt") || "No caption available"; // Get alt text or default
 
             if (!selectedImageSrc) return; // Exit if no valid image source
 
@@ -324,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slickModeInstance.slickModeImages = [this]; // Set the clicked image as the only image
             slickModeInstance.slickModeIndex = 0; // Since it's a single image
             slickModeInstance.slickModeImage.src = selectedImageSrc; // Set image source
-            slickModeInstance.slickModeCaption.textContent = "No caption available"; // Default caption
+            slickModeInstance.slickModeCaption.textContent = selectedImageAlt; // Set caption from alt text
             slickModeInstance.slickMode.style.display = "flex"; // Show the modal
             
             // Hide navigation buttons for independent images
