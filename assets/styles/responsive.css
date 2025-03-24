@@ -1,38 +1,52 @@
 
 /* Responsive Styles */
 @media (max-width: 431px) {
+    .swiper-backface-hidden{
+        height: auto;
+        max-height: 450px;
+    }
+    .gallery-way h2 {
+        font-size: 24px;
+    }
+    .vert-gallery2 .v-card {
+        max-width: 340px;
+        min-height: 450px;
+    }
+    .gallery-way{
+        min-height: auto;
+    }
     
     .tribal-museum-title{
         width: 60%;
     }
     .header-content .tribal-museum-title p{
-        font-size: calc(min(8vh / 7.5)) !important;
+        font-size: calc(min(8svh / 7.5)) !important;
     }
     .header-content img {
         height: 50%;
         width: 100%;
     }
     .header-content{
-        height: 6vh;
+        height: 6svh;
     }
     .tribal-central-logo,
     .tribal-museum-title,
     .tribal-state-logo{
-        height: 6vh;
+        height: 6svh;
     }
     .banner{
-        height: 82vh;
+        height: 82svh;
     }
     .banner-content{
         flex-direction: column;
-        height: 82vh;
+        height: 82svh;
     }
     .banner-title{
         width: 100%;
-        padding-top: 6vh;
+        padding-top: 6svh;
     }
     #scroll-container #section-front .content h1 {
-        font-size: calc(min(80vh / 3, 100vw / 5.8));
+        font-size: calc(min(80svh / 3, 100vw / 5.8));
         text-align: center;
         margin: 0 !important;    }
     .banner-right{
@@ -46,10 +60,10 @@
         width: 96%;
     }
     #scroll-container .banner-pm p{
-        font-size: calc(min(80vh / 22, 100vw / 24));
+        font-size: calc(min(80svh / 22, 100vw / 24));
     }
     .main-footer .footer-content ul li a {
-        font-size: calc(min(12vh / 5));
+        font-size: calc(min(12svh / 5));
     }   
     .main-footer .footer-content .flex{
         flex-wrap: wrap;
@@ -68,12 +82,12 @@
 
     }
     #scroll-container .content h1{
-        font-size: calc(min(10vh / 2.2));
+        font-size: calc(min(10svh / 2.2));
     }
     #scroll-container .content p {
         line-height: 1.2;
         padding-bottom: 1rem;
-        font-size: calc(min(100vh / 55));
+        font-size: calc(min(100svh / 55));
     }
 
     /* History Page */
@@ -88,28 +102,28 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        padding-top: 27vh;
+        padding-top: 27svh;
         position: absolute;
         z-index: 5;
         left: 2%;
     }
     #history-page #lang{
         z-index: 4;
-        top: 18vh !important;
+        top: 18svh !important;
     }
     #history-page .history-content-inner {
-        height: 85vh;
+        height: 85svh;
         justify-content: end;
         
     }
   
     .history-content-inner h1 {
-        font-size: calc(min(100vh / 11));
+        font-size: calc(min(100svh / 11));
         line-height: 70%;
     }
     
     .history-content-inner h3 {
-        font-size: calc(min(100vh / 35));
+        font-size: calc(min(100svh / 35));
         font-weight: 200;
         padding: 0 !important;
     }
@@ -121,11 +135,11 @@
         height: auto;
     }
     .history-content-inner .slide-text h3{
-        font-size: calc(min(100vh / 40));
+        font-size: calc(min(100svh / 40));
     }
  
     .history-navbar a{
-        font-size: calc(min(12vh / 6));
+        font-size: calc(min(12svh / 6));
     }
     .main-logo-second-head .logo-link img{
         max-width: 80px;
@@ -145,7 +159,7 @@
         align-items: start;
       }
       .section-footer{
-        height: 200vh;
+        height: 200svh;
       }
       .int-btn{
         font-size: 16px;
@@ -153,13 +167,13 @@
         max-width: 180px;
       }
       .footer-content-outer .next{
-        height: 70vh;
+        height: 70svh;
       }
       .plan-your-visit{
-        height: 70vh;
+        height: 70svh;
       }
       .footer-content-outer .footer-content{
-        height: 20vh;
+        height: 20svh;
         width: 100%;
         align-items: center;
       }
@@ -197,7 +211,7 @@
     }
     .front-page .custom-menu-btn,
     .front-page #lang{
-        top: 7vh !important;
+        top: 7svh !important;
     }
   
     
@@ -207,7 +221,7 @@
     }
     #breadcrumb{
         position: absolute;
-        top: 40vh;
+        top: 40svh;
         display: flex
     ;
         align-items: center;
@@ -216,7 +230,7 @@
     }
     #lang{
         position: absolute !important;
-        top: 10vh !important;
+        top: 10svh !important;
         right: 2% !important;
 
     }
@@ -225,13 +239,13 @@
         left: 27%;
     }
     .banner{
-        height: 74vh;
+        height: 74svh;
     }
     .banner-content{
-        height: 74vh;
+        height: 74svh;
     }
     #scroll-container #section-front .content{
-        height: 100vh;
+        height: 100svh;
     }
     .main-footer{
         display: none;
@@ -241,13 +255,13 @@
     }
     #s-main-container .history-content-inner h2,
      .tribe-content-head h2 {
-        font-size: calc(min(100vh / 18));
+        font-size: calc(min(100svh / 18));
         line-height: 70%;
         font-weight: 700;
     }
     #history-page .navigator{
         display: block;
-        padding-top: 8vh;
+        padding-top: 8svh;
     }
     .navigator{
         display: none;
@@ -266,16 +280,16 @@
         display: none;
     }
     .swiper-slide{
-        display: flex;
+        display: flex !important;
         width: 100%;
         justify-content: center;
         align-items: center;
     }
     #conservation #scroll-container .content p {
-        font-size: calc(min(100vh / 40));
+        font-size: calc(min(100svh / 40));
     }
     .single-page #scroll-container .content p {
-        font-size: calc(min(100vh / 35));
+        font-size: calc(min(100svh / 35));
     }
    
 

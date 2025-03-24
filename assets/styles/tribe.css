@@ -6,7 +6,7 @@
   .tribe .section {
     display: flex;
     justify-content: space-between;
-    height: 85vh;
+    height: 85svh;
     position: relative;
     padding: 0;
     box-sizing: border-box;
@@ -29,12 +29,12 @@
 
 
   .tribe .text h2 {
-    font-size: calc(min(100vh / 18)); 
+    font-size: calc(min(100svh / 18)); 
     margin-bottom: 1rem;
   }
 
   .tribe .text p {
-    font-size: calc(min(100vh / 32)); 
+    font-size: calc(min(100svh / 32)); 
   }
 
   /* Tribes of MP */
@@ -69,12 +69,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
+    height: 90svh;
     color: #e3e3e3;
     font-family: 'Genos';
   }
   .tribe-content-head h2 {
-    font-size: calc(min(100vh / 5));
+    font-size: calc(min(100svh / 5));
     line-height: 70%;
     font-weight: 700;
 }
@@ -94,12 +94,12 @@
     position: sticky;
     top: 0;
     width: 15%;
-    height: 100vh;
+    height: 100svh;
     padding: 2rem 0;
     overflow: auto;
   }
   .left-side-tribe h1{
-    font-size: calc(min(100vh / 32)); 
+    font-size: calc(min(100svh / 32)); 
   }
   .right-side-tribe{
     width: 85%;
@@ -166,7 +166,7 @@
 
 #tribes-of-mp .swiper-wrapper {
   display: flex;
-  height: 50vh;
+  height: 50svh;
 }
 
 #tribes-of-mp .swiper-slide {

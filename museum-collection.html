@@ -7,316 +7,322 @@
       Museum Collection - Raja Shankar Shah Kunwar Raghunath Shah Tribal Freedom
       Fighters Museum, Jabalpur
     </title>
-    <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/resources/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/resources/swiper-bundle.min.css" />
 
     <style>
-      /* Artifects Gallery Way */
+      #collection{
+        background-color: #fff !important;
+      }
+      #collection .tribe-content-head .tribe-head-inner h2 {
+        font-size: 6rem;
+      }
+      
+/* Artifects Gallery Way */
+.no-show-lg h2 {
+  display: none;
+  font-size: 32px !important;
+  color: #f5f5f5;
+  letter-spacing: 10px !important;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 60%;
+  border-bottom-right-radius: 10px;
+  font-weight: 300;
+}
+.last-crop h2{
+  color: #f5f5f5;
+  padding-left: 2.5%;
+  font-weight: 300;
 
-      .swiper-wrapper{
-        gap: 1rem !important;
-      }
-      .no-show-lg h2 {
-        display: none;
-        font-size: 32px !important;
-        color: #ffc107;
-        letter-spacing: 10px !important;
-        margin-bottom: 24px;
-        text-align: center;
-        width: 60%;
-        border-bottom: 5px solid #0275d8;
-        border-bottom-right-radius: 10px;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif !important;
-      }
+}
 
-      .a-left-text h2 {
-        writing-mode: vertical-rl;
-        text-orientation: sideways-right;
-        text-transform: uppercase;
-        font-size: 43px !important;
-        text-align: right;
-        color: #ffc107;
-        letter-spacing: 20px !important;
-        margin-left: 48px !important;
-      }
 
-      .gallery-way2 .a-left-text {
-        text-align: left;
-        margin-right: 48px !important;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif !important;
-      }
+.a-left-text h2 {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  text-transform: uppercase;
+  font-size: 43px !important;
+  text-align: right;
+  letter-spacing: 20px !important;
+  margin-left: 48px !important;
+  font-weight: 300;
 
-      .gallery-way {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        min-height: 100%;
-        background: #020905;
-        padding: 50px 0px;
-      }
+}
 
-      .gallery-way h2 {
-        font-size: 34px;
-        letter-spacing: 12px;
-        color: #ffde5b;
-        text-transform: uppercase;
-        margin-bottom: 35px;
-        line-height: 110%;
-        font-weight: 500;
-        font-family: "Raleway", sans-serif !important;
-        text-align: center;
-      }
+.gallery-way2 .a-left-text {
+  text-align: left;
+  margin-right: 48px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif !important;
+}
 
-      .gallery-way .container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 80%;
-      }
+.gallery-way {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  min-height: 100%;
+  background: #020905;
+  margin: 50px 0px;
+}
 
-      .gallery-way .container .g-card {
-        position: relative;
-        width: 270px;
-        height: 165px;
-        margin: 4px;
-        overflow: hidden;
-      }
+.gallery-way h2 {
+  font-size: 34px;
+  letter-spacing: 12px;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  line-height: 110%;
+  font-weight: 300;
+  text-align: center;
+}
 
-      .gallery-way .vert-gallery3 .g-card {
-        width: 280px !important;
-        height: 190px;
-      }
+.gallery-way .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1280px;
+}
 
-      .gallery-way .swiper-pagination-bullet {
-        background-color: #f5f5f5;
-      }
+.gallery-way .container .g-card {
+  position: relative;
+  width: 270px;
+  height: 165px;
+  margin: 4px;
+  overflow: hidden;
+}
 
-      .g-card .imgBx,
-      .g-card .contentBx {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+.gallery-way .vert-gallery3 .g-card {
+  width: 280px !important;
+  height: 190px;
+}
 
-      .container .g-card .imgBx img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: contain;
-        object-fit: contain;
-      }
+.gallery-way .swiper-pagination-bullet {
+  background-color: #f5f5f5;
+}
 
-      .container .g-card .contentBx::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        transform: scaleX(0);
-        transition: transform 0.5s ease-in-out;
-        transform-origin: right;
-        transition-delay: 0.3s;
-      }
+.g-card .imgBx,
+.g-card .contentBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-      .container .g-card:hover .contentBx::before {
-        transform: scaleX(1);
-        transition: transform 0.5s ease-in-out;
-        transform-origin: left;
-        transition-delay: 0;
-      }
+.container .g-card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
-      .container .g-card .contentBx {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 0.5rem;
-      }
+.container .g-card .contentBx::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.3s;
+}
 
-      .container .g-card .contentBx .content {
-        position: relative;
-        padding: 5px;
-        z-index: 1;
-        transition: 0.5s;
-        transform: translateX(-270px);
-        transition-delay: 0;
-      }
+.container .g-card:hover .contentBx::before {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0;
+}
 
-      .container .g-card:hover .contentBx .content {
-        transform: translateX(0px);
-        transition-delay: 0.2s;
-      }
+.container .g-card .contentBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+}
 
-      .container .g-card .contentBx .content h5 {
-        font-size: 1em;
-        text-transform: capitalize;
-        color: #020905;
-      }
+.container .g-card .contentBx .content {
+  position: relative;
+  padding: 5px;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateX(-270px);
+  transition-delay: 0;
+  max-width: 100% !important;
+}
 
-      .container .g-card .contentBx .content p {
-        font-size: 11px !important;
-        color: #020905;
-        letter-spacing: 0.6px;
-      }
+.container .g-card:hover .contentBx .content {
+  transform: translateX(0px);
+  transition-delay: 0.2s;
+}
 
-      /* Gallery way 2 */
-      /* Artifects Section 3 */
-      .vert-gallery {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 3rem !important;
-      }
+.container .g-card .contentBx .content h5 {
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #020905;
+}
 
-      .v-card {
-        width: 300px;
-        height: 400px;
-        background-color: #fff;
-        display: flex;
-        align-items: flex-end;
-        padding: 2rem 1rem;
-        position: relative;
-        transition: 0.5s all ease-in-out;
-      }
+.container .g-card .contentBx .content p {
+  font-size: 11px;
+  color: #020905;
+  letter-spacing: 0.4px;
+  line-height: 120% !important;
+  font-size: 12px !important;
+}
 
-      .vert-gallery2,
-      .vert-gallery3 {
-        margin: 0px !important;
-        padding-top: 1rem;
-      }
+/* Gallery way 2 */
+/* Artifects Section 3 */
+.vert-gallery {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px !important;
+}
 
-      .vert-gallery2 .v-card {
-        width: 220px;
-        height: 300px;
-      }
+.v-card {
+  width: 95%;
+  height: 90%;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 1rem;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
 
-      #galleryLast {
-        width: 95%;
-        margin: auto;
-        padding: 40px 0px;
-      }
+.vert-gallery2, .vert-gallery3 {
+  margin: 0px !important;
+}
 
-      #galleryLast .v-card {
-        width: 310px !important;
-        height: 190px !important;
-        padding: 1rem !important;
-      }
+  .vert-gallery2 .v-card {
+    max-width: 340px;
+    min-height: 300px;
 
-      #galleryLast .v-card img {
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
+}
 
-      #galleryLast .v-card p {
-        font-size: 11px !important;
-      }
+#galleryLast {
+  width: 95%;
+  margin: auto;
+  padding: 40px 0px;
+}
 
-      #galleryLast .v-card:hover {
-        transform: translateX(-5px);
-      }
+#galleryLast .v-card {
+  width: 310px !important;
+  height: 190px !important;
+  padding: 1rem !important;
+}
 
-      .v-card:hover {
-        transform: translateY(-10px);
-      }
+#galleryLast .v-card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
-      .v-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(13, 36, 63, 0.3),
-          rgb(13, 36, 63)
-        );
-        z-index: 2;
-        opacity: 0;
-        transition: 0.5s all;
-      }
+#galleryLast .v-card p {
+  font-size: 11px;
+}
 
-      .v-card:hover::before {
-        opacity: 1;
-      }
+#galleryLast .v-card:hover {
+  transform: translateX(-5px);
+}
+.mySwiper{
+  min-height: 450px;
+}
+.mySwiper .card{
+    min-height: 400px;
+    border-radius: 0;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.mySwiper .card-img, .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
-      .v-card img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+.v-card:hover {
+  transform: translateY(-10px);
+}
 
-      .v-card .info {
-        position: relative;
-        color: #fff;
-        z-index: 3;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: 0.5s all;
-      }
+.v-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgb(13, 36, 63));
+  z-index: 2;
+  opacity: 0;
+  transition: 0.5s all;
+}
 
-      .v-card:hover .info {
-        opacity: 1;
-        transform: translateX(0);
-      }
+.v-card:hover::before {
+  opacity: 1;
+}
 
-      .v-card .info h5 {
-        line-height: 40px;
-      }
+.v-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-      .v-card .info p {
-        font-size: 12px !important;
-        letter-spacing: 1px;
-      }
-      .swiper-slide{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .no-show-lg{
-        display: block;
-    }
-    #scroll-container .arte .content  p{
-        font-size: calc(min(100vh / 55));
-    }
-    #scroll-container .mySwiper .swiper-wrapper  p{
-      color: #000;
-      font-size: calc(min(100vh / 50));
-    }
-    #scroll-container #section-footer  .g-card .content{
-        background: none !important;
-    }
-    .mySwiper1 .swiper-wrapper .card,
-    .mySwiper2 .swiper-wrapper .card{
-      border: none !important;
-    }
-    
-    .galleryLast .swiper-pagination-bullet{
-      background-color: #fff !important;
-    }
+.v-card .info {
+  position: relative;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+.v-card:hover .info {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.v-card .info h5 {
+  line-height: 40px;
+}
+
+.v-card .info p {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.last-crop h2 {
+    font-weight: 300;
+    letter-spacing: 12px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    line-height: 110%;
+    font-weight: 300;
+    text-align: center;
+    font-size: 34px;
+}
+
     </style>
   </head>
   <body id="collection" class="">
     <!-- Accessibility Button -->
     <div id="dynamic-gallery-demo"></div>
     <div class="tribes-main" id="scroll-container">
-      <div class="section-tribe"
+      <div
+        class="section-tribe"
         style="
           background-image: url('assets/images/Front/transition/Gallery1.jpg');
         "
@@ -394,883 +400,629 @@
         </div>
       </div>
 
-      <div
-      class="section-tribe arte"
-      id="section-footer"
-      data-bg="assets/images/conservation/1b.JPG"
-    >
-      <div class="content">
-      <!-- Swiper -->
       <section class="vert-gallery swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Bhurabhagat.png" alt="" />
+              <img src="/assets/images/artefects/Bhurabhagat.png" alt="">
               <div class="info">
                 <h5>Bhura Bhagat</h5>
-                <p>
-                  Bhura Bhagat is crafted from brass, and the Gond tribe
-                  venerates it during traditional religious ceremonies and
-                  special occasions.
-                </p>
+                <p>Bhura Bhagat is crafted from brass, and the Gond tribe venerates it during traditional religious
+                  ceremonies and special occasions.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img
-                src="assets/images/collection/Bhurabhagat (panchayat).png"
-                alt=""
-              />
+              <img src="/assets/images/artefects/Bhurabhagat(panchayat).png" alt="">
               <div class="info">
                 <h5>Bhurabhagat(panchayat)</h5>
-                <p>
-                  The bhurabhagat (panchayat) is made of brass and is worshiped
-                  by the Gond tribe of Chhindwara during traditional religious
-                  ceremonies.
-                </p>
+                <p>The bhurabhagat (panchayat) is made of brass and is worshiped by the Gond tribe of Chhindwara during
+                  traditional religious ceremonies.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Trishul.png" alt="" />
+              <img src="/assets/images/artefects/Trishul.png" alt="">
               <div class="info">
                 <h5>Trishul</h5>
-                <p>
-                  The trishul is made of iron and is crafted by the Lohar or
-                  Mandla&#39;s Agariya tribe. It is consecrated and worshiped in
-                  traditional ceremonies by the Gond tribe. This symbol is found
-                  in almost all communities.
-                </p>
+                <p>The trishul is made of iron and is crafted by the Lohar or Mandla&#39;s Agariya tribe. It is consecrated and
+                  worshiped in traditional ceremonies by the Gond tribe. This symbol is found in almost all communities.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Mangrohan Kham.png" alt="" />
+              <img src="/assets/images/artefects/MangrohanKham.png" alt="">
               <div class="info">
                 <h5>Mangrohan Kham</h5>
-                <p>
-                  The Mangrohan Kham is made from a single piece of wood and is
-                  crafted by carpenters, known as Sutaar or Badhayi, with
-                  intricate carvings sometimes added. The Gond tribe in
-                  Chhindwara uses the Mangrohan Kham for worship during marriage
-                  ceremonies.
-                </p>
+                <p>The Mangrohan Kham is made from a single piece of wood and is crafted by carpenters, known as
+                  Sutaar or Badhayi, with intricate carvings sometimes added. The Gond tribe in Chhindwara uses the
+                  Mangrohan Kham for worship during marriage ceremonies.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Pajama.png" alt="" />
+              <img src="/assets/images/artefects/Pajama.png" alt="">
               <div class="info">
                 <h5>Pajama</h5>
-                <p>
-                  Pajama is made of white cotton fabric. It is tailored by a
-                  tailor. It is used by men of the Gond tribe in Mandla and
-                  Chhindwara for daily wear.
-                </p>
+                <p>Pajama is made of white cotton fabric. It is tailored by a tailor. It is used by men of the
+                  Gond tribe in Mandla and Chhindwara for daily wear.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Churidar Pajama.png" alt="" />
+              <img src="/assets/images/artefects/ChuridarPajama.png" alt="">
               <div class="info">
                 <h5>Churidar Pajama</h5>
-                <p>
-                  Churidar pajama is made of white silk fabric. It is worn by
-                  men of the Gond tribe in Mandla on occasions such as weddings,
-                  festivals, and other celebrations.
-                </p>
+                <p>Churidar pajama is made of white silk
+                  fabric. It is worn by men of the Gond tribe in Mandla on
+                  occasions such as weddings, festivals, and other
+                  celebrations.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Bana.bmp" alt="" />
+              <img src="/assets/images/artefects/Bana.bmp" alt="">
               <div class="info">
                 <h5>Bana</h5>
-                <p>
-                  The "Bana" is a musical instrument of the Gond tribe,
-                  specifically the Pardhan community. It is made from sagwan
-                  wood, leather, and bamboo. The Bana is associated with the
-                  worship of the major deity Bade Dev, and it is played during
-                  religious rituals, Teej, festivals, and other auspicious
-                  occasions.
-                </p>
+                <p>The "Bana" is a musical instrument of the Gond tribe, specifically the Pardhan community. It is made from sagwan wood, leather, and bamboo. The Bana is associated with the worship of the major deity Bade Dev, and it is played during religious rituals, Teej, festivals, and other auspicious occasions.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Barooddani.bmp" alt="" />
+              <img src="/assets/images/artefects/Barooddani.bmp" alt="">
               <div class="info">
                 <h5>Barooddani</h5>
-                <p>
-                  A gunpowder flask is made from wood and is intricately carved
-                  using a chisel. It is used by the Gond tribe in Mandla to
-                  store gunpowder.
-                </p>
+                <p>A gunpowder flask is made from wood and is intricately carved using a chisel. It is used by the Gond tribe in Mandla to store gunpowder.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Chonkya.bmp" alt="" />
+              <img src="/assets/images/artefects/Chonkya.bmp" alt="">
               <div class="info">
                 <h5>Chonkya(Tuntuna)</h5>
-                <p>
-                  The musical instrument "Chonkya" is made from bamboo, wood,
-                  leather, and strings. It is used as a solo instrument by the
-                  Gond and Baiga tribes in Balaghat and Mandla for various
-                  occasions, including weddings and festivals. The musician
-                  plays this instrument, and in return, seeks compensation for
-                  their performance during events like weddings and other
-                  celebrations.
+                <p>The musical instrument "Chonkya" is made from bamboo, wood, leather, and strings. It is used as a solo instrument by the Gond and Baiga tribes in Balaghat and Mandla for various occasions, including weddings and festivals. The musician plays this instrument, and in return, seeks compensation for their performance during events like weddings and other celebrations.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Fota.jpg" alt="" />
+              <img src="/assets/images/artefects/Fota.jpg" alt="">
               <div class="info">
                 <h5>Fota</h5>
-                <p>
-                  "Fota" is made of cotton fabric and has a yellow color. It is
-                  locally bought from the market. During Teej festivals or
-                  traditional dances, men from the Gond-Baiga tribes in Dindauri
-                  and Mandla wear it wrapped around their heads.
+                <p>"Fota" is made of cotton fabric and has a yellow color. It is locally bought from the market. During Teej festivals or traditional dances, men from the Gond-Baiga tribes in Dindauri and Mandla wear it wrapped around their heads.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Gamcha.bmp" alt="" />
+              <img src="/assets/images/artefects/Gamcha.bmp" alt="">
               <div class="info">
                 <h5>Gamcha</h5>
-                <p>
-                  A "gamcha" is made of cotton fabric and has thin colorful
-                  borders on both edges. Men from the Gond tribe in Chindwada
-                  use it to drape over their shoulders or wrap around their
-                  heads.
-                </p>
+                <p>A "gamcha" is made of cotton fabric and has thin colorful borders on both edges. Men from the Gond tribe in Chindwada use it to drape over their shoulders or wrap around their heads.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Itarni.png" alt="" />
+              <img src="/assets/images/artefects/Itarni.png" alt="">
               <div class="info">
                 <h5>Itarni</h5>
-                <p>
-                  "Itarni" is made of brass metal. Its lower part is round,
-                  pendant-shaped, and the upper part is long and pointed, with
-                  three to four holes. The Gond tribal community in Mandla uses
-                  it for sprinkling scented water during auspicious occasions or
-                  weddings.
-                </p>
+                <p>"Itarni" is made of brass metal. Its lower part is round, pendant-shaped, and the upper part is long and pointed, with three to four holes. The Gond tribal community in Mandla uses it for sprinkling scented water during auspicious occasions or weddings.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/KaadiKhochni.png" alt="" />
+              <img src="/assets/images/artefects/KaadiKhochni.png" alt="">
               <div class="info">
                 <h5>Kaadi Khochni</h5>
-                <p>
-                  Kaadi Khochni is made of brass (metal). It has an artistic
-                  shape. The Gond tribal community in Mandla uses it during
-                  worship ceremonies for holding incense sticks.
+                <p>Kaadi Khochni is made of brass (metal). It has an artistic shape. The Gond tribal community in Mandla uses it during worship ceremonies for holding incense sticks.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Kandhwana.bmp" alt="" />
+              <img src="/assets/images/artefects/Kandhwana.bmp" alt="">
               <div class="info">
                 <h5>Kandhvana</h5>
-                <p>
-                  The musical instrument "Kandhvana" or "Chikada" is made from
-                  wood, leather, and bamboo. The Pardhan tribe plays it during
-                  weddings and other festive celebrations at Gond community
-                  events.
-                </p>
+                <p>The musical instrument "Kandhvana" or "Chikada" is made from wood, leather, and bamboo. The Pardhan tribe plays it during weddings and other festive celebrations at Gond community events.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Khalta bag.bmp" alt="" />
+              <img src="/assets/images/artefects/Khaltabag.bmp" alt="">
               <div class="info">
                 <h5>Khalta</h5>
-                <p>
-                  Khalta bag jut ki rassi se bana hota hai. Iske dono siron me
-                  chamde ke lattu bane hote hai. Isme semal ki rui rakhi jati
-                  hai. Chindwada ki gond janjati dwara aak sugani ki samagri ,
-                  chakmak pathar loh dhatu ki pattika ityadi rakhne ke liye iska
-                  upyog kiya jata hai.
+                <p>Khalta bag jut ki rassi se bana hota hai. Iske dono siron me chamde ke lattu bane hote hai. Isme semal ki rui rakhi jati hai. Chindwada ki gond janjati dwara aak sugani ki samagri , chakmak pathar loh dhatu ki pattika ityadi rakhne ke liye iska upyog kiya jata hai. 
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/pisu batua.bmp" alt="" />
+              <img src="/assets/images/artefects/pisubatua.bmp" alt="">
               <div class="info">
                 <h5>Batua</h5>
-                <p>
-                  "Pisu" or "Batua" is crafted by women using cut pieces of
-                  cotton and colorful fabrics. It has a rectangular shape and is
-                  used by women from the tribal communities in Chindwada and
-                  Mandla to keep items like money, lime, tobacco, etc.
-                </p>
+                <p>"Pisu" or "Batua" is crafted by women using cut pieces of cotton and colorful fabrics. It has a rectangular shape and is used by women from the tribal communities in Chindwada and Mandla to keep items like money, lime, tobacco, etc.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Sarangi.bmp" alt="" />
+              <img src="/assets/images/artefects/Sarangi.bmp" alt="">
               <div class="info">
                 <h5>Saarangi</h5>
-                <p>
-                  The "Saarangi" is a musical instrument made from wood,
-                  leather, and strings. It is played during dance performances,
-                  weddings, and other festive occasions. The Pardhan sub-tribe
-                  of the Gond community is particularly known for playing this
-                  instrument.
+                <p>The "Saarangi" is a musical instrument made from wood, leather, and strings. It is played during dance performances, weddings, and other festive occasions. The Pardhan sub-tribe of the Gond community is particularly known for playing this instrument.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Sendri Dhoti.bmp" alt="" />
+              <img src="/assets/images/artefects/SendriDhoti.bmp" alt="">
               <div class="info">
                 <h5>Sendri Dhoti</h5>
-                <p>
-                  A "Sendri Dhoti" is made from cotton fabric, is plain-colored,
-                  and has a wide border, making it heavy. It is crafted by
-                  weavers and is purchased from local markets for various
-                  occasions. Gond women from Chinwada and Mandla use it for
-                  festivals, weddings, fairs, and special events.
+                <p>A "Sendri Dhoti" is made from cotton fabric, is plain-colored, and has a wide border, making it heavy. It is crafted by weavers and is purchased from local markets for various occasions. Gond women from Chinwada and Mandla use it for festivals, weddings, fairs, and special events.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Tumba.bmp" alt="" />
+              <img src="/assets/images/artefects/Tumba.bmp" alt="">
               <div class="info">
                 <h5>Tumba</h5>
-                <p>
-                  A musical instrument called "tumba" is made from dried bottle
-                  gourd (lauki). The upper part of the dried gourd is cut off,
-                  seeds are removed, and it is cleaned for use. It is then used
-                  by various tribes like Bheel, Gond, Korku, Baiga, Madiya,
-                  etc., for holding water, storing chemicals like sulfur, and
-                  more.
+                <p>A musical instrument called "tumba" is made from dried bottle gourd (lauki). The upper part of the dried gourd is cut off, seeds are removed, and it is cleaned for use. It is then used by various tribes like Bheel, Gond, Korku, Baiga, Madiya, etc., for holding water, storing chemicals like sulfur, and more.
                 </p>
               </div>
             </div>
           </div>
+          
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </section>
-
+    
       <!-- Jwellery Gallery -->
       <section class="gallery-way">
-        <span class="a-left-text no-show"><h2>Jewellery</h2></span>
-        <div class="container">
-          <span class="no-show-lg"><h2>Jewellery</h2></span>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Tora.png" alt="" />
+          <span class="a-left-text no-show"><h2>Jewellery</h2></span>
+          <div class="container">
+    
+            <span class="no-show-lg"><h2>Jewellery</h2></span>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Tora.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Tora</h5>
+                  <p>Tora is a piece of jewellery made of Aluminium. It is made by intertwining aluminium wires. It is worn by women of the Gond tribe in regions of Chhindwara and Mandla in their daily lives.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Tora</h5>
-                <p>
-                  Tora is a piece of jewellery made of Aluminium. It is made by
-                  intertwining aluminium wires. It is worn by women of the Gond
-                  tribe in regions of Chhindwara and Mandla in their daily
-                  lives.
-                </p>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/RignaOrRing.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Rigna</h5>
+                  <p>Ring/Rigna is a piece of jewellery made of iron. On the outer surface, the prominent design is mostly circular, like a rope. It is worn by the men of the Gond tribe in regions of Mandla in their daily lives.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/PahunchiBajubandh.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Pahunchi</h5>
+                  <p>Pahunchi is made of nickel or thick cotton string. It is made by braiding of the strings. It is worn by women of the Gond tribe in regions of Chhindwara and Mandla in their daily lives.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/BariOrBali.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Bali</h5>
+                  <p>Bali is a piece of jewellery made of brass or silver. It is round in shape, with a thick
+                    middle portion and thin, pointed ends on both sides. It is worn in ear by men of the Gond tribe in
+                    Mandla in their daily lives.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Kanosi.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Kanosi</h5>
+                  <p>Kanosi is a jewellery made of silver, brass, or nickel. It has one thick end with
+                    designs and another thin, pointed end. It is used for wearing in the ears in 
+                    various tribes such as Bhil, Gond, Korku and others.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Hansli.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Hansli</h5>
+                  <p>Hansli is a piece of jewellery made of nickel-mixed silver metal. It is hollow from the
+                    inside and has designs on the outer surface. It is used by women of the Gond tribe in Mandla for
+                    wearing around the neck.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Kakna.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Kakna</h5>
+                  <p>Kakna (Kangan) is a short silver bracelet. It is circular in shape with a flat upper surface
+                    adorned with designs. It is used by women of the Gond tribe in Mandla for wearing on their
+                    hands.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Kangan.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Kangan</h5>
+                  <p>Kangan is a jewellery made of brass metal. It is used by women of the Birhor tribe in
+                    Raigarh for wearing on their hands. This jewellery is worn in daily life.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Payjna.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Pajna</h5>
+                  <p>Pajna (or Payjna) is made of Nickel. It is used by women of the Gond tribe in
+                    Chhindwara and Mandla to adorn their daily lives by wearing it on the arms.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Ghunghru.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Ghunghru</h5>
+                  <p>The Ghunghru is made of brass metal. It is worn on the feet as a musical accessory,
+                    specifically used in Mandlas Gond tribe during dances like Karma, Saul, Faag, weddings etc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Bogri.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Bogri</h5>
+                  <p>Bogri is a jewellery made of silver. It has a hollow interior and is adorned with designs
+                    on the outer surface. It is used by women of the Gond tribe in Mandla for wearing on the hands
+                    in their daily lives.</p>
+                </div>
+              </div>
+            </div>
+            <div class="g-card">
+              <div class="imgBx">
+                <img src="/assets/images/artefects/Bajubandh.png" alt="">
+              </div>
+              <div class="contentBx">
+                <div class="content">
+                  <h5>Bajubandh</h5>
+                  <p>Bajubandh is a jewellery made of silver. It is used by women of the Gond tribe in
+                    Chhindwara and Mandla to adorn their daily lives by wearing it on the arms.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/RignaOrRing.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Rigna</h5>
-                <p>
-                  Ring/Rigna is a piece of jewellery made of iron. On the outer
-                  surface, the prominent design is mostly circular, like a rope.
-                  It is worn by the men of the Gond tribe in regions of Mandla
-                  in their daily lives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img
-                src="assets/images/collection/PahunchiBajubandh.png"
-                alt=""
-              />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Pahunchi</h5>
-                <p>
-                  Pahunchi is made of nickel or thick cotton string. It is made
-                  by braiding of the strings. It is worn by women of the Gond
-                  tribe in regions of Chhindwara and Mandla in their daily
-                  lives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/BariOrBali.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Bali</h5>
-                <p>
-                  Bali is a piece of jewellery made of brass or silver. It is
-                  round in shape, with a thick middle portion and thin, pointed
-                  ends on both sides. It is worn in ear by men of the Gond tribe
-                  in Mandla in their daily lives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Kanosi.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Kanosi</h5>
-                <p>
-                  Kanosi is a jewellery made of silver, brass, or nickel. It has
-                  one thick end with designs and another thin, pointed end. It
-                  is used for wearing in the ears in various tribes such as
-                  Bhil, Gond, Korku and others.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Hansli.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Hansli</h5>
-                <p>
-                  Hansli is a piece of jewellery made of nickel-mixed silver
-                  metal. It is hollow from the inside and has designs on the
-                  outer surface. It is used by women of the Gond tribe in Mandla
-                  for wearing around the neck.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Kakna.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Kakna</h5>
-                <p>
-                  Kakna (Kangan) is a short silver bracelet. It is circular in
-                  shape with a flat upper surface adorned with designs. It is
-                  used by women of the Gond tribe in Mandla for wearing on their
-                  hands.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Kangan.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Kangan</h5>
-                <p>
-                  Kangan is a jewellery made of brass metal. It is used by women
-                  of the Birhor tribe in Raigarh for wearing on their hands.
-                  This jewellery is worn in daily life.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Payjna.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Pajna</h5>
-                <p>
-                  Pajna (or Payjna) is made of Nickel. It is used by women of
-                  the Gond tribe in Chhindwara and Mandla to adorn their daily
-                  lives by wearing it on the arms.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Ghunghru.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Ghunghru</h5>
-                <p>
-                  The Ghunghru is made of brass metal. It is worn on the feet as
-                  a musical accessory, specifically used in Mandlas Gond tribe
-                  during dances like Karma, Saul, Faag, weddings etc.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Bogri.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Bogri</h5>
-                <p>
-                  Bogri is a jewellery made of silver. It has a hollow interior
-                  and is adorned with designs on the outer surface. It is used
-                  by women of the Gond tribe in Mandla for wearing on the hands
-                  in their daily lives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="g-card">
-            <div class="imgBx">
-              <img src="assets/images/collection/Bajubandh.png" alt="" />
-            </div>
-            <div class="contentBx">
-              <div class="content">
-                <h5>Bajubandh</h5>
-                <p>
-                  Bajubandh is a jewellery made of silver. It is used by women
-                  of the Gond tribe in Chhindwara and Mandla to adorn their
-                  daily lives by wearing it on the arms.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
-
+    
       <!-- Bootstrap card Swiper -->
-      <section class="swiper mySwiper1">
+      <section class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Pata Saree.bmp"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/PataSaree.bmp" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Pata Saree</h5>
-                <p class="card-text">
-                  A "Pata Saree" is made from cotton fabric and is generally
-                  heavy. Gond women from Chinwada and Mandla use it for special
-                  occasions like Teej, weddings, Bela-Madai, and other festive
-                  events.
+                <p class="card-text">A "Pata Saree" is made from cotton fabric and is generally heavy. Gond women from Chinwada and Mandla use it for special occasions like Teej, weddings, Bela-Madai, and other festive events.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Pagdi.bmp"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/Pagdi.bmp" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Pagdi</h5>
-                <p class="card-text">
-                  The "Pagdi" is made from a fabric called "kosa." It has a
-                  golden head and a patterned design. It is specifically used by
-                  men of the Gond tribe in Mandla for special occasions such as
-                  weddings, Teej festivals, and other celebrations to be worn on
-                  the head.
+                <p class="card-text">The "Pagdi" is made from a fabric called "kosa." It has a golden head and a patterned design. It is specifically used by men of the Gond tribe in Mandla for special occasions such as weddings, Teej festivals, and other celebrations to be worn on the head.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Chadar.bmp"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/Chadar.bmp" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Chaadar</h5>
-                <p class="card-text">
-                  A "chaadar" is made from a fabric known as "sooti," and it
-                  features a checkered design. It is locally purchased from
-                  handloom weavers. It is prepared by weavers and is used by the
-                  Gond tribal community in Mandla to cover and decorate their
-                  homes.
+                <p class="card-text">A "chaadar" is made from a fabric known as "sooti," and it features a checkered design. It is locally purchased from handloom weavers. It is prepared by weavers and is used by the Gond tribal community in Mandla to cover and decorate their homes.
                 </p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/rajai khol.bmp"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/rajaikhol.bmp" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Rajai</h5>
-                <p class="card-text">
-                  The "rajai" is made from printed "sooti" fabric that is
-                  sourced from local markets. In the Gond tribal communities of
-                  Chhindwara and Mandla, this "rajai" is used to cover and
-                  protect oneself by wrapping it around a quilt or blanket.
+                <p class="card-text">The "rajai" is made from printed "sooti" fabric that is sourced from local markets. In the Gond tribal communities of Chhindwara and Mandla, this "rajai" is used to cover and protect oneself by wrapping it around a quilt or blanket.
                 </p>
               </div>
             </div>
-          </div>
+          </div>         
           <div class="swiper-slide">
-            <div class="card">
-              <img
-                src="assets/images/collection/Batua.bmp"
-                class="card-img-top"
-                alt="..."
-              />
+            <div class="card" >
+              <img src="/assets/images/artefects/Batua.bmp" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Batua</h5>
-                <p class="card-text">
-                  A "Batua" is a small cotton fabric pouch with a cotton string
-                  lock at the top for easy opening and closing. Colorful tassels
-                  (jhumkas) adorn both ends of the string. Gond women and men
-                  use it to carry essentials such as tobacco, lime, and currency
-                  notes. Women personally craft it using needle and thread.
+                <p class="card-text">A "Batua" is a small cotton fabric pouch with a cotton string lock at the top for easy opening and closing. Colorful tassels (jhumkas) adorn both ends of the string. Gond women and men use it to carry essentials such as tobacco, lime, and currency notes. Women personally craft it using needle and thread.
                 </p>
               </div>
             </div>
           </div>
+    
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </section>
-
+      
       <!-- Utensil and Mugs -->
       <section class="gallery-way">
         <div class="container">
-          <h2>Utensils & Household Items</h2>
+          <h2>Utensils & Household Items  </h2>
           <section class="vert-gallery2 swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img src="assets/images/collection/GangaarBada.png" alt="" />
+                  <img src="/assets/images/artefects/GangaarBada.png" alt="">
                   <div class="info">
                     <h5>Gangaar</h5>
-                    <p>
-                      Gangaar is a large vessel made of brass metal. It is used
-                      by the Gond tribal community in Mandla for storing water.
-                    </p>
+                    <p>Gangaar is a large vessel made of brass metal. It is used by the Gond tribal
+                      community in Mandla for storing water.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img src="assets/images/collection/JaamGilaas.png" alt="" />
+                  <img src="/assets/images/artefects/JaamGilaas.png" alt="">
                   <div class="info">
                     <h5>Jaam Gilas</h5>
-                    <p>
-                      The "Jaam gilas" is made of brass. It is beautiful and
-                      decorative. It is used by the Gond and Baiga tribal
-                      communities in Mandla for drinking water and consuming
-                      beverages.
-                    </p>
+                    <p>The "Jaam gilas" is made of brass. It is beautiful and decorative. It is used by the Gond and Baiga tribal communities in Mandla for drinking water and consuming beverages.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img
-                    src="assets/images/collection/KhurawaleGilas.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/KhurawaleGilas.png" alt="">
                   <div class="info">
-                    <h5>Khurawale Gilas</h5>
-                    <p>
-                      The "Khurawale gilas" is made of bell metal. It has an
-                      expanding upper part and a spreading lower part. It is
-                      used by the Gond and Baiga tribal communities in Mandla
-                      for drinking water and consuming beverages.
+                    <h5>Khurawale Gilas </h5>
+                    <p>The "Khurawale gilas" is made of bell metal. It has an expanding upper part and a spreading lower part. It is used by the Gond and Baiga tribal communities in Mandla for drinking water and consuming beverages.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img src="assets/images/collection/SafedaGilas.png" alt="" />
+                  <img src="/assets/images/artefects/SafedaGilas.png" alt="">
                   <div class="info">
                     <h5>Safeda Gilas</h5>
-                    <p>
-                      The "Safeda gilas" is made of stainless steel. It is used
-                      by the Gond and Baiga tribal communities in Mandla for
-                      drinking water or consuming beverages.
+                    <p>The "Safeda gilas" is made of stainless steel. It is used by the Gond and Baiga tribal communities in Mandla for drinking water or consuming beverages.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img src="assets/images/collection/Gilas.png" alt="" />
+                  <img src="/assets/images/artefects/Gilas.png" alt="">
                   <div class="info">
                     <h5>Gilas</h5>
-                    <p>
-                      The "gilas" is made of brass and bronze (metals). It is
-                      used by the Gond and Baiga tribal communities in Mandla
-                      for drinking water.
+                    <p>The "gilas" is made of brass and bronze (metals). It is used by the Gond and Baiga tribal communities in Mandla for drinking water.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="v-card">
-                  <img src="assets/images/collection/Gangajali.png" alt="" />
+                  <img src="/assets/images/artefects/Gangajali.png" alt="">
                   <div class="info">
                     <h5>Gangajali</h5>
-                    <p>
-                      The "Gangajali" is made of brass (metal). It has a handle
-                      attached to the lid for easy handling. The Gond and Baiga
-                      tribal communities in Mandla use it to store holy water
-                      from the Ganges in their homes.
+                    <p>The "Gangajali" is made of brass (metal). It has a handle attached to the lid for easy handling. The Gond and Baiga tribal communities in Mandla use it to store holy water from the Ganges in their homes.
                     </p>
-                  </div>
+                    </div>
                 </div>
-              </div>
-            </div>
+              </div>          
+            </div>  
             <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-prev"></div> 
             <div class="swiper-pagination"></div>
           </section>
           <section class="vert-gallery3 swiper">
             <div class="swiper-wrapper">
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img
-                    src="assets/images/collection/MirzapuriLota.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/MirzapuriLota.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Mirzapur lota</h5>
-                    <p>
-                      The "Mirzapur lota" is a vessel made of bell metal (an
-                      alloy of copper and tin). It is used for domestic tasks by
-                      the Gond and Baiga tribal communities in Mandla.
+                    <p>The "Mirzapur lota" is a vessel made of bell metal (an alloy of copper and tin). It is used for domestic tasks by the Gond and Baiga tribal communities in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Gadua.png" alt="" />
+                  <img src="/assets/images/artefects/Gadua.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Gadua</h5>
-                    <p>
-                      The "Gadua" is made of brass and bronze. It has a smaller
-                      size compared to other vessels and is relatively heavy. It
-                      is used during worship ceremonies by the Gond and Baiga
-                      tribal communities in Mandla.
+                    <p>The "Gadua" is made of brass and bronze. It has a smaller size compared to other vessels and is relatively heavy. It is used during worship ceremonies by the Gond and Baiga tribal communities in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/GolaLota.png" alt="" />
+                  <img src="/assets/images/artefects/GolaLota.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Gola Lota</h5>
-                    <p>
-                      The "gola lota" is made of a mixture of brass and bronze.
-                      It has a spherical shape and does not have a handle. It is
-                      used for domestic and kitchen purposes by the Gond and
-                      Baiga tribal communities in Mandla.
+                    <p>The "gola lota" is made of a mixture of brass and bronze. It has a spherical shape and does not have a handle. It is used for domestic and kitchen purposes by the Gond and Baiga tribal communities in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Okhli.bmp" alt="" />
+                  <img src="/assets/images/artefects/Okhli.bmp" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Okhli</h5>
-                    <p>
-                      The "Okhli" grinding stone, made of durable pink-colored
-                      stone, is skillfully carved by traditional artisans into a
-                      square outer shape with intricate designs. Embedded in the
-                      ground, it is used by women from the Bhil and Bhilala
-                      tribes of Jhabua, along with a wooden pestle, to grind
-                      grains.
-                    </p>
+                    <p>The "Okhli" grinding stone, made of durable pink-colored stone, is skillfully carved by traditional artisans into a square outer shape with intricate designs. Embedded in the ground, it is used by women from the Bhil and Bhilala tribes of Jhabua, along with a wooden pestle, to grind grains.</p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/NakkiDegchi.png" alt="" />
+                  <img src="/assets/images/artefects/NakkiDegchi.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Nakki Degchi</h5>
-                    <p>
-                      The "nakki" is made of brass (metal). The Gond, Bhatra,
-                      Maadiya, Muriya tribal communities in Bastar and Mandla
-                      use it for heating water or cooking in the kitchen.
+                    <p>The "nakki" is made of brass (metal). The Gond, Bhatra, Maadiya, Muriya tribal communities in Bastar and Mandla use it for heating water or cooking in the kitchen.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kunda.png" alt="" />
+                  <img src="/assets/images/artefects/Kunda.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kunda</h5>
-                    <p>
-                      The "kunda" is made of brass (metal). Its upper part is
-                      spread out like a plate, and the lower part is tapered.
-                      The Gond and Baiga tribal communities in Mandla use it for
-                      keeping flatbreads (roti).
+                    <p>The "kunda" is made of brass (metal). Its upper part is spread out like a plate, and the lower part is tapered. The Gond and Baiga tribal communities in Mandla use it for keeping flatbreads (roti).
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Chhaaka.png" alt="" />
+                  <img src="/assets/images/artefects/Chhaaka.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Chhaaka</h5>
-                    <p>
-                      The "Chhaaka" is a brass (metal) utensil in the form of a
-                      bowl. The Gond and Baiga tribal communities in Mandla use
-                      it for drinking water or as a bowl.
+                    <p>The "Chhaaka" is a brass (metal) utensil in the form of a bowl. The Gond and Baiga tribal communities in Mandla use it for drinking water or as a bowl.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/TatuarPlate.png" alt="" />
+                  <img src="/assets/images/artefects/TatuarPlate.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Tatuar</h5>
-                    <p>
-                      "Tatuar" is a brass (metal) plate used in kitchen
-                      activities. It is utilized by the Gond and Baiga tribal
-                      communities in Mandla for culinary purposes.
+                    <p>"Tatuar" is a brass (metal) plate used in kitchen activities. It is utilized by the Gond and Baiga tribal communities in Mandla for culinary purposes.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Chunauti.bmp" alt="" />
+                  <img src="/assets/images/artefects/Chunauti.bmp" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Chunatui</h5>
-                    <p>
-                      The chunauti (mortar) is made of wood and comes in various
-                      shapes and sizes. It is adorned with artistic carvings and
-                      crafted by a skilled artisan. It is used by various tribes
-                      such as Gond, Maadiya, Muriya, Uraav, Korku, Baiga, etc.,
-                      for keeping edible lime.
+                    <p>The chunauti (mortar) is made of wood and comes in various shapes and sizes. It is adorned with artistic carvings and crafted by a skilled artisan. It is used by various tribes such as Gond, Maadiya, Muriya, Uraav, Korku, Baiga, etc., for keeping edible lime.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/sadsi.png" alt="" />
+                  <img src="/assets/images/artefects/sadsi.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Saadsi</h5>
-                    <p>
-                      Saadsi is made of iron and is made by the Agariya tribe.
-                      It is used in the kitchen by the people of Agariya, Gond
-                      and Bega tribe for cooking and for melting iron and
-                      holding the tray in a kiln.
-                    </p>
+                    <p>Saadsi is made of iron and is made by the Agariya tribe. It is used in the kitchen by the people of Agariya, Gond and Bega tribe for cooking and for melting iron and holding the tray in a kiln.</p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kadchul.bmp" alt="" />
+                  <img src="/assets/images/artefects/Kadchul.bmp" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kadchul</h5>
-                    <p>
-                      The kadchul (ladle) is made of brass. It is utilized in
-                      kitchen activities by the Gond, Baiga, and other tribes in
-                      Mandla.
+                    <p>The kadchul (ladle) is made of brass. It is utilized in kitchen activities by the Gond, Baiga, and other tribes in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/sancha.png" alt="" />
+                  <img src="/assets/images/artefects/sancha.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Sancha</h5>
-                    <p>
-                      It is made from Sagwan wood. It is circular in shape. Its
-                      exterior surface is adorned with beautiful design. It is
-                      used to make puri or roti which is flat bread in festivals
-                      and occassions by the people of Bhil, Bhilala and Gond
-                      tribe.
+                    <p>It is made from Sagwan wood. It is circular in shape. Its exterior surface is adorned with beautiful design.  It is used to make puri or roti which is flat bread in festivals and occassions by the people of Bhil, Bhilala and Gond tribe. 
                     </p>
                   </div>
                 </div>
@@ -1282,276 +1034,180 @@
           </section>
         </div>
       </section>
-
-      <section class="swiper mySwiper2">
+      <section class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Thakur Dev.png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/ThakurDev.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Thakur Dev</h5>
-                <p class="card-text">
-                  Thakur Dev is made of brass, a metal alloy of copper and zinc.
-                  It is crafted by the Dhadwa tribe. The Gond community
-                  traditionally worships Thakur Dev during religious ceremonies
-                  and rituals.
-                </p>
+                <p class="card-text">Thakur Dev is made of brass, a metal alloy of copper and zinc. It is crafted by the Dhadwa tribe. The
+                  Gond community traditionally worships Thakur Dev during religious ceremonies and rituals.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Dulha Dev.png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/DulhaDev.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Dulha Dev</h5>
-                <p class="card-text">
-                  Dulha Dev is a deity made of stone and is crafted by skilled
-                  artisans. The Gond tribe in Chhindwara specifically worships
-                  Dulha Dev during special occasions and wedding ceremonies.
-                </p>
+                <p class="card-text">Dulha Dev is a deity made of stone and is crafted by skilled artisans. The Gond tribe in Chhindwara
+                  specifically worships Dulha Dev during special occasions and wedding ceremonies.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Chutkule.png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/Chutkule.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Chutkule</h5>
-                <p class="card-text">
-                  Chutkule are made from wood. During dance performances,
-                  dancers hold them in their hands and perform. The Gond-Pardhan
-                  tribe in Mandla district uses them during occasions like
-                  Karma, Shail, Faag, Holi, etc., while dancing.
-                </p>
+                <p class="card-text">Chutkule are made from wood. During dance performances, dancers hold them in their hands and
+                  perform. The Gond-Pardhan tribe in Mandla district uses them during occasions like Karma, Shail, Faag,
+                  Holi, etc., while dancing.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Manjeere.png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/Manjeere.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Manjeere</h5>
-                <p class="card-text">
-                  Manjeere are made from brass and bronze. The Gond tribe in
-                  Mandla district plays them during Bhajan- Kirtan and Ramsatta
-                  (ramdhun) occasions.
-                </p>
+                <p class="card-text">Manjeere are made from brass and bronze. The Gond tribe in Mandla district plays them during Bhajan-
+                  Kirtan and Ramsatta (ramdhun) occasions.</p>
               </div>
             </div>
-          </div>
+          </div>         
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Jhanjhi (Manjeera).png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/Jhanjhi(Manjeera).png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Jhanjh</h5>
-                <p class="card-text">
-                  The "Jhanjh" is made of brass (metal). It is played by the
-                  Gond, Baiga, and Bhil tribes during occasions like
-                  bhajan-kirtan and Ramsatta.
-                </p>
+                <p class="card-text">The "Jhanjh" is made of brass (metal). It is played by the Gond, Baiga, and Bhil tribes during occasions like bhajan-kirtan and Ramsatta.</p>
               </div>
             </div>
-          </div>
+          </div>         
           <div class="swiper-slide">
             <div class="card">
-              <img
-                src="assets/images/collection/Churuk Dhana (Dhanmakkad).png"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="/assets/images/artefects/ChurukDhana(Dhanmakkad).png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Churuk Dhana Khel</h5>
-                <p class="card-text">
-                  Churuk Dhana Khel is a prominent game played by the Gond tribe
-                  in the regions of Chhindwara, Balaghat, Dindori, and Mandla.
-                  It is prepared using two wooden pieces. A straight piece of
-                  wood with a hole is prepared, and another stick resembling a
-                  bow is attached to it.
-                </p>
+                <p class="card-text">Churuk Dhana Khel is a prominent game played by the Gond tribe in the regions of Chhindwara, Balaghat, Dindori, and Mandla. It is prepared using two wooden pieces. A straight piece of wood with a hole is prepared, and another stick resembling a bow is attached to it.</p>
               </div>
             </div>
-          </div>
+          </div>         
           <div class="swiper-slide">
-            <div class="card">
-              <img
-                src="assets/images/collection/Pittu (Goti) Khel.png"
-                class="card-img-top"
-                alt="..."
-              />
+            <div class="card" >
+              <img src="/assets/images/artefects/Pittu(Goti)Khel.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Pittu</h5>
-                <p class="card-text">
-                  The game of Pittu is played with 12 pieces of clay
-                  (round-shaped fragments) and a ball. This game is played not
-                  only by the Gond tribe but also by other tribal communities.
-                </p>
+                <p class="card-text">The game of Pittu is played with 12 pieces of clay (round-shaped fragments) and a ball. This
+                  game is played not only by the Gond tribe but also by other tribal communities.</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="card">
-              <img
-                src="assets/images/collection/Kinnari (Iktara).png"
-                class="card-img-top"
-                alt="..."
-              />
+            <div class="card" >
+              <img src="/assets/images/artefects/Kinnari(Iktara).png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Kinnari</h5>
-                <p class="card-text">
-                  The "Kinnari" (Iktara) is made from bamboo, gourd, and
-                  strings. Artists of the Gond tribe in Chhindwara district play
-                  it while going from house to house during wedding ceremonies.
-                  They play it and ask for donations, receiving grains and money
-                  as gifts.
+                <p class="card-text">The "Kinnari" (Iktara) is made from bamboo, gourd, and strings. Artists of the Gond tribe in Chhindwara district play it while going from house to house during wedding ceremonies. They play it and ask for donations, receiving grains and money as gifts.
                 </p>
               </div>
             </div>
           </div>
+    
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </section>
       <!-- Tools & Arms -->
       <section class="gallery-way">
         <div class="container">
-          <h2>Tools & Arms</h2>
+          <h2>Tools & Arms  </h2>
           <section class="vert-gallery3 swiper">
             <div class="swiper-wrapper">
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kasiya.png" alt="" />
+                  <img src="/assets/images/artefects/Kasiya.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kasiya</h5>
-                    <p>
-                      A "kasiya" is made of wood and metal. It has a knife or
-                      dagger-like shape, and it is sharp and pointed. It is
-                      often kept in a wooden or leather sheath. The Gond tribal
-                      community in Mandla uses it for their protection or during
-                      weddings, where the groom hangs it around the waist like a
-                      ceremonial dagger.
+                    <p>A "kasiya" is made of wood and metal. It has a knife or dagger-like shape, and it is sharp and pointed. It is often kept in a wooden or leather sheath. The Gond tribal community in Mandla uses it for their protection or during weddings, where the groom hangs it around the waist like a ceremonial dagger.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kharda.png" alt="" />
+                  <img src="/assets/images/artefects/Kharda.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kharda</h5>
-                    <p>
-                      The "Kharda" is made of iron. Its upper part is stamped,
-                      strong, triangular, and pointed, while the lower part is
-                      round and polished, into which a wooden handle is fitted.
-                      It is used by the Gond tribal community of Mandla and
-                      Chhindwara for their protection.
+                    <p>The "Kharda" is made of iron. Its upper part is stamped, strong, triangular, and pointed, while the lower part is round and polished, into which a wooden handle is fitted. It is used by the Gond tribal community of Mandla and Chhindwara for their protection.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Katna - Iron.png" alt="" />
+                  <img src="/assets/images/artefects/Katna-Iron.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Katna</h5>
-                    <p>
-                      A "katna" is made of wood and iron. It has a sharp edge
-                      and is crafted by ironworkers. The Gond tribe in
-                      Chhindwara uses it for forestry and agricultural
-                      activities.
+                    <p>A "katna" is made of wood and iron. It has a sharp edge and is crafted by ironworkers. The Gond tribe in Chhindwara uses it for forestry and agricultural activities.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kangura.png" alt="" />
+                  <img src="/assets/images/artefects/Kangura.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kangura</h5>
-                    <p>
-                      Kangura is made of iron. Its upper part is trident-shaped
-                      and pointed, while the lower part is round and polished,
-                      with a wooden handle attached. The Gond tribal community
-                      uses it for their protection.
-                    </p>
+                    <p>Kangura is made of iron. Its upper part is trident-shaped and pointed, while the lower part is
+                      round and polished, with a wooden handle attached. The Gond tribal community uses it for their
+                      protection.</p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img
-                    src="assets/images/collection/Katna-IronWood.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/Katna-IronWood.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Katna(Wood&Iron)</h5>
-                    <p>
-                      A &quot;katna&quot; is made of wood and iron. It has a
-                      sharp edge and is crafted by ironworkers. The Gond tribe
-                      in Chhindwara uses it for forestry and agricultural
-                      activities.
-                    </p>
+                    <p>A &quot;katna&quot; is made of wood and iron. It has a sharp edge and is crafted by ironworkers. The Gond
+                      tribe in Chhindwara uses it for forestry and agricultural activities.</p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Naal.png" alt="" />
+                  <img src="/assets/images/artefects/Naal.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Naal</h5>
-                    <p>
-                      Naal is made of iron. It has a hollow inside and is quite
-                      heavy. It is crafted by specialized artisans. The Gond
-                      tribal community in Mandla uses it for protective
-                      purposes.
-                    </p>
+                    <p>Naal is made of iron. It has a hollow inside and is quite heavy. It is crafted by specialized
+                      artisans. The Gond tribal community in Mandla uses it for protective purposes.</p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Talwar.png" alt="" />
+                  <img src="/assets/images/artefects/Talwar.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Talwar</h5>
-                    <p>
-                      A sword is made of iron. It is sharp, pointed, and has a
-                      blade that can be wide or narrow. It is used by tribal
-                      communities like Gond and Bheel for their protection.
-                    </p>
+                    <p>A sword is made of iron. It is sharp, pointed, and has a blade that can be wide or narrow. It is
+                      used by tribal communities like Gond and Bheel for their protection.</p>
                   </div>
                 </div>
               </div>
@@ -1564,156 +1220,107 @@
             <div class="swiper-wrapper">
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img
-                    src="assets/images/collection/KavachBakhtar.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/KavachBakhtar.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kavach</h5>
-                    <p>
-                      A "Kavach" is made of small iron plates joined together.
-                      It is crafted by specialized artisans. The Gond tribal
-                      community in Mandla uses it for protection in warfare.
+                    <p>A "Kavach" is made of small iron plates joined together. It is crafted by specialized artisans. The Gond tribal community in Mandla uses it for protection in warfare.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img
-                    src="assets/images/collection/BharmaarBanduk.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/BharmaarBanduk.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Bharmaar Banduk</h5>
-                    <p>
-                      "Bharmaar Banduk" is made of wood and iron. It is used for
-                      personal protection by the Gond tribal community in
-                      Mandla.
+                    <p>"Bharmaar Banduk" is made of wood and iron. It is used for personal protection by the Gond tribal community in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/ShyaamLaathi.png" alt="" />
+                  <img src="/assets/images/artefects/ShyaamLaathi.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Shyaam Laathi</h5>
-                    <p>
-                      A "Shyaam Laathi" is made of bamboo and is approximately 6
-                      feet long. It has iron rings fitted in the upper part,
-                      providing convenience for striking. It is used for
-                      personal protection by the Gond tribal community in
-                      Mandla.
+                    <p>A "Shyaam Laathi" is made of bamboo and is approximately 6 feet long. It has iron rings fitted in the upper part, providing convenience for striking. It is used for personal protection by the Gond tribal community in Mandla.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Kundi (Kudo).png" alt="" />
+                  <img src="/assets/images/artefects/Kundi(Kudo).png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Kundi Anaaj Maapak</h5>
-                    <p>
-                      Kundi Anaaj Maapak is a measuring tool used for grains. It
-                      is crafted by carving a thick piece of wood, and its
-                      construction is typically carried out by a skilled
-                      artisan, often known as a "badhai" or a carpenter. In some
-                      areas, it is also known as “kudo”. This tool is
-                      specifically used by the Gond tribal community in Mandla
-                      for measuring grains.
+                    <p>Kundi Anaaj Maapak is a measuring tool used for grains. It is crafted by carving a thick piece of wood, and its construction is typically carried out by a skilled artisan, often known as a "badhai" or a carpenter. In some areas, it is also known as “kudo”. This tool is specifically used by the Gond tribal community in Mandla for measuring grains.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img
-                    src="assets/images/collection/ChidiyaChimney.png"
-                    alt=""
-                  />
+                  <img src="/assets/images/artefects/Chidiya.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Chidiya Chimney</h5>
-                    <p>
-                      The Chidiya Chimney is made of brass (metal) and has a
-                      shape resembling a bird (chidiya). The Gond tribal
-                      community in Chhindwada uses it for providing light in
-                      their homes during the night, typically with the use of a
-                      lamp.
+                    <p>The Chidiya Chimney is made of brass (metal) and has a shape resembling a bird (chidiya). The Gond tribal community in Chhindwada uses it for providing light in their homes during the night, typically with the use of a lamp.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/patli.png" alt="" />
+                  <img src="/assets/images/artefects/patli.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Patli/Pera</h5>
-                    <p>
-                      It is made from slender grains. It has a round and flat
-                      shape. It is used by the Gond tribe for sitting.
+                    <p> It is made from slender grains. It has a round and flat shape. It is used by the Gond tribe for sitting.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Saam(Dainta).png" alt="" />
+                  <img src="/assets/images/artefects/Saam(Dainta).png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Saam(Dainta)</h5>
-                    <p>
-                      This is made of a mixture of iron and brass. It is
-                      approximately 05 to 06 inches long, with a pointed upper
-                      part and a rounded lower part from the inside. It is
-                      fitted into wood. The Gond tribal community in Mandla uses
-                      it for their protection.
+                    <p>This is made of a mixture of iron and brass. It is approximately 05 to 06 inches long, with a pointed upper part and a rounded lower part from the inside. It is fitted into wood. The Gond tribal community in Mandla uses it for their protection.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Teer.png" alt="" />
+                  <img src="/assets/images/artefects/Teer.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Teer</h5>
-                    <p>
-                      A "teer" is made by fitting a pointed iron head into the
-                      bamboo or horsewood shaft. It is prepared by a blacksmith
-                      or the Agariya tribe in Mandla. It is used by tribal
-                      communities such as Maadiya, Muriya, Bheel, Gond, Baiga,
-                      Bhilala for hunting purposes.
-                    </p>
+                    <p>A "teer" is made by fitting a pointed iron head into the bamboo or horsewood shaft. It is prepared by a blacksmith or the Agariya tribe in Mandla. It is used by tribal communities such as Maadiya, Muriya, Bheel, Gond, Baiga, Bhilala for hunting purposes.                </p>
                   </div>
                 </div>
               </div>
               <div class="g-card swiper-slide">
                 <div class="imgBx">
-                  <img src="assets/images/collection/Tokni.png" alt="" />
+                  <img src="/assets/images/artefects/Tokni.png" alt="">
                 </div>
                 <div class="contentBx">
                   <div class="content">
                     <h5>Tokni</h5>
-                    <p>
-                      A "Tokni" is made of bamboo. It is typically round in
-                      shape with a lid and a handle. The Gond tribal community
-                      in Mandla uses it to store betel leaves, betel nuts, lime,
-                      and other items.
+                    <p>A "Tokni" is made of bamboo. It is typically round in shape with a lid and a handle. The Gond tribal community in Mandla uses it to store betel leaves, betel nuts, lime, and other items.
                     </p>
                   </div>
                 </div>
@@ -1722,279 +1329,256 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+          </section>
         </div>
       </section>
+     
+      
+    
+    <!-- Test Swiper -->
 
-      <!-- Test Swiper -->
-      <section class="galleryLast swiper" id="galleryLast">
+       <section class="last-crop">
+        <section class="galleryLast swiper" id="galleryLast">
         <div class="swiper-wrapper">
+           
+          
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Kodo.png" alt="" />
+              <img src="/assets/images/artefects/Kodo.png" alt="">
               <div class="info">
                 <h5>Kodo</h5>
-                <p>
-                  Kodo, a millet type, is widely cultivated by tribal
-                  communities in Madhya Pradesh, especially by Baiga and Gond
-                  tribes, who commonly use its flour to make thick and flavorful
-                  bread.
+                <p>Kodo, a millet type, is widely cultivated by tribal communities in Madhya Pradesh, especially by Baiga and Gond tribes, who commonly use its flour to make thick and flavorful bread.
                 </p>
-              </div>
+                </div>
             </div>
-          </div>
+          </div>          
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Kulthi.png" alt="" />
+              <img src="/assets/images/artefects/Kulthi.png" alt="">
               <div class="info">
                 <h5>Kulathi</h5>
-                <p>
-                  In Chhindwara, Gond and Bhariya communities play a significant
-                  role in cultivating Kulathi, known for its effectiveness in
-                  dissolving kidney stones.
+                <p> In Chhindwara, Gond and Bhariya communities play a significant role in cultivating Kulathi, known for its effectiveness in dissolving kidney stones.
                 </p>
-              </div>
+                </div>
             </div>
-          </div>
+          </div>          
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Kutki.png" alt="" />
+              <img src="/assets/images/artefects/Kutki.png" alt="">
               <div class="info">
                 <h5>Kutki</h5>
-                <p>
-                  The Gond and Bhariya communities in Chhindwara cultivate Kutki
-                  as a food crop, cooking it like rice for warmth and energy.
-                  Pregnant women often consume it with medicinal herbs. Kutki is
-                  notably abundant in Chhindwara.
+                <p>The Gond and Bhariya communities in Chhindwara cultivate Kutki as a food crop, cooking it like rice for warmth and energy. Pregnant women often consume it with medicinal herbs. Kutki is notably abundant in Chhindwara.
                 </p>
-              </div>
+                </div>
             </div>
-          </div>
+          </div>          
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Saawaan.png" alt="" />
+              <img src="/assets/images/artefects/Saawaan.png" alt="">
               <div class="info">
                 <h5>Saawaan</h5>
-                <p>
-                  In the districts of Mandla and Dindori, the Baiga and Gond
-                  communities residing there cultivate Kulathi in their fields.
-                  It can also be grown on uncultivated or fallow land. Kulathi
-                  falls into the category of coarse grains and is known to be
-                  nutritious.
+                <p> In the districts of Mandla and Dindori, the Baiga and Gond communities residing there cultivate Kulathi in their fields. It can also be grown on uncultivated or fallow land. Kulathi falls into the category of coarse grains and is known to be nutritious.
                 </p>
-              </div>
+                </div>
             </div>
-          </div>
+          </div> 
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Khumri.png" alt="" />
+              <img src="/assets/images/artefects/Khumri.png" alt="">
               <div class="info">
                 <h5>Khumri</h5>
-                <p>
-                  Khumri" is made from bamboo and mahaul leaves. It has a
-                  conical or pentagon shape. The tribal communities like
-                  Maadiya, Baiga, and Gond use it during agricultural and
-                  forestry activities to protect themselves from rain.
+                <p>Khumri" is made from bamboo and mahaul leaves. It has a conical or pentagon shape. The tribal communities like Maadiya, Baiga, and Gond use it during agricultural and forestry activities to protect themselves from rain.
                 </p>
               </div>
             </div>
-          </div>
+          </div>  
           <div class="swiper-slide">
             <div class="v-card">
-              <img src="assets/images/collection/Topla.png" alt="" />
+              <img src="/assets/images/artefects/Topla.png" alt="">
               <div class="info">
                 <h5>Topla</h5>
-                <p>
-                  A "Topla" is made of bamboo. It can have a round or square
-                  shape. The Gond tribal community in Mandla uses it for
-                  agricultural, forestry, and domestic purposes.
+                <p>A "Topla" is made of bamboo. It can have a round or square shape. The Gond tribal community in Mandla uses it for agricultural, forestry, and domestic purposes.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </div>         
+        </div>  
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div> 
       </section>
-    </div>
-    </div>
+      </section>
 
-    <!-- Footer -->
-    <div
-      class="section-tribe"
-      id="section-footer"
-      data-bg="assets/images/conservation/1b.JPG"
-    >
-      <div class="content footer-content-outer">
-        <div class="footer">
-          <div class="next">
-            <div class="plan-your-visit">
-              <h3>Plan Your Visit</h3>
+      <!-- Footer -->
+      <div
+        class="section-tribe"
+        id="section-footer"
+        data-bg="assets/images/conservation/1b.JPG"
+      >
+        <div class="content footer-content-outer">
+          <div class="footer">
+            <div class="next">
+              <div class="plan-your-visit">
+                <h3>Plan Your Visit</h3>
 
-              <div class="flex-container-footer">
-                <div class="map-embed">
-                  <a href="https://maps.app.goo.gl/h8C4ZFueVtAhTswy8"
-                    ><img src="assets/images/map.png" alt=""
-                  /></a>
-                </div>
-                <div class="how-to-reach">
-                  <h4>How to Reach</h4>
-                  <p>
-                    Opposite Rani Durgabati Hospital (elgin), <br />South Civil
-                    Lines <br />Jabalpur, Madhya Pradesh - 482007
-                  </p>
-                  <div class="int-btn">
+                <div class="flex-container-footer">
+                  <div class="map-embed">
                     <a href="https://maps.app.goo.gl/h8C4ZFueVtAhTswy8"
-                      >Get Direction</a
-                    >
+                      ><img src="assets/images/map.png" alt=""
+                    /></a>
                   </div>
-                </div>
-                <div class="museum-status">
-                  <div class="timing">
-                    <div class="time-head"><h4>Hours</h4></div>
+                  <div class="how-to-reach">
+                    <h4>How to Reach</h4>
                     <p>
-                      Tue-Sun (10:00 AM to 6:00 PM) <br />Closed on Mondays and
-                      National Holidays
+                      Opposite Rani Durgabati Hospital (elgin), <br />South
+                      Civil Lines <br />Jabalpur, Madhya Pradesh - 482007
                     </p>
+                    <div class="int-btn">
+                      <a href="https://maps.app.goo.gl/h8C4ZFueVtAhTswy8"
+                        >Get Direction</a
+                      >
+                    </div>
                   </div>
-                  <div class="entry-fee">
-                    <div class="time-head"><h4>Entry Fee</h4></div>
-                    <ul>
-                      <li><span>Adults:</span><span>20 &#8377;</span></li>
-                      <li>
-                        <span>Foreign Nationals:</span><span>500 &#8377;</span>
-                      </li>
-                      <li>
-                        <span
-                          >Students up to class 12th <br />
-                          (with ID Cards) :</span
-                        ><span>Free</span>
-                      </li>
-                    </ul>
+                  <div class="museum-status">
+                    <div class="timing">
+                      <div class="time-head"><h4>Hours</h4></div>
+                      <p>
+                        Tue-Sun (10:00 AM to 6:00 PM) <br />Closed on Mondays
+                        and National Holidays
+                      </p>
+                    </div>
+                    <div class="entry-fee">
+                      <div class="time-head"><h4>Entry Fee</h4></div>
+                      <ul>
+                        <li><span>Adults:</span><span>20 &#8377;</span></li>
+                        <li>
+                          <span>Foreign Nationals:</span
+                          ><span>500 &#8377;</span>
+                        </li>
+                        <li>
+                          <span
+                            >Students up to class 12th <br />
+                            (with ID Cards) :</span
+                          ><span>Free</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="footer-content">
+              <div class="museum-info">
+                <a href="index.html" class="logo-link">
+                  <img
+                    src="assets/images/logos/main-logo.png"
+                    alt="Museum Logo"
+                  />
+                </a>
+                <a href="index.html" class="text-link">
+                  RAJA SHANKAR SHAH <br />KUNWAR RAGHUNATH SHAH <br />TRIBAL
+                  FREEDOM FIGHTERS <br />
+                  MUSEUM, JABALPUR
+                </a>
+              </div>
+              <div class="menu-footer">
+                <h4>History</h4>
+                <ul class="navbar-ul">
+                  <li>
+                    <a href="history/freedom-movement-of-1857.html"
+                      >Freedom Movement of 1857</a
+                    >
+                  </li>
+                  <li>
+                    <a href="history/martyrdom-story-raja-shankar-shah.html"
+                      >Martyrdom Story of Raja & Kunwar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="history/the-52nd-regiment.html"
+                      >The 52nd Regiment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="history/raja-shankar-shah.html"
+                      >Raja Shankar Shah</a
+                    >
+                  </li>
+                  <li>
+                    <a href="history/kunwar-raghunath-shah.html"
+                      >Kunwar Raghunath Shah</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-footer">
+                <h4>Menu</h4>
+                <ul class="navbar-ul">
+                  <li><a href="tribes-of-mp.html">Tribes of MP</a></li>
+                  <li><a href="gond-tribe.html">Gondwana Tribe</a></li>
+                  <li><a href="history.html">History</a></li>
+                  <li><a href="conservation.html">Conservation</a></li>
+                  <li><a href="collection.html">Museum Collection</a></li>
+                </ul>
+              </div>
+              <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul class="quick-links-content">
+                  <li>
+                    <a href="https://tribal.nic.in/"
+                      >Ministry of Tribal Affairs</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.tribal.mp.gov.in/"
+                      >Tribal Affairs Department, MP</a
+                    >
+                  </li>
+                  <li><a href="https://www.intach.org/">Intach</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="copyright" class="copyright"></div>
           </div>
-          <div class="footer-content">
-            <div class="museum-info">
-              <a href="index.html" class="logo-link">
-                <img
-                  src="assets/images/logos/main-logo.png"
-                  alt="Museum Logo"
-                />
-              </a>
-              <a href="index.html" class="text-link">
-                RAJA SHANKAR SHAH <br />KUNWAR RAGHUNATH SHAH <br />TRIBAL
-                FREEDOM FIGHTERS <br />
-                MUSEUM, JABALPUR
-              </a>
-            </div>
-            <div class="menu-footer">
-              <h4>History</h4>
-              <ul class="navbar-ul">
-                <li>
-                  <a href="history/freedom-movement-of-1857.html"
-                    >Freedom Movement of 1857</a
-                  >
-                </li>
-                <li>
-                  <a href="history/martyrdom-story-raja-shankar-shah.html"
-                    >Martyrdom Story of Raja & Kunwar</a
-                  >
-                </li>
-                <li>
-                  <a href="history/the-52nd-regiment.html">The 52nd Regiment</a>
-                </li>
-                <li>
-                  <a href="history/raja-shankar-shah.html">Raja Shankar Shah</a>
-                </li>
-                <li>
-                  <a href="history/kunwar-raghunath-shah.html"
-                    >Kunwar Raghunath Shah</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="menu-footer">
-              <h4>Menu</h4>
-              <ul class="navbar-ul">
-                <li><a href="tribes-of-mp.html">Tribes of MP</a></li>
-                <li><a href="gond-tribe.html">Gondwana Tribe</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="conservation.html">Conservation</a></li>
-                <li><a href="collection.html">Museum Collection</a></li>
-              </ul>
-            </div>
-            <div class="quick-links">
-              <h4>Quick Links</h4>
-              <ul class="quick-links-content">
-                <li>
-                  <a href="https://tribal.nic.in/"
-                    >Ministry of Tribal Affairs</a
-                  >
-                </li>
-                <li>
-                  <a href="https://www.tribal.mp.gov.in/"
-                    >Tribal Affairs Department, MP</a
-                  >
-                </li>
-                <li><a href="https://www.intach.org/">Intach</a></li>
-              </ul>
-            </div>
-          </div>
-          <div id="copyright" class="copyright"></div>
         </div>
       </div>
     </div>
 
-    <script src="assets/resources/ScrollTrigger.min.js"></script>
-    <script src="assets/resources/gsap.min.js"></script>
-    <script src="assets/resources/bootstrap.min.js"></script>
-
-    <script src="assets/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/resources/swiper-bundle.min.js"></script>
-    <script src="assets/resources/smooth-scrollbar.js"></script>
-
+    <script src="assets/scripts/main.js"></script>
     <script>
-function initializeSwiper(
-  containerClass,
-  slidesPerViewSmall,
-  slidesPerGroupSmall,
-  slidesPerViewMedium,
-  slidesPerGroupMedium,
-  slidesPerViewLarge,
-  slidesPerGroupLarge,
-  slidesPerViewXLarge,
-  slidesPerGroupXLarge
-) {
+      
+      function initializeSwiper(containerClass, slidesPerViewSmall, slidesPerGroupSmall, slidesPerViewMedium, slidesPerGroupMedium, slidesPerViewLarge, slidesPerGroupLarge, slidesPerViewXL, slidesPerGroupXL) {
   return new Swiper("." + containerClass, {
     slidesPerView: 1,
     centeredSlides: false,
     slidesPerGroupSkip: 1,
     grabCursor: true,
-
     keyboard: {
       enabled: true,
     },
     breakpoints: {
-      1600: {
-        slidesPerView: slidesPerViewXLarge || slidesPerViewLarge,
-        slidesPerGroup: slidesPerGroupXLarge || slidesPerGroupLarge,
+      2560: { // Ultra-wide screens
+        slidesPerView: slidesPerViewXL,
+        slidesPerGroup: slidesPerGroupXL,
       },
-      1420: {
-        slidesPerView: slidesPerViewXLarge || slidesPerViewLarge,
-        slidesPerGroup: slidesPerGroupXLarge || slidesPerGroupLarge,
+      1920: { // Full HD & larger screens
+        slidesPerView: slidesPerViewLarge + 1, // Slightly increase slides
+        slidesPerGroup: slidesPerGroupLarge + 1,
       },
-      1281: {
+      1440: { // Large Laptops & iMacs
         slidesPerView: slidesPerViewLarge,
         slidesPerGroup: slidesPerGroupLarge,
       },
-      769: {
+      1281: { 
+        slidesPerView: slidesPerViewLarge,
+        slidesPerGroup: slidesPerGroupLarge,
+      },
+      769: { 
         slidesPerView: slidesPerViewMedium,
         slidesPerGroup: slidesPerGroupMedium,
       },
-      0: {
+      0: { 
         slidesPerView: slidesPerViewSmall,
         slidesPerGroup: slidesPerGroupSmall,
       },
@@ -2006,22 +1590,21 @@ function initializeSwiper(
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+
   });
 }
 
-// Initialize Swipers with different configurations
-initializeSwiper("mySwiper1", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("mySwiper2", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("vert-gallery", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("vert-gallery2", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("vert-gallery3", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("galleryLast", 1, 1, 3, 3, 4, 4, 5, 5);
-initializeSwiper("music-slider-container", 1, 1, 2, 2, 6, 6, 8, 8);
+// Initialize Swipers with extra-large screen support
+var swiper1 = initializeSwiper("mySwiper", 1, 1, 3, 3, 4, 4, 6, 6);
+var swiper2 = initializeSwiper("vert-gallery", 1, 1, 3, 3, 4, 4, 6, 6);
+var swiper3 = initializeSwiper("vert-gallery2", 1, 1, 3, 3, 6, 6, 7, 7);
+var swiper4 = initializeSwiper("vert-gallery3", 1, 1, 3, 3, 4, 4, 6, 6);
+var swiper5 = initializeSwiper("galleryLast", 1, 1, 3, 3, 4, 4, 6, 6);
+var swiper6 = initializeSwiper("music-slider-container", 1, 1, 2, 2, 6, 6, 8, 8);
+var swiper7 = initializeSwiper("related-links-slider", 2, 2, 3, 3, 5, 5, 7, 7);
 
     </script>
+    
+
   </body>
 </html>

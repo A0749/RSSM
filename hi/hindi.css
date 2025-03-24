@@ -23,8 +23,8 @@ body a{
 
 }
 #scroll-container #section-front .content h1 {
-    font-size: calc(min(80vh / 2.2, 77vw / 2.2)) !important;
-    padding-top: 8vh;
+    font-size: calc(min(80svh / 2.2, 77vw / 2.2)) !important;
+    padding-top: 8svh;
     line-height: 100%;
 }
 .right-side-tribe h2 {
@@ -38,12 +38,12 @@ body a{
     line-height: 100%;
 }
  .header-content .tribal-museum-title p{
-   font-size: calc(min(100vh / 30)) !important;
+   font-size: calc(min(100svh / 30)) !important;
 
 }
 
 .footer-content .museum-info .text-link {
-    font-size: calc(min(100vh / 25)) !important;
+    font-size: calc(min(100svh / 25)) !important;
     letter-spacing: normal;
     line-height: 110%;
     font-family: 'Hind';
@@ -53,18 +53,18 @@ body a{
 @media (max-width: 431px) {
 
     .header-content .tribal-museum-title p{
-        font-size: calc(min(100vh / 60)) !important;
+        font-size: calc(min(100svh / 60)) !important;
     }
     .int-btn{
         font-size: 12px;
     }
     #scroll-container #section-front .content h1{
-        font-size: calc(min(80vh / 2.8, 77vw / 2.8)) !important;
-        padding-top: 2vh !important;
+        font-size: calc(min(80svh / 2.8, 77vw / 2.8)) !important;
+        padding-top: 2svh !important;
 
     }
     .footer-content .museum-info .text-link {
-        font-size: calc(min(100vh / 32)) !important;
+        font-size: calc(min(100svh / 32)) !important;
     }
 
 }

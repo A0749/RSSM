@@ -25,7 +25,7 @@
   }
   .tribes-navbar a,
   .history-navbar a{
-    font-size: calc(min(12vh / 4)); 
+    font-size: calc(min(12svh / 4)); 
   }
   .navbar-content{
     width: 60%;
@@ -68,7 +68,7 @@
   .text-link {
     text-decoration: none;
     color: #fff;
-    font-size: calc(min(12vh / 3.8)); 
+    font-size: calc(min(12svh / 3.8)); 
     line-height: 1.1;
     max-width: 70%; 
     transition: all 0.3s ease-in;
@@ -77,7 +77,7 @@
 
 
   .logo-link img {
-    max-width: calc(min(100vh / 6)); 
+    max-width: calc(min(100svh / 6)); 
     height: auto;
     display: flex;
   }
@@ -90,7 +90,7 @@
     align-items: center;
     font-size: 0.8rem;
     position: absolute;
-    top: 11vh;
+    top: 11svh;
     left: 2%;
     right: 2%;
     z-index: 100;
@@ -136,14 +136,14 @@
 
 
 #history-page .custom-menu-btn{
-  top: 18vh;
+  top: 18svh;
   left: 2%;
 
 }
   /* Style for Toggle Button */
 .custom-menu-btn {
   position: absolute;
-  top: 10vh;
+  top: 10svh;
   left: 2%;
   font-size: 24px;
   background: none;
@@ -160,7 +160,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@
 /* Close Button */
 .custom-close-btn {
   position: absolute;
-  top: 6vh;
+  top: 6svh;
   right: 20px;
   font-size: 30px;
   background: none;

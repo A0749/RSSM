@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Ensure existing files and directories are not rewritten
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Rewrite URLs to remove .html but exclude "history" directory and history.html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteCond %{REQUEST_URI} !^/history/
+RewriteCond %{REQUEST_URI} !^/history.html$
+RewriteRule ^([^/.]+)$ $1.html [L]
+
+# Redirect .html requests to clean URLs (except history/ and history.html)
+RewriteCond %{THE_REQUEST} \s/(.*?\.html)[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/history/
+RewriteCond %{REQUEST_URI} !^/history.html$
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]

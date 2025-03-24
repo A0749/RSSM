@@ -35,7 +35,7 @@
 /* Line between Sections */
 .section-nav-line {
   width: 1px;
-  height: 12vh; 
+  height: 12svh; 
   background-color: #fff;
   transition: all 0.3s;
 }
@@ -75,15 +75,15 @@
   pointer-events: none;
 }
 .history-content-inner h1{
-  font-size: calc(min(100vh / 6.5)); 
+  font-size: calc(min(100svh / 6.5)); 
   line-height: 100%;
   font-family: 'Genos';
   
 }
 .history-content-inner h3{
-  font-size: calc(min(100vh / 16)); 
+  font-size: calc(min(100svh / 16)); 
   font-weight: 300;
-  padding: 3vh 0;
+  padding: 3svh 0;
 }
 
 .history-section.active {
@@ -100,7 +100,7 @@
     justify-content: center;
   z-index: 3;
   height: 100%;
-  height: 100vh;
+  height: 100svh;
 
   width: 100%;
   background: rgb(0, 0, 0);
@@ -144,7 +144,7 @@
 }
 
 #history-scroll-container .swiper-slide {
-  width: calc(min(100vh / 3.5)) !important; /* Fixed slide width */
+  width: calc(min(100svh / 3.5)) !important; /* Fixed slide width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,7 +167,7 @@
   color: #fff;
 }
 #history-scroll-container .slide-text h3{
-  font-size: calc(min(100vh / 40)); 
+  font-size: calc(min(100svh / 40)); 
   font-family: 'Inter';
   transition: transform 0.3s ease;
 
@@ -204,7 +204,7 @@
 #scroll-container .content-slider,
 #scroll-container .content-img{
   max-width: 100%;
-  height: 100vh;
+  height: 100svh;
   margin-left: 0 !important;
   margin-right: 0 !important;
   display: flex;
@@ -218,19 +218,19 @@
 }
 
 #scroll-container .content-img h1{
-  padding-bottom: 5vh;
+  padding-bottom: 5svh;
 }
 #scroll-container .content-slider img,
 #scroll-container .content-img img{
   height: auto !important;
   width: auto !important;
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 100svh;
   
 }
 #scroll-container .content-slider .swiper-slide{
   width: 100% !important;
-  max-height: 100vh !important;
+  max-height: 100svh !important;
   display: flex;
   align-items: center;
   justify-content: center;

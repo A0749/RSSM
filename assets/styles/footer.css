@@ -1,13 +1,13 @@
 .footer-content-outer{
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     max-width: 100% !important;
 }
 .footer-content-outer .next{
     overflow: hidden;
     width: 100%;
     padding: 0 2%;
-    height: 60vh;
+    height: 60svh;
     font-family: 'Hind';
 
 }
@@ -17,7 +17,7 @@
   border-bottom: 1px dotted #555;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  font-size: calc(min(100vh / 35)) !important; 
+  font-size: calc(min(100svh / 35)) !important; 
   color: #fff;
 
 }
@@ -35,7 +35,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 100svh;
 }
 .footer-content-outer .footer-content {
     display: flex;
@@ -43,7 +43,7 @@
     align-items: start;
     gap: 3%;
     width: 96%;
-    height: 30vh;
+    height: 30svh;
     border-top: 1px solid #333;
     padding-top: 1rem;
 }
@@ -53,7 +53,7 @@
     align-items: center;
 }
 .footer-content .museum-info .text-link{
-  font-size: calc(min(100vh / 35)) !important; 
+  font-size: calc(min(100svh / 35)) !important; 
   letter-spacing: normal;
   font-family: 'Jockey';
   font-weight: 100;
@@ -66,14 +66,14 @@
 
 .footer-content-outer .footer-content p,
 .footer-content-outer .footer-content  a{
-    font-size: calc(min(100vh / 50)) !important; 
+    font-size: calc(min(100svh / 50)) !important; 
     font-family:'Hind' ;
     letter-spacing: 1px;
     
 }
 
 #conservation .footer-content-outer .footer-content h3{
-    font-size: calc(min(100vh / 25)) !important;
+    font-size: calc(min(100svh / 25)) !important;
     margin-bottom: 3%;
     font-weight: 500;
     border-bottom: 1px dotted #555;
@@ -96,9 +96,9 @@
     border-top: 1px solid #555;
     text-align: center;
     width: 100%;
-    font-size: calc(min(100vh / 50)) !important; 
+    font-size: calc(min(100svh / 50)) !important; 
     font-family: 'Hind';
-    height: 10vh;
+    height: 10svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +149,7 @@ footer a[href] {
   }
 
   .plan-your-visit{
-    height: 60vh;
+    height: 60svh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -172,7 +172,7 @@ footer a[href] {
   }
   .flex-container-footer .how-to-reach p{
     font-family: 'Hind';
-    font-size: calc(min(100vh / 50)) !important; 
+    font-size: calc(min(100svh / 50)) !important; 
 
   }
   .entry-fee .time-head,
@@ -193,7 +193,7 @@ footer a[href] {
   .timing p,
   .entry-fee ul li span{
     font-family: 'Hind' !important;
-    font-size: calc(min(100vh / 50)) !important; 
+    font-size: calc(min(100svh / 50)) !important; 
 
   }
   .entry-fee ul li {
@@ -236,7 +236,7 @@ footer a[href] {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.953);
+  background-color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -251,13 +251,14 @@ footer a[href] {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
+  flex-direction: column;
 }
 
 #slickmode-image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 85%;
   transition: transform 0.3s ease-in-out;
   cursor: zoom-in;
   position: relative;
@@ -265,14 +266,34 @@ footer a[href] {
   width: auto;
 }
 
+.slickmode-caption {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 90%;
+}
+#slickmode-caption{
+  z-index: 2;
+  padding: 10px 10px;
+  background: #0000003f;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+textarea{
+  position: absolute;
+  bottom: 2%;
+}
 .slickmode-close {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 4.5svh;
+  right: 2%;
   color: white;
-  font-size: 45px;
+  font-size: 2.5rem;
   cursor: pointer;
   z-index: 10;
+  line-height: 0;
 }
 
 #slickmode-prev, #slickmode-next {
@@ -292,17 +313,26 @@ footer a[href] {
 
 .zoom-controls {
   position: absolute;
-  bottom: 20px;
+  top: 18px;
   display: flex;
   gap: 10px;
+  right: 6% ;
 }
 
 .zoom-controls button {
-  background-color: #0000009f;
-  border: none;
-  padding: 5px 12px;
-  font-size: 16px;
+  background-color: transparent;
+  padding: 2px 12px;
+  font-size: 1rem;
   cursor: pointer;
   color: #fff;
   border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slickmode-caption.editable {
+  border-bottom: 1px dashed #ddd;
+  cursor: text;
+  outline: none;
 }

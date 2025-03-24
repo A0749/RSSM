@@ -1,7 +1,7 @@
 /* Accessibility Container */
 .accessibility-container {
     position: fixed;
-    bottom: 45vh;
+    bottom: 45svh;
     right: 1rem;
     display: flex;
     flex-direction: column;
