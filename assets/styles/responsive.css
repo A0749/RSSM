@@ -119,6 +119,9 @@
         justify-content: end;
         
     }
+    #history-page .bottom-navbar{
+        display: none;
+    }
   
     .history-content-inner h1 {
         font-size: calc(min(100svh / 11));
