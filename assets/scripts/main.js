@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const basePath = repoName ? `/${repoName}` : ""; // Add repo prefix if exists
 
     // Detect language folder (English or Hindi)
-    const isHindi = window.location.pathname.includes("/hi/");
-    let pathPrefix = `${basePath}${isHindi ? "/hi" : ""}/`;
+    const isHindi = window.location.pathname.includes("/hi");
+    let pathPrefix = `${basePath}${isHindi ? "/hi" : ""}`; // Ensure no trailing slash
 
     // Navbar content
     const navbarHTML = `
@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 class SlickMode {
